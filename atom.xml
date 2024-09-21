@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-09-21T11:52:18.029Z</updated>
+  <updated>2024-09-21T11:56:25.731Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/2024/09/21/hellohexo/"/>
     <id>http://example.com/2024/09/21/hellohexo/</id>
     <published>2024-09-21T11:47:45.000Z</published>
-    <updated>2024-09-21T11:52:18.029Z</updated>
+    <updated>2024-09-21T11:56:25.731Z</updated>
     
     <content type="html"><![CDATA[<h3 id="一个开始"><a href="#一个开始" class="headerlink" title="一个开始"></a>一个开始</h3><p>新建了一个github.io的静态网站，突然好喜欢这种极简风格，尝试搭建一下。</p>]]></content>
     
@@ -34,8 +34,10 @@
     
     
     
+    <category term="new" scheme="http://example.com/categories/new/"/>
     
-    <category term="note think" scheme="http://example.com/tags/note-think/"/>
+    
+    <category term="note" scheme="http://example.com/tags/note/"/>
     
   </entry>
   

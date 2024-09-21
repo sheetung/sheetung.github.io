@@ -23,8 +23,11 @@
     <url>/2024/09/21/hellohexo/</url>
     <content><![CDATA[<h3 id="一个开始"><a href="#一个开始" class="headerlink" title="一个开始"></a>一个开始</h3><p>新建了一个github.io的静态网站，突然好喜欢这种极简风格，尝试搭建一下。</p>
 ]]></content>
+      <categories>
+        <category>new</category>
+      </categories>
       <tags>
-        <tag>note think</tag>
+        <tag>note</tag>
       </tags>
   </entry>
 </search>

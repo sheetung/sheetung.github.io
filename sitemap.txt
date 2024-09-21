@@ -4,4 +4,5 @@ http://example.com/categoris/index.html
 http://example.com/about/index.html
 http://example.com/2024/09/21/hello-world/
 http://example.com/
-http://example.com/tags/note-think/
+http://example.com/tags/note/
+http://example.com/categories/new/
