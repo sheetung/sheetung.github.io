@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-09-21T08:28:00.369Z</updated>
+  <updated>2024-09-21T11:52:18.029Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hellohexo</title>
+    <link href="http://example.com/2024/09/21/hellohexo/"/>
+    <id>http://example.com/2024/09/21/hellohexo/</id>
+    <published>2024-09-21T11:47:45.000Z</published>
+    <updated>2024-09-21T11:52:18.029Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="一个开始"><a href="#一个开始" class="headerlink" title="一个开始"></a>一个开始</h3><p>新建了一个github.io的静态网站，突然好喜欢这种极简风格，尝试搭建一下。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;一个开始&quot;&gt;&lt;a href=&quot;#一个开始&quot; class=&quot;headerlink&quot; title=&quot;一个开始&quot;&gt;&lt;/a&gt;一个开始&lt;/h3&gt;&lt;p&gt;新建了一个github.io的静态网站，突然好喜欢这种极简风格，尝试搭建一下。&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+    <category term="note think" scheme="http://example.com/tags/note-think/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
