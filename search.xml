@@ -27,6 +27,7 @@
 <li>一个GitHub账号</li>
 <li>会写md文档</li>
 </ol>
+<p>界面更友好的<a href="https://cutech.space/archives/githubio.html">地方</a></p>
 <h4 id="ok首先使用docker容器拉取hexo博客容器"><a href="#ok首先使用docker容器拉取hexo博客容器" class="headerlink" title="ok首先使用docker容器拉取hexo博客容器"></a>ok首先使用docker容器拉取hexo博客容器</h4><blockquote>
 <p>如果设备仅仅用来搭建hexo博客并上传到GitHub，可以不用使用docker容器，使用docker容器是为了避免环境污染。仅搭建hexo博客的化去官网即可，最后可以参考hexo上传到GitHub的方法</p>
 </blockquote>
