@@ -140,4 +140,83 @@
         <tag>blog</tag>
       </tags>
   </entry>
+  <entry>
+    <title>git通关版使用教程</title>
+    <url>/2024/09/28/git%E9%80%9A%E5%85%B3%E7%89%88%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<blockquote>
+<p>记得很久以前，大概两年左右吧，为了方便自己查阅以及实验室朋友们的使用，搓了一篇git使用教程，很惭愧它特别的粗糙，并且还躺在我的blog里，现在作为gitee/github专业单词拼写专家，还是想精细化这个教程，同样是为了自己查阅，还有方便搜索到的朋友查看。</p>
+</blockquote>
+<h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h3><blockquote>
+<p>写每一篇我都希望您具备这些前提条件 </p>
+</blockquote>
+<ol>
+<li>拥有一个<strong>gitee</strong>/<strong>github</strong>账号</li>
+<li>会创建一个基础的仓库</li>
+<li><strong>Linux</strong>/<strong>Win</strong>下已经安装了<strong>git</strong>，并且<strong>Win</strong>下知道右键打开<strong>Git Bash</strong></li>
+</ol>
+<h3 id="新建仓库"><a href="#新建仓库" class="headerlink" title="新建仓库"></a>新建仓库</h3><p>首先，你需要在<strong>gitee</strong>/<strong>github</strong>上新建一个仓库，新建好后不要着急退出。会看到类似于这样的代码块</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"# testgit"</span> &gt;&gt; README.md</span><br><span class="line">git init</span><br><span class="line">git add README.md</span><br><span class="line">git commit -m <span class="string">"first commit"</span></span><br><span class="line">git branch -M main</span><br><span class="line">git remote add origin git@github.com:sheetung/testgit.git</span><br><span class="line">git push -u origin main</span><br><span class="line"></span><br><span class="line"><span class="comment">#…or push an existing repository from the command line</span></span><br><span class="line">git remote add origin git@github.com:sheetung/testgit.git</span><br><span class="line">git branch -M main</span><br><span class="line">git push -u origin main</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这里给出了一个使用<strong>SSH</strong>的基础的连接操作<del>其实也就这么多操作</del>，接下来来到电脑端，我使用的是<strong>Ubuntu</strong>，<strong>Win</strong>下一样</p>
+<h3 id="添加SSH公钥"><a href="#添加SSH公钥" class="headerlink" title="添加SSH公钥"></a>添加SSH公钥</h3><blockquote>
+<p>当然使用http远程管理仓库也是可行的，方法更简单。这里使用SSH是为了<del>专业</del></p>
+</blockquote>
+<p>首先不管是<strong>Linux</strong>还是<strong>Win</strong>，均可使用相同的命令生成<strong>SSH Key</strong>，命令后回车三次</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># -t&nbsp;key 类型  -C 注释,随意可以是 计算机名，你的名字，Email...</span></span><br><span class="line">ssh-keygen -t rsa -C <span class="string">"email"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>生成后，有类似如下显示</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">ubt@ubt:~$ ssh-keygen -t rsa -C <span class="string">"email"</span></span><br><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file <span class="keyword">in</span> <span class="built_in">which</span> to save the key (/home/ubt/.ssh/id_rsa): </span><br><span class="line">Enter passphrase (empty <span class="keyword">for</span> no passphrase): </span><br><span class="line">Enter same passphrase again: </span><br><span class="line">Your identification has been saved <span class="keyword">in</span> /home/ubt/.ssh/id_rsa</span><br><span class="line">Your public key has been saved <span class="keyword">in</span> /home/ubt/.ssh/id_rsa.pub</span><br><span class="line">The key fingerprint is:</span><br><span class="line">SHA256:0fefZMlW9pYVBnOZ3urEl6yMzyCjtzvM8UivXkYvtCQ email</span><br><span class="line">The key<span class="string">'s randomart image is:</span></span><br><span class="line"><span class="string">+---[RSA 3072]----+</span></span><br><span class="line"><span class="string">|             o.+o|</span></span><br><span class="line"><span class="string">|         .    +o.|</span></span><br><span class="line"><span class="string">|        . . . . =|</span></span><br><span class="line"><span class="string">|         . . ..oB|</span></span><br><span class="line"><span class="string">|        SE + .oO+|</span></span><br><span class="line"><span class="string">|         o= o B=o|</span></span><br><span class="line"><span class="string">|        +o=*o+.o.|</span></span><br><span class="line"><span class="string">|        .*=++o.  |</span></span><br><span class="line"><span class="string">|       .o== .o   |</span></span><br><span class="line"><span class="string">+----[SHA256]-----+</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>可见，<strong>Linux</strong>下<strong>SSH</strong>保存在<code>/home/ubt/.ssh/id_rsa.pub</code>内</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># cat copy</span></span><br><span class="line"><span class="built_in">cat</span> /home/ubt/.ssh/id_rsa.pub</span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>Win</strong>则保存在C盘用户&gt;用户名&gt;.ssh(隐藏文件夹)下，可直接用记事本打开<br>将复制好的<strong>SSH Key</strong>，来到<strong>gitee</strong>/<strong>github</strong>的设置页面，找到<strong>SSH 公钥</strong>粘贴进去即可</p>
+<h3 id="初始化仓库"><a href="#初始化仓库" class="headerlink" title="初始化仓库"></a>初始化仓库</h3><p>在工程内打开终端，Win下右键打开<strong>Git Bash</strong><br>首先配置你的<strong>git config</strong></p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git config --global user.name “你的名字” </span><br><span class="line">git config --global user.email <span class="string">"注册的邮箱"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>仓库初始化</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git init</span><br><span class="line"><span class="comment"># 如果已有文件或者不需要readme可不执行这一步</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"# testgit"</span> &gt;&gt; README.md</span><br><span class="line">git add README.md</span><br><span class="line"></span><br><span class="line"><span class="comment"># 推送三件套,三件套中不包括git remote</span></span><br><span class="line"><span class="comment">#  git add 也可以单个文件或者文件夹添加，--&gt;baidu</span></span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">"first commit"</span></span><br><span class="line">git remote add origin ******.git</span><br><span class="line"><span class="comment"># -u 第一次的参数  以后只需 git push origin main</span></span><br><span class="line">git push -u origin main</span><br></pre></td></tr></tbody></table></figure>
+
+<p>此时不出意外已经完成了仓库的推送，刷新你的仓库即可看到文件</p>
+<h3 id="同步远程仓库"><a href="#同步远程仓库" class="headerlink" title="同步远程仓库"></a>同步远程仓库</h3><blockquote>
+<p>如果已经拥有一个仓库，需要本地同步，那就这样这样这样</p>
+</blockquote>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># 初始化本地仓库</span></span><br><span class="line">git init</span><br><span class="line"><span class="comment"># 链接远程仓库</span></span><br><span class="line">git remote add origin ******.git</span><br><span class="line"><span class="comment"># pull远程仓库的main分支</span></span><br><span class="line">git pull origin main</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="仓库提交三件套"><a href="#仓库提交三件套" class="headerlink" title="仓库提交三件套"></a>仓库提交三件套</h3><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># 一般情况下，可以对所有文件进行直接提交，三件套如下</span></span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">"[M]:又掉了一根头发"</span></span><br><span class="line">git push origin main</span><br></pre></td></tr></tbody></table></figure>
+
+<hr>
+<h3 id="git相关知识点"><a href="#git相关知识点" class="headerlink" title="git相关知识点"></a>git相关知识点</h3><p><strong>push忽略</strong><br><code>.gitignore</code>，放入不想上传的文件或者文件夹，例如编译产生的<code>build</code>文件，与工程无关的测试文件等<br><strong>git commit规范化</strong><br>当然，开心就好，这个随意<br><code>git commit -m "[M]:update..."</code></p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">??：表示未被 Git 跟踪的新文件（Untracked files）。</span><br><span class="line">A：表示新添加到暂存区（staged）的文件（Added）。</span><br><span class="line">M：表示文件被修改了（Modified）。</span><br><span class="line">D：表示文件被删除了（Deleted）。</span><br><span class="line">R：表示文件被重命名了（Renamed）。</span><br><span class="line">C：表示文件复制了一份（Copied）。</span><br><span class="line">U：表示文件在合并时发生了冲突（Unmerged）。</span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>分支的提交与合并</strong></p>
+<ol>
+<li>将本地的 tabbar 分支进行本地的 commit 提交：</li>
+</ol>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">"完成了 tabBar 的开发"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<ol start="2">
+<li>将本地的 tabbar 分支推送到远程仓库进行保存：</li>
+</ol>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git push -u origin tabbar</span><br></pre></td></tr></tbody></table></figure>
+
+<ol start="3">
+<li>将本地的 tabbar 分支合并到本地的 master 分支：</li>
+</ol>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git checkout master</span><br><span class="line">git merge tabbar</span><br></pre></td></tr></tbody></table></figure>
+
+<ol start="4">
+<li>删除本地的 tabbar 分支：</li>
+</ol>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">git branch -d tabbar</span><br></pre></td></tr></tbody></table></figure>
+
+<hr>
+]]></content>
+      <categories>
+        <category>note</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
 </search>
