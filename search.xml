@@ -219,4 +219,19 @@
         <tag>git</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Ubuntu20无法引导双系统解决方案</title>
+    <url>/2024/11/22/Ubuntu20%E6%97%A0%E6%B3%95%E5%BC%95%E5%AF%BC%E5%8F%8C%E7%B3%BB%E7%BB%9F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
+    <content><![CDATA[<blockquote>
+<p>问题描述：由于不同系统安装在不同硬盘中，导致使用Ubuntu系统作为引导时无法拉起grub引导菜单。</p>
+</blockquote>
+<p>打开ubuntu系统的终端，输入 <code>sudo gedit /etc/default/grub</code> 编辑grub菜单</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">GRUB_DEFAULT=0       # 默认系统</span><br><span class="line">#GRUB_TIMEOUT_STYLE=hidden  #**1.此处注释**</span><br><span class="line">GRUB_TIMEOUT=10GRUB_DISTRIBUTOR=`lsb_release -i -s 2&gt; /dev/null || echo Debian`</span><br><span class="line">GRUB_CMDLINE_LINUX_DEFAULT="text"  #**2.此处修改**</span><br><span class="line">GRUB_CMDLINE_LINUX=""</span><br></pre></td></tr></tbody></table></figure>
+
+<p>最后，输入 <code>sudo update-grub</code> 更新启动菜单</p>
+]]></content>
+      <tags>
+        <tag>ubuntu</tag>
+      </tags>
+  </entry>
 </search>
