@@ -14,7 +14,8 @@
     <guid>http://localhost:1313/first_post/</guid>
     <description><![CDATA[<p>my first article</p>
 <blockquote>
-<p>第一次提交！</p></blockquote>]]></description>
+<p>第一次提交！</p></blockquote>
+<p></p>]]></description>
 </item>
 </channel>
 </rss>
