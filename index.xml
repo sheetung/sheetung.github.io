@@ -1,0 +1,20 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>sheetung</title>
+        <link>http://localhost:1313/</link>
+        <description>This is my cool site</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>sheetung@foxmail.com (sheetung)</managingEditor>
+            <webMaster>sheetung@foxmail.com (sheetung)</webMaster><lastBuildDate>Wed, 09 Jul 2025 13:50:27 &#43;0100</lastBuildDate>
+            <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+    <title>First_post</title>
+    <link>http://localhost:1313/posts/first_post/</link>
+    <pubDate>Wed, 09 Jul 2025 13:50:27 &#43;0100</pubDate>
+    <author>sheetung</author>
+    <guid>http://localhost:1313/posts/first_post/</guid>
+    <description><![CDATA[<p>my first article</p>
+<blockquote>
+<p>近期很是猖狂哈，我是指垃圾灌水邮箱，但是引入邮箱验证机制又太麻烦而且拖慢博客的速度（<del>绝对不是因为我不会</del>）。所以我就想着从底层出发，拒绝垃圾邮箱通过评论。如果有注意或者有收到，那么大部分垃圾邮箱格式都是 <code>一串英文@qq.com</code> 那么我们就可以增加正则过滤，去除他们，虽然也有英文的qq邮箱，但是秉持宁可错杀，不可放过的原则!！</p>]]></description>
+</item>
+</channel>
+</rss>
