@@ -4,9 +4,17 @@
         <link>http://localhost:1313/</link>
         <description>这是我的全新 Hugo 网站</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>sheetung@foxmail.com (sheetung)</managingEditor>
-            <webMaster>sheetung@foxmail.com (sheetung)</webMaster><lastBuildDate>Wed, 09 Jul 2025 16:39:58 &#43;0100</lastBuildDate>
+            <webMaster>sheetung@foxmail.com (sheetung)</webMaster><lastBuildDate>Wed, 09 Jul 2025 17:21:18 &#43;0100</lastBuildDate>
             <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Test02</title>
+    <link>http://localhost:1313/test02/</link>
+    <pubDate>Wed, 09 Jul 2025 17:21:18 &#43;0100</pubDate>
+    <author>Author</author>
+    <guid>http://localhost:1313/test02/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>First</title>
     <link>http://localhost:1313/first/</link>
     <pubDate>Wed, 09 Jul 2025 16:39:58 &#43;0100</pubDate>
