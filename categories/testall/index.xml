@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Testall on sheetung</title>
-    <link>http://localhost:1313/categories/testall/</link>
+    <link>https://sheetung.github.io/categories/testall/</link>
     <description>Recent content in Testall on sheetung</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <managingEditor>sheetung@foxmail.com (sheetung)</managingEditor>
     <webMaster>sheetung@foxmail.com (sheetung)</webMaster>
     <lastBuildDate>Wed, 09 Jul 2025 16:11:51 +0100</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/testall/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://sheetung.github.io/categories/testall/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Test</title>
-      <link>http://localhost:1313/test/</link>
+      <link>https://sheetung.github.io/test/</link>
       <pubDate>Wed, 09 Jul 2025 16:11:51 +0100</pubDate><author>sheetung@foxmail.com (sheetung)</author>
-      <guid>http://localhost:1313/test/</guid>
+      <guid>https://sheetung.github.io/test/</guid>
       <description></description>
     </item>
   </channel>
