@@ -31,7 +31,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://sheetung.github.io/hugo%E9%9B%B6%E6%88%90%E6%9C%AC%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B8%A6%E6%9C%89%E8%AF%84%E8%AE%BA%E5%92%8C%E6%90%9C%E7%B4%A2%E7%B3%BB%E7%BB%9F%E7%9A%84%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</loc>
+    <loc>https://sheetung.github.io/build_hugo_blog/</loc>
     <lastmod>2025-07-11T06:53:17+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -61,7 +61,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://sheetung.github.io/git_use.html</loc>
+    <loc>https://sheetung.github.io/git_use/</loc>
     <lastmod>2025-07-09T20:15:50+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
