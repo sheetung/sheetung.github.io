@@ -1,8 +1,56 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://sheetung.github.io/friends/</loc>
+    <lastmod>2025-07-11T06:58:59+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://sheetung.github.io/friends.html</loc>
+    <lastmod>2025-07-11T06:58:59+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://sheetung.github.io/</loc>
+    <lastmod>2025-07-11T06:58:59+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://sheetung.github.io/categories/</loc>
-    <lastmod>2025-07-09T20:15:50+01:00</lastmod>
+    <lastmod>2025-07-11T06:53:17+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://sheetung.github.io/categories/draft/</loc>
+    <lastmod>2025-07-11T06:53:17+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://sheetung.github.io/tags/draft/</loc>
+    <lastmod>2025-07-11T06:53:17+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://sheetung.github.io/hugo%E9%9B%B6%E6%88%90%E6%9C%AC%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B8%A6%E6%9C%89%E8%AF%84%E8%AE%BA%E5%92%8C%E6%90%9C%E7%B4%A2%E7%B3%BB%E7%BB%9F%E7%9A%84%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2025-07-11T06:53:17+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://sheetung.github.io/posts/</loc>
+    <lastmod>2025-07-11T06:53:17+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://sheetung.github.io/tags/</loc>
+    <lastmod>2025-07-11T06:53:17+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -19,31 +67,13 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://sheetung.github.io/posts/</loc>
-    <lastmod>2025-07-09T20:15:50+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://sheetung.github.io/</loc>
-    <lastmod>2025-07-09T20:15:50+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://sheetung.github.io/tags/</loc>
-    <lastmod>2025-07-09T20:15:50+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://sheetung.github.io/categories/%E7%99%BE%E8%AE%B0/</loc>
     <lastmod>2025-07-09T20:15:50+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://sheetung.github.io/about/</loc>
+    <loc>https://sheetung.github.io/about.html</loc>
     <lastmod>2025-07-09T16:20:16+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
