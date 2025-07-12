@@ -6,20 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
     <meta name="robots" content="noodp" />
     <title>GIT使用教程 通关版 - sheetung</title><meta name="author" content="">
-<meta name="description" content=" 记得很久以前，大概两年左右吧，为了方便自己查阅以及实验室朋友们的使用，搓了一篇git使用教程，很惭愧它特别的粗糙，并且还躺在我的blog里，现在作为gitee/github专业单词拼写专家，还是想精细化这个教程，同样是为了自己查阅，还有方便搜索到的朋友查看。
-前提 写每一篇我都希望您具备这些前提条件
+<meta name="description" content="一篇完整的git命令使用教程
 "><meta name="keywords" content='git'>
   <meta itemprop="name" content="GIT使用教程 通关版">
-  <meta itemprop="description" content="记得很久以前，大概两年左右吧，为了方便自己查阅以及实验室朋友们的使用，搓了一篇git使用教程，很惭愧它特别的粗糙，并且还躺在我的blog里，现在作为gitee/github专业单词拼写专家，还是想精细化这个教程，同样是为了自己查阅，还有方便搜索到的朋友查看。
-前提 写每一篇我都希望您具备这些前提条件">
+  <meta itemprop="description" content="一篇完整的git命令使用教程">
   <meta itemprop="datePublished" content="2025-07-12T12:22:24+01:00">
   <meta itemprop="dateModified" content="2025-07-12T12:22:24+01:00">
-  <meta itemprop="wordCount" content="451">
+  <meta itemprop="wordCount" content="452">
   <meta itemprop="keywords" content="Git"><meta property="og:url" content="https://sheetung.github.io/git_use/">
   <meta property="og:site_name" content="sheetung">
   <meta property="og:title" content="GIT使用教程 通关版">
-  <meta property="og:description" content="记得很久以前，大概两年左右吧，为了方便自己查阅以及实验室朋友们的使用，搓了一篇git使用教程，很惭愧它特别的粗糙，并且还躺在我的blog里，现在作为gitee/github专业单词拼写专家，还是想精细化这个教程，同样是为了自己查阅，还有方便搜索到的朋友查看。
-前提 写每一篇我都希望您具备这些前提条件">
+  <meta property="og:description" content="一篇完整的git命令使用教程">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -29,8 +26,7 @@
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="GIT使用教程 通关版">
-  <meta name="twitter:description" content="记得很久以前，大概两年左右吧，为了方便自己查阅以及实验室朋友们的使用，搓了一篇git使用教程，很惭愧它特别的粗糙，并且还躺在我的blog里，现在作为gitee/github专业单词拼写专家，还是想精细化这个教程，同样是为了自己查阅，还有方便搜索到的朋友查看。
-前提 写每一篇我都希望您具备这些前提条件">
+  <meta name="twitter:description" content="一篇完整的git命令使用教程">
 <meta name="application-name" content="FixIt">
 <meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -45,7 +41,7 @@
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https:\/\/sheetung.github.io\/git_use\/"
-    },"genre": "posts","keywords": "git","wordcount":  451 ,
+    },"genre": "posts","keywords": "git","wordcount":  452 ,
     "url": "https:\/\/sheetung.github.io\/git_use\/","datePublished": "2025-07-12T12:22:24+01:00","dateModified": "2025-07-12T12:22:24+01:00","publisher": {
       "@type": "Organization",
       "name": ""},"author": {
@@ -122,7 +118,7 @@
     <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span>GIT使用教程 通关版</span>
       </h1></div><div class="post-meta">
       <div class="post-meta-line"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
-      Anonymous</span></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/%E7%99%BE%E8%AE%B0/" class="post-category" title="分类 - 百记"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> 百记</a></span></div><div class="post-meta-line"><span title="发布于 2025-07-12 12:22:24"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2025-07-12">2025-07-12</time></span>&nbsp;<span title="451 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 500 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>预计阅读 3 分钟</span>&nbsp;</div>
+      Anonymous</span></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/%E7%99%BE%E8%AE%B0/" class="post-category" title="分类 - 百记"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> 百记</a></span></div><div class="post-meta-line"><span title="发布于 2025-07-12 12:22:24"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2025-07-12">2025-07-12</time></span>&nbsp;<span title="452 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 500 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>预计阅读 3 分钟</span>&nbsp;</div>
     </div><div class="details toc" id="toc-static" data-kept="false">
         <div class="details-summary toc-title">
           <span>目录</span>
@@ -151,7 +147,8 @@
     </li>
   </ul>
 </nav></div>
-      </div><div class="content" id="content"><blockquote>
+      </div><div class="content" id="content"><p>一篇完整的git命令使用教程</p>
+<blockquote>
 <p>记得很久以前，大概两年左右吧，为了方便自己查阅以及实验室朋友们的使用，搓了一篇git使用教程，很惭愧它特别的粗糙，并且还躺在我的blog里，现在作为gitee/github专业单词拼写专家，还是想精细化这个教程，同样是为了自己查阅，还有方便搜索到的朋友查看。</p></blockquote>
 <h3 class="heading-element" id="前提"><span>前提</span>
   <a href="#%e5%89%8d%e6%8f%90" class="heading-mark">
@@ -485,8 +482,7 @@
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git checkout <span class="o">[</span>ID<span class="o">]</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>3.如果不放心使用 <code>git branch</code> 查看当前本地分支</p>
-<hr>
-</div><div class="post-footer" id="post-footer">
+<hr></div><div class="post-footer" id="post-footer">
   <div class="post-info">
     <div class="post-info-line">
       <div class="post-info-mod">
@@ -506,7 +502,7 @@
     <section>
       <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
     </section>
-  </div><div class="post-nav"></div>
+  </div><div class="post-nav"><a href="/build_hugo_blog/" class="post-nav-item" rel="prev" title="Hugo：零成本搭建一个带有评论和搜索系统的静态博客"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>Hugo：零成本搭建一个带有评论和搜索系统的静态博客</a></div>
 </div>
 <div class="post-reward">
     <div class="comment"></div>
