@@ -22,7 +22,7 @@
 
 ### 1. 安装
 
-首先到Hugo官方下载满足系统要求的**Hugo extended** 版本，推荐在HugoReleases中下载指定版本，推荐 [v0.145.0](https://github.com/gohugoio/hugo/releases/tag/v0.145.0), 我是使用树莓派安装的Ubuntu操作系统，所以我选择的是 `hugo_extended_0.145.0_linux-arm64.deb` 版本，教程中稍有不同。
+首先到Hugo官方下载满足系统要求的**Hugo extended** 版本，推荐在HugoReleases中下载指定版本，推荐最新版（图片仅为旧版截图未及时更换） [v0.148.1](https://github.com/gohugoio/hugo/releases/tag/v0.148.1), 我是使用树莓派安装的Ubuntu操作系统，所以我选择的是 `hugo_extended_0.145.0_linux-arm64.deb` 版本，教程中稍有不同。
 
 ![](/assets/build_hugo_blog/20250712091511624.png)
 
