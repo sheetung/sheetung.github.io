@@ -6,14 +6,12 @@
     <description>西塘的静态博客站</description>
     <generator>Hugo 0.148.1 &amp; FixIt v0.3.20</generator>
     <language>zh-CN</language>
-    <managingEditor>sheetung@foxmail.com (sheetung)</managingEditor>
-    <webMaster>sheetung@foxmail.com (sheetung)</webMaster>
     <lastBuildDate>Fri, 11 Jul 2025 06:53:17 +0100</lastBuildDate>
     <atom:link href="https://sheetung.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo：零成本搭建一个带有评论和搜索系统的静态博客</title>
       <link>https://sheetung.github.io/build_hugo_blog/</link>
-      <pubDate>Fri, 11 Jul 2025 06:53:17 +0100</pubDate><author>sheetung@foxmail.com (sheetung)</author>
+      <pubDate>Fri, 11 Jul 2025 06:53:17 +0100</pubDate>
       <guid>https://sheetung.github.io/build_hugo_blog/</guid>
       <category domain="https://sheetung.github.io/categories/%E7%99%BE%E8%AE%B0/">百记</category>
       <description>&lt;p&gt;简单但是功能完善的静态博客搭建教程，希望帮到你&lt;/p&gt;</description>
