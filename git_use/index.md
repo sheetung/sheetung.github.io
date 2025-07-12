@@ -185,6 +185,6 @@ git checkout [ID]
 
 ---
 
-> 作者: sheetung  
+> 作者: 西塘  
 > URL: https://sheetung.github.io/git_use/  
 

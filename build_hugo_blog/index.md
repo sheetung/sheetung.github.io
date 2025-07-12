@@ -99,6 +99,6 @@ hasCJKLanguage = true
 
 ---
 
-> 作者: sheetung  
+> 作者: 西塘  
 > URL: https://sheetung.github.io/build_hugo_blog/  
 
