@@ -12,7 +12,7 @@
   <meta itemprop="description" content="简单但是功能完善的静态博客搭建教程，希望帮到你">
   <meta itemprop="datePublished" content="2025-07-11T06:53:17+01:00">
   <meta itemprop="dateModified" content="2025-07-11T06:53:17+01:00">
-  <meta itemprop="wordCount" content="734">
+  <meta itemprop="wordCount" content="1010">
   <meta itemprop="image" content="https://sheetung.github.io/logo.png">
   <meta itemprop="keywords" content="Hugo,Blog"><meta property="og:url" content="https://sheetung.github.io/build_hugo_blog/">
   <meta property="og:site_name" content="sheetung">
@@ -45,7 +45,7 @@
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https:\/\/sheetung.github.io\/build_hugo_blog\/"
-    },"genre": "posts","keywords": "Hugo, blog","wordcount":  734 ,
+    },"genre": "posts","keywords": "Hugo, blog","wordcount":  1010 ,
     "url": "https:\/\/sheetung.github.io\/build_hugo_blog\/","datePublished": "2025-07-11T06:53:17+01:00","dateModified": "2025-07-11T06:53:17+01:00","publisher": {
       "@type": "Organization",
       "name": ""},"author": {
@@ -122,7 +122,7 @@
     <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span>Hugo：零成本搭建一个带有评论和搜索系统的静态博客</span>
       </h1></div><div class="post-meta">
       <div class="post-meta-line"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
-      sheetung</span></span><span class="post-included-in">&nbsp;included in <a href="/categories/%E7%99%BE%E8%AE%B0/" class="post-category" title="Category - 百记"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> 百记</a></span></div><div class="post-meta-line"><span title="published on 2025-07-11 06:53:17"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2025-07-11">2025-07-11</time></span>&nbsp;<span title="734 words"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>About 800 words</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>2 minutes</span>&nbsp;</div>
+      sheetung</span></span><span class="post-included-in">&nbsp;included in <a href="/categories/%E7%99%BE%E8%AE%B0/" class="post-category" title="Category - 百记"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> 百记</a></span></div><div class="post-meta-line"><span title="published on 2025-07-11 06:53:17"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2025-07-11">2025-07-11</time></span>&nbsp;<span title="1010 words"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>About 1100 words</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>3 minutes</span>&nbsp;</div>
     </div><div class="details toc" id="toc-static" data-kept="false">
         <div class="details-summary toc-title">
           <span>Contents</span>
@@ -136,6 +136,7 @@
         <li><a href="#1-安装">1. 安装</a></li>
         <li><a href="#2创建你的第一个博客">2.创建你的第一个博客</a></li>
         <li><a href="#3-安装主题">3. 安装主题</a></li>
+        <li><a href="#4-主题基础配置">4. 主题基础配置</a></li>
       </ul>
     </li>
   </ul>
@@ -213,7 +214,55 @@ win系统对于命令操作可以打开终端进行</p></div><p>按照本文教�
 </span></span><span class="line"><span class="cl"><span class="c1">#git clone https://github.com/hugo-fixit/FixIt.git themes/LoveIt</span>
 </span></span><span class="line"><span class="cl">git submodule add https://github.com/hugo-fixit/FixIt.git themes/LoveIt</span></span></code></pre></td></tr></table>
 </div>
-</div><div class="alert alert-tip"><p class="alert-title"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path d="M8 1.5c-2.363.0-4 1.69-4 3.75.0.984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75.0 01-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456.0 00-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863.0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751.0 01-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304.0-2.06-1.637-3.75-4-3.75zM5.75 12h4.5a.75.75.0 010 1.5h-4.5a.75.75.0 010-1.5zM6 15.25a.75.75.0 01.75-.75h2.5a.75.75.0 010 1.5h-2.5A.75.75.0 016 15.25z"/></svg>Tip</p><p>可以去官方手动 <a href="https://github.com/hugo-fixit/FixIt/releases/tag/v0.3.20"target="_blank" rel="external nofollow noopener noreferrer">下载</a>稳定版 <code>0.3.20</code> Source code即可，</p></div></div><div class="post-footer" id="post-footer">
+</div><div class="alert alert-tip"><p class="alert-title"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path d="M8 1.5c-2.363.0-4 1.69-4 3.75.0.984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75.0 01-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456.0 00-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863.0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751.0 01-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304.0-2.06-1.637-3.75-4-3.75zM5.75 12h4.5a.75.75.0 010 1.5h-4.5a.75.75.0 010-1.5zM6 15.25a.75.75.0 01.75-.75h2.5a.75.75.0 010 1.5h-2.5A.75.75.0 016 15.25z"/></svg>Tip</p><p>可以去官方手动<a href="https://github.com/hugo-fixit/FixIt/releases/tag/v0.3.20"target="_blank" rel="external nofollow noopener noreferrer">下载</a>稳定版 <code>0.3.20</code> Source code即可，解压到theme文件夹下</p></div><h3 class="heading-element" id="4-主题基础配置"><span>4. 主题基础配置</span>
+  <a href="#4-%e4%b8%bb%e9%a2%98%e5%9f%ba%e7%a1%80%e9%85%8d%e7%bd%ae" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>这里直接从你下载的主题内，即 <code>theme/FixIt</code> 下复制 <code>hugo.toml</code> 到博客目录下 <code>hugo.toml</code>, 或者直接复制其中内容覆盖</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># your site 目录，使用命令复制配置文件</span>
+</span></span><span class="line"><span class="cl">cp themes/FixIt/hugo.toml .</span></span></code></pre></td></tr></table>
+</div>
+</div><p>此时你的博客目录下就有了一个完整的配置文件，可以先将如下内容进行修改，使得博客为中文语言</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">baseURL</span> <span class="p">=</span> <span class="s2">&#34;http://example.org/&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 更改使用 Hugo 构建网站时使用的默认主题</span>
+</span></span><span class="line"><span class="cl"><span class="nx">theme</span> <span class="p">=</span> <span class="s2">&#34;FixIt&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 网站标题</span>
+</span></span><span class="line"><span class="cl"><span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;我的全新 Hugo 网站&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 网站语言, 仅在这里 CN 大写 [&#34;en&#34;, &#34;zh-CN&#34;, &#34;fr&#34;, &#34;pl&#34;, ...]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">languageCode</span> <span class="p">=</span> <span class="s2">&#34;zh-CN&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 语言名称 [&#34;English&#34;, &#34;简体中文&#34;, &#34;Français&#34;, &#34;Polski&#34;, ...]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">languageName</span> <span class="p">=</span> <span class="s2">&#34;简体中文&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 是否包括中日韩文字</span>
+</span></span><span class="line"><span class="cl"><span class="nx">hasCJKLanguage</span> <span class="p">=</span> <span class="kc">true</span></span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
   <div class="post-info">
     <div class="post-info-line">
       <div class="post-info-mod">
