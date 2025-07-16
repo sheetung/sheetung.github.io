@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Uav - 标签 - sheetung</title>
+    <link>https://sheetung.github.io/tags/uav/</link>
+    <description>西塘的静态博客站</description>
+    <generator>Hugo 0.148.1 &amp; FixIt v0.3.20</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 16 Jul 2025 03:53:12 +0100</lastBuildDate>
+    <atom:link href="https://sheetung.github.io/tags/uav/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>【无人机】鲁班猫Cat5V2与PX4飞控的通信篇</title>
+      <link>https://sheetung.github.io/lubancat_px4uart/</link>
+      <pubDate>Wed, 16 Jul 2025 03:53:12 +0100</pubDate>
+      <guid>https://sheetung.github.io/lubancat_px4uart/</guid>
+      <category domain="https://sheetung.github.io/categories/%E6%97%A0%E4%BA%BA%E6%9C%BA/">无人机</category>
+      <description>&lt;p&gt;鲁班猫Cat5V2开发板，或者指鲁班猫Linux系列开发板40pin接口（树莓派同款接口），默认为&lt;strong&gt;复用关闭&lt;/strong&gt;状态，所以要使用指定功能需要配置复用&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
