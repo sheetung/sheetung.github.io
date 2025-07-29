@@ -7,7 +7,7 @@
 
 1. github clone源码，此处需要代理 [Linux 开启与关闭代理]
 
-```bash {title="代理的相关命令"}{data-open=false}
+```bash {data-open="false" title="代理的相关命令"}
 # 开启代理 
 export http_proxy=http://IP:PORT 
 export https_proxy=http://IP:PORT 
