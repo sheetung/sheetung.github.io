@@ -4,10 +4,18 @@
     <title>所有文章 - sheetung</title>
     <link>https://sheetung.github.io/posts/</link>
     <description>西塘的静态博客站</description>
-    <generator>Hugo 0.148.1 &amp; FixIt v0.3.20</generator>
+    <generator>Hugo 0.148.2 &amp; FixIt v0.3.20</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 16 Jul 2025 03:53:12 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 29 Jul 2025 05:05:48 +0100</lastBuildDate>
     <atom:link href="https://sheetung.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>虚拟机Ubuntu20配置px4相关环境</title>
+      <link>https://sheetung.github.io/ubt20_px4/</link>
+      <pubDate>Tue, 29 Jul 2025 05:05:48 +0100</pubDate>
+      <guid>https://sheetung.github.io/ubt20_px4/</guid>
+      <category domain="https://sheetung.github.io/categories/ubuntu/">Ubuntu</category>
+      <description>&lt;p&gt;虚拟机安装px4环境配置&lt;/p&gt;</description>
+    </item>
     <item>
       <title>【无人机】鲁班猫Cat5V2与PX4飞控的通信篇</title>
       <link>https://sheetung.github.io/lubancat_px4uart/</link>
