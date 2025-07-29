@@ -3,10 +3,19 @@
 虚拟机安装px4环境配置
 <!--more-->
 
-[Ubuntu20 px4 与ego_planner_for_visual配置](Ubuntu20%20px4%20与ego_planner_for_visual配置.md)
 ### 安装和配置PX4
 
-1. github clone源码，此处需要代理 [Linux 开启与关闭代理](../blog/Linux%20开启与关闭代理.md)
+1. github clone源码，此处需要代理 [Linux 开启与关闭代理]
+
+```bash {title="代理的相关命令"}{data-open=false}
+# 开启代理 
+export http_proxy=http://IP:PORT 
+export https_proxy=http://IP:PORT 
+# 关闭代理 
+unset http_proxy 
+unset https_proxy
+```
+
 ```sh
 git clone https://github.com/PX4/PX4-Autopilot.git --recursive
 ```
@@ -63,7 +72,6 @@ make px4_sitl_default jmavsim
 
 根据官网提示安装 [QGC](https://docs.qgroundcontrol.com/master/en/qgc-user-guide/getting_started/download_and_install.html)
 
-auth: sheetung
 
 ---
 
