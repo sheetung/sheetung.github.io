@@ -18,7 +18,7 @@
 |   xshell8    |        不仅仅是一个ssh终端工具         |     [xftp8](https://cloud.092399.xyz/od/塘优APP/xshell8)     |
 | Linux_Reader | 双系统文件互传，win端读取linux分区工具 | [Linux_Reader](https://cloud.092399.xyz/od/%E5%A1%98%E4%BC%98APP/Linux_Reader) |
 |  typora旧版  |  上手入门极简的基础markdown文本编辑器  |     [typora](https://cloud.092399.xyz/od/塘优APP/typora)     |
-
+|  Vmware15.5Pro  |  支持win11  |     [typora](https://cloud.092399.xyz/od/%E5%A1%98%E4%BC%98APP/Vmware15.5Pro)     |
 
 
 ## 塘的资料
