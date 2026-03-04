@@ -92,6 +92,11 @@ languageName = "简体中文"
 hasCJKLanguage = true
 ```
 
+### 5. 新建博客
+
+```toml
+hugo new content/posts/my-first-post.md
+```
 
 
 ---

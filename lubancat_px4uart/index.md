@@ -46,6 +46,7 @@ stty -F /dev/ttyS1 ispeed 921600 ospeed 921600
 
 修改 `mavros` 下的 `px4. launch`, 将串口修改为 `/dev/ttyS1`
 
+
 ---
 
 > 作者: 西塘  
