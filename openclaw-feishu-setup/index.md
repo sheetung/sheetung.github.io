@@ -45,6 +45,8 @@ openclaw onboard --install-daemon
 
 命令执行后会有类似如下显示，此处弹出免责声明，务必使用键盘控制选择 **yes**。
 
+![](https://static.moontung.top/2026/20260306193754928.png)
+
 第一次配置，建议选择 **QuickStart**，快速体验：
 
 ```bash
@@ -154,6 +156,8 @@ Onboarding mode
 
 访问 [飞书开放平台](https://open.feishu.cn/app)，使用飞书账号登录。选择创建企业自建应用，填写应用名称和描述，选择应用图标。
 
+![](https://static.moontung.top/2026/QQ_1772798920437.png)
+
 #### 2. 获取应用凭证
 
 在应用的 **凭证与基础信息** 页面，复制：
@@ -163,9 +167,13 @@ Onboarding mode
 
 > 请妥善保管 App Secret，不要分享给他人。
 
+![](https://static.moontung.top/2026/20260306201049949.png)
+
 #### 3. 配置应用权限
 
 在 **权限管理** 页面，点击 **批量导入** 按钮，粘贴以下 JSON 配置一键导入所需权限：
+
+![](https://static.moontung.top/2026/20260306201215960.png)
 
 ```json
 {
@@ -206,6 +214,8 @@ Onboarding mode
 1. 开启机器人能力
 2. 配置机器人名称
 
+![](https://static.moontung.top/2026/20260306201325309.png)
+
 此时来到 OpenClaw 配置处，选择飞书渠道，然后系统会自动安装飞书插件，待安装完成后提示输入，顺序不要搞反！
 - **App Secret**
 - **App ID**
@@ -221,6 +231,8 @@ Onboarding mode
 
 1. 选择 **使用长连接接收事件**（WebSocket 模式）
 2. ③处添加事件：`im.message.receive_v1`（接收消息）
+
+![](https://static.moontung.top/2026/QQ_1772799494309.png)
 
 #### 6. 发布应用
 
@@ -283,6 +295,8 @@ openclaw gateway restart
 到这里，你应该可以从飞书唤醒 OpenClaw 了，恭喜你，尽情的使用吧。
 
 > 我要把 OpenClaw 夸成翘嘴
+
+![](https://static.moontung.top/2026/20260306203512535.png)
 
 
 ---
