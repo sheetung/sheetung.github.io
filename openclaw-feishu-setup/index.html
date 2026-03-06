@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>OpenClaw 与飞书的搭建始末 - sheetung</title><meta name="author" content="西塘">
+<meta name="description" content="OpenClaw 安装、配置以及与飞书消息渠道连接的详细教程"><meta name="keywords" content='OpenClaw, 飞书, 教程, 部署'>
+  <meta itemprop="name" content="OpenClaw 与飞书的搭建始末">
+  <meta itemprop="description" content="OpenClaw 安装、配置以及与飞书消息渠道连接的详细教程">
+  <meta itemprop="datePublished" content="2026-03-06T20:53:00+08:00">
+  <meta itemprop="dateModified" content="2026-03-06T20:53:00+08:00">
+  <meta itemprop="wordCount" content="626">
+  <meta itemprop="keywords" content="OpenClaw,飞书,教程,部署"><meta property="og:url" content="https://sheetung.github.io/openclaw-feishu-setup/">
+  <meta property="og:site_name" content="sheetung">
+  <meta property="og:title" content="OpenClaw 与飞书的搭建始末">
+  <meta property="og:description" content="OpenClaw 安装、配置以及与飞书消息渠道连接的详细教程">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-03-06T20:53:00+08:00">
+    <meta property="article:modified_time" content="2026-03-06T20:53:00+08:00">
+    <meta property="article:tag" content="OpenClaw">
+    <meta property="article:tag" content="飞书">
+    <meta property="article:tag" content="教程">
+    <meta property="article:tag" content="AI">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="OpenClaw 与飞书的搭建始末">
+  <meta name="twitter:description" content="OpenClaw 安装、配置以及与飞书消息渠道连接的详细教程">
+<meta name="application-name" content="FixIt">
+<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="https://sheetung.github.io/openclaw-feishu-setup/" title="OpenClaw 与飞书的搭建始末 - sheetung" /><link rel="prev" type="text/html" href="https://sheetung.github.io/openclaw-skill-%E6%B5%8B%E8%AF%95/" title="openclaw 的 skill 测试" /><link rel="alternate" type="text/markdown" href="https://sheetung.github.io/openclaw-feishu-setup/index.md" title="OpenClaw 与飞书的搭建始末 - sheetung"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "OpenClaw 与飞书的搭建始末",
+    "inLanguage": "zh-CN",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https:\/\/sheetung.github.io\/openclaw-feishu-setup\/"
+    },"genre": "posts","keywords": "OpenClaw, 飞书, 教程, AI","wordcount":  626 ,
+    "url": "https:\/\/sheetung.github.io\/openclaw-feishu-setup\/","datePublished": "2026-03-06T20:53:00+08:00","dateModified": "2026-03-06T20:53:00+08:00","publisher": {
+      "@type": "Organization",
+      "name": ""},"author": {
+        "@type": "Person",
+        "name": "西塘"
+      },"description": "OpenClaw 安装、配置以及与飞书消息渠道连接的详细教程"
+  }
+  </script><script src="/js/head/color-scheme.min.js"></script></head>
+  <body data-header-desktop="sticky" data-header-mobile="auto"><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/" title="sheetung"><span class="header-title-text">sheetung</span></a><span class="header-subtitle"></span></div>
+    <nav>
+      <ul class="menu"><li class="menu-item">
+              <a class="menu-link" href="/posts/">文章</a></li><li class="menu-item">
+              <a class="menu-link" href="/categories/">分类</a></li><li class="menu-item">
+              <a class="menu-link" href="/tags/">标签</a></li><li class="menu-item">
+              <a class="menu-link" href="/friends/">友链</a></li><li class="menu-item">
+              <a class="menu-link" href="/tangfiles/">塘库</a></li><li class="menu-item">
+              <a class="menu-link" href="/about/">关于</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id="search-desktop">
+            <input type="text" placeholder="搜索文章标题或内容……" id="search-input-desktop">
+            <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+              <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+            </a>
+            <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+              <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+            </a>
+            <span class="search-button search-loading" id="search-loading-desktop">
+              <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+            </span>
+          </li><li class="menu-item theme-switch" title="切换主题">
+          <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+        </li></ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="sheetung"><span class="header-title-text">sheetung</span></a><span class="header-subtitle"></span></div>
+      <div class="menu-toggle" id="menu-toggle-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li class="search-wrapper">
+            <div class="search mobile" id="search-mobile">
+              <input type="text" placeholder="搜索文章标题或内容……" id="search-input-mobile">
+              <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+              </a>
+              <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+              </a>
+              <span class="search-button search-loading" id="search-loading-mobile">
+                <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+              </span>
+            </div>
+            <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+              取消
+            </a>
+          </li><li class="menu-item"><a class="menu-link" href="/posts/">文章</a></li><li class="menu-item"><a class="menu-link" href="/categories/">分类</a></li><li class="menu-item"><a class="menu-link" href="/tags/">标签</a></li><li class="menu-item"><a class="menu-link" href="/friends/">友链</a></li><li class="menu-item"><a class="menu-link" href="/tangfiles/">塘库</a></li><li class="menu-item"><a class="menu-link" href="/about/">关于</a></li><li class="menu-item menu-system">
+          <span class="menu-system-item theme-switch" title="切换主题"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></span></li>
+      </ul>
+    </nav>
+  </div>
+</header><div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+  </div>
+  <div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+  </div><main class="container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="合集"></aside>
+
+  <article class="page single">
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span>OpenClaw 与飞书的搭建始末</span>
+      </h1><p class="single-subtitle animate__animated animate__fadeIn">从安装到连接飞书消息平台的完整指南</p></div><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
+      西塘</span></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/%E6%95%99%E7%A8%8B/" class="post-category" title="分类 - 教程"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> 教程</a></span></div><div class="post-meta-line"><span title="发布于 2026-03-06 20:53:00"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2026-03-06">2026-03-06</time></span>&nbsp;<span title="626 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 700 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>预计阅读 3 分钟</span>&nbsp;<span id="busuanzi_container_page_pv" class="busuanzi_visitors comment-visitors" data-flag-title="OpenClaw 与飞书的搭建始末"><i class="fa-regular fa-eye fa-fw me-1" aria-hidden="true"></i><span id="busuanzi_value_page_pv">-</span>&nbsp;次阅读
+          </span>&nbsp;</div>
+    </div><div class="details toc" id="toc-static" data-kept="false">
+        <div class="details-summary toc-title">
+          <span>目录</span>
+          <span><i class="details-icon fa-solid fa-angle-right" aria-hidden="true"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#0-准备阶段">0. 准备阶段</a></li>
+    <li><a href="#1-安装-openclaw">1. 安装 OpenClaw</a></li>
+    <li><a href="#2-配置-openclaw">2. 配置 OpenClaw</a>
+      <ul>
+        <li><a href="#21-大模型配置">2.1 大模型配置</a></li>
+        <li><a href="#22-飞书消息渠道配置">2.2 飞书消息渠道配置</a>
+          <ul>
+            <li><a href="#1-打开飞书开放平台">1. 打开飞书开放平台</a></li>
+            <li><a href="#2-获取应用凭证">2. 获取应用凭证</a></li>
+            <li><a href="#3-配置应用权限">3. 配置应用权限</a></li>
+            <li><a href="#4-启用机器人能力">4. 启用机器人能力</a></li>
+            <li><a href="#5-配置事件订阅">5. 配置事件订阅</a></li>
+            <li><a href="#6-发布应用">6. 发布应用</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#23-后续但重要的配置">2.3 后续但重要的配置</a></li>
+  </ul>
+</nav></div>
+      </div><div class="content" id="content"><p>不知道赶没赶上这口热乎的，自己也是折腾了很久。从刚开始的 Clawbot，又到 Moltbot 然后是现在的 OpenClaw，应该是不会改名了吧！</p>
+<p>也算是更新了有几个月？在安装的成功率和使用体验上都有了不小的进步。虽然目前博主也还没探索出更好玩的技能，但是对于搭建上还是有着不少经验（折腾过好几次也是~~）</p>
+<p>所以本文会介绍 OpenClaw 的安装到与飞书的消息渠道的链接。</p>
+<h2 class="heading-element" id="0-准备阶段"><span>0. 准备阶段</span>
+  <a href="#0-%e5%87%86%e5%a4%87%e9%98%b6%e6%ae%b5" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><ol>
+<li>一台服务器/个人电脑，配置要求并不高</li>
+<li>系统方面因为在终端/命令行中完成，所以 Linux/Win/Macos 都是可以的</li>
+<li>半个小时的个人时间</li>
+</ol>
+<h2 class="heading-element" id="1-安装-openclaw"><span>1. 安装 OpenClaw</span>
+  <a href="#1-%e5%ae%89%e8%a3%85-openclaw" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>此处其实可以参照官方教程，官方教程也是有中文版的。</p>
+<p>如果你是 Linux/Macos 使用如下命令一键安装：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -fsSL https://openclaw.ai/install.sh <span class="p">|</span> bash</span></span></code></pre></td></tr></table>
+</div>
+</div><p>如果你是 win 操作系统，在 PowerShell/cmd 中：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">iwr -useb https://openclaw.ai/install.ps1 <span class="p">|</span> iex</span></span></code></pre></td></tr></table>
+</div>
+</div><p>当然还有 Docker 或者源码等安装方法，👉 <a href="https://docs.openclaw.ai/zh-CN/install"target="_blank" rel="external nofollow noopener noreferrer">OpenClaw官方中文网站</a></p>
+<p>如果出现安装失败，首要考虑网络问题。请在系统或者终端处打开代理，重新运行安装脚本。</p>
+<h2 class="heading-element" id="2-配置-openclaw"><span>2. 配置 OpenClaw</span>
+  <a href="#2-%e9%85%8d%e7%bd%ae-openclaw" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>默认情况下安装成功会自动进入配置处理，如果没有可以手动进入配置，建议新开一个终端，输入以下命令进入配置项：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">openclaw onboard --install-daemon</span></span></code></pre></td></tr></table>
+</div>
+</div><p>命令执行后会有类似如下显示，此处弹出免责声明，务必使用键盘控制选择 <strong>yes</strong>。</p>
+<p>第一次配置，建议选择 <strong>QuickStart</strong>，快速体验：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Onboarding mode
+</span></span><span class="line"><span class="cl">│  ● QuickStart <span class="o">(</span>Configure details later via openclaw configure.<span class="o">)</span>
+</span></span><span class="line"><span class="cl">│  ○ Manual</span></span></code></pre></td></tr></table>
+</div>
+</div><p>如果已经进行过相关配置，会提示你对于已存在的配置项做什么处理，因为我已经安装过，我这里选择 <strong>Use existing values</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">◆  Config handling
+</span></span><span class="line"><span class="cl">│  ● Use existing values
+</span></span><span class="line"><span class="cl">│  ○ Update values
+</span></span><span class="line"><span class="cl">│  ○ Reset</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 class="heading-element" id="21-大模型配置"><span>2.1 大模型配置</span>
+  <a href="#21-%e5%a4%a7%e6%a8%a1%e5%9e%8b%e9%85%8d%e7%bd%ae" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>接下来就会来到模型的配置页面，官方预制了一些模型供应商，如果是第一次体验又不想麻烦可以选择 <strong>GitHub/z.ai</strong>，当然如果你的服务器并不在国内或者你有代理的能力，可以选择 <strong>Gemini</strong> 等。</p>
+<p>国内也有很不错的模型供应商，这里以硅基流动的 GLM5 模型为例。</p>
+<p>可以白嫖部分额度的大模型供应商：</p>
+<ol>
+<li>硅基流动，注册即送 14 元代金券 👉 <a href="https://cloud.siliconflow.cn/i/ebbhNO28"target="_blank" rel="external nofollow noopener noreferrer">硅基流动</a></li>
+<li>白山智算，限时赠送 450 代金券 👉 <a href="https://ai.baishan.com/auth/login?referralCode=3ssWcDyFj4"target="_blank" rel="external nofollow noopener noreferrer">白山智算</a></li>
+</ol>
+<p>如果要使用自定义模型，控制光标到 <strong>Custom Provider</strong>，首先就会来到模型请求地址的配置。查看供应商的请求文档可知：</p>
+<ul>
+<li>硅基的请求 url 为：<code>https://api.siliconflow.cn/v1</code></li>
+<li>白山的请求 url 为：<code>https://api.edgefn.net/v1</code></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">◆  API Base URL
+</span></span><span class="line"><span class="cl">│  http://127.0.0.1:11434/v1█
+</span></span><span class="line"><span class="cl">└</span></span></code></pre></td></tr></table>
+</div>
+</div><p>填写完 url 需要配置 API Key，从各自的个人中心处增加 key，并选择 <strong>Paste API key now</strong> 配置：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">◇  API Base URL
+</span></span><span class="line"><span class="cl">│  https://api.edgefn.net/v1
+</span></span><span class="line"><span class="cl">│
+</span></span><span class="line"><span class="cl">◆  How <span class="k">do</span> you want to provide this API key?
+</span></span><span class="line"><span class="cl">│  ● Paste API key now <span class="o">(</span>Stores the key directly in OpenClaw config<span class="o">)</span>
+</span></span><span class="line"><span class="cl">│  ○ Use external secret provider
+</span></span><span class="line"><span class="cl">└</span></span></code></pre></td></tr></table>
+</div>
+</div><p>然后就是兼容接口的选择，这里建议选择兼容更好的 <code>OpenAI-compatible</code>。（大佬们轻喷，此处我不熟悉他们各有的区别于特色）</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">◆  Endpoint compatibility
+</span></span><span class="line"><span class="cl">│  ● OpenAI-compatible (Uses /chat/completions)
+</span></span><span class="line"><span class="cl">│  ○ Anthropic-compatible
+</span></span><span class="line"><span class="cl">│  ○ Unknown (detect automatically)
+</span></span><span class="line"><span class="cl">└</span></span></code></pre></td></tr></table>
+</div>
+</div><p>然后就是模型选择，目前市面上最好的肯定还是 <strong>Anthropic</strong> 团队的 <strong>claude opus 4.6</strong>，但是面对龙虾这个 token 饕餮，还是有些消费不起。所以可以退而求其次，重在体验，目前我认为最优解应该是智谱的 GLM5。</p>
+<ul>
+<li>硅基的 GLM5 模型名字为：<code>Pro/zai-org/GLM-5</code></li>
+<li>白山的 GLM5 模型名字为：<code>GLM-5</code></li>
+</ul>
+<p>配置完成后会弹出一个命名框，这里建议在后面加上模型的名字，方便后续使用命令 <code>/model</code> 进行模型切换。填写完成后，<strong>Model alias</strong> 默认即可：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">◆  Endpoint ID
+</span></span><span class="line"><span class="cl">│  custom-api-edgefn-net-glm5█
+</span></span><span class="line"><span class="cl">└</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 class="heading-element" id="22-飞书消息渠道配置"><span>2.2 飞书消息渠道配置</span>
+  <a href="#22-%e9%a3%9e%e4%b9%a6%e6%b6%88%e6%81%af%e6%b8%a0%e9%81%93%e9%85%8d%e7%bd%ae" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">◆  Select channel <span class="o">(</span>QuickStart<span class="o">)</span>
+</span></span><span class="line"><span class="cl">│  ○ Telegram <span class="o">(</span>Bot API<span class="o">)</span>
+</span></span><span class="line"><span class="cl">│  ○ WhatsApp <span class="o">(</span>QR link<span class="o">)</span> <span class="o">(</span>not linked<span class="o">)</span>
+</span></span><span class="line"><span class="cl">│  ○ Discord <span class="o">(</span>Bot API<span class="o">)</span>
+</span></span><span class="line"><span class="cl">│  ○ IRC <span class="o">(</span>Server + Nick<span class="o">)</span>
+</span></span><span class="line"><span class="cl">│  ○ Google Chat <span class="o">(</span>Chat API<span class="o">)</span>
+</span></span><span class="line"><span class="cl">│  ○ Slack <span class="o">(</span>Socket Mode<span class="o">)</span>
+</span></span><span class="line"><span class="cl">│  ○ Signal <span class="o">(</span>signal-cli<span class="o">)</span>
+</span></span><span class="line"><span class="cl">│  ○ iMessage <span class="o">(</span>imsg<span class="o">)</span>
+</span></span><span class="line"><span class="cl">│  ● Feishu/Lark <span class="o">(</span>飞书<span class="o">)</span>
+</span></span><span class="line"><span class="cl">│  ○ Nostr <span class="o">(</span>NIP-04 DMs<span class="o">)</span>
+</span></span><span class="line"><span class="cl">│  ○ Microsoft Teams <span class="o">(</span>Bot Framework<span class="o">)</span>
+</span></span><span class="line"><span class="cl">│  ○ Mattermost <span class="o">(</span>plugin<span class="o">)</span>
+</span></span><span class="line"><span class="cl">│  ○ Nextcloud Talk <span class="o">(</span>self-hosted<span class="o">)</span>
+</span></span><span class="line"><span class="cl">│  ○ Matrix <span class="o">(</span>plugin<span class="o">)</span>
+</span></span><span class="line"><span class="cl">│  ○ BlueBubbles <span class="o">(</span>macOS app<span class="o">)</span>
+</span></span><span class="line"><span class="cl">│  ○ LINE <span class="o">(</span>Messaging API<span class="o">)</span>
+</span></span><span class="line"><span class="cl">│  ○ Zalo <span class="o">(</span>Bot API<span class="o">)</span>
+</span></span><span class="line"><span class="cl">│  ○ Zalo <span class="o">(</span>Personal Account<span class="o">)</span>
+</span></span><span class="line"><span class="cl">│  ○ Synology Chat <span class="o">(</span>Webhook<span class="o">)</span>
+</span></span><span class="line"><span class="cl">│  ○ Tlon <span class="o">(</span>Urbit<span class="o">)</span>
+</span></span><span class="line"><span class="cl">│  ○ Skip <span class="k">for</span> now</span></span></code></pre></td></tr></table>
+</div>
+</div><p>因为本文以飞书为例，所以就使用飞书作为消息渠道。这里先不急选择飞书，我们在网页端完成飞书平台的配置。</p>
+<p>以下内容来自<a href="https://docs.openclaw.ai/zh-CN/channels/feishu"target="_blank" rel="external nofollow noopener noreferrer">飞书 - OpenClaw</a></p>
+<h4 class="heading-element" id="1-打开飞书开放平台"><span>1. 打开飞书开放平台</span>
+  <a href="#1-%e6%89%93%e5%bc%80%e9%a3%9e%e4%b9%a6%e5%bc%80%e6%94%be%e5%b9%b3%e5%8f%b0" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p>访问 <a href="https://open.feishu.cn/app"target="_blank" rel="external nofollow noopener noreferrer">飞书开放平台</a>，使用飞书账号登录。选择创建企业自建应用，填写应用名称和描述，选择应用图标。</p>
+<h4 class="heading-element" id="2-获取应用凭证"><span>2. 获取应用凭证</span>
+  <a href="#2-%e8%8e%b7%e5%8f%96%e5%ba%94%e7%94%a8%e5%87%ad%e8%af%81" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p>在应用的 <strong>凭证与基础信息</strong> 页面，复制：</p>
+<ul>
+<li><strong>App ID</strong>（格式如 <code>cli_xxx</code>）</li>
+<li><strong>App Secret</strong></li>
+</ul>
+<blockquote>
+<p>请妥善保管 App Secret，不要分享给他人。</p></blockquote>
+<h4 class="heading-element" id="3-配置应用权限"><span>3. 配置应用权限</span>
+  <a href="#3-%e9%85%8d%e7%bd%ae%e5%ba%94%e7%94%a8%e6%9d%83%e9%99%90" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p>在 <strong>权限管理</strong> 页面，点击 <strong>批量导入</strong> 按钮，粘贴以下 JSON 配置一键导入所需权限：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;scopes&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;tenant&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;aily:file:read&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;aily:file:write&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;application:application.app_message_stats.overview:readonly&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;application:application.self_manage&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;application:bot.menu:write&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;cardkit:card:write&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;contact:user.employee_id:readonly&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;corehr:file:download&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;docs:document.content:read&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;event:ip_list&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;im:chat&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;im:chat.access_event.bot_p2p_chat:read&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;im:chat.members:bot_access&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;im:message&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;im:message.group_at_msg:readonly&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;im:message.group_msg&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;im:message.p2p_msg:readonly&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;im:message:readonly&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;im:message:send_as_bot&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;im:resource&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;sheets:spreadsheet&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;wiki:wiki:readonly&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;user&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;aily:file:read&#34;</span><span class="p">,</span> <span class="s2">&#34;aily:file:write&#34;</span><span class="p">,</span> <span class="s2">&#34;im:chat.access_event.bot_p2p_chat:read&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 class="heading-element" id="4-启用机器人能力"><span>4. 启用机器人能力</span>
+  <a href="#4-%e5%90%af%e7%94%a8%e6%9c%ba%e5%99%a8%e4%ba%ba%e8%83%bd%e5%8a%9b" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p>在 <strong>应用能力</strong> &gt; <strong>机器人</strong> 页面：</p>
+<ol>
+<li>开启机器人能力</li>
+<li>配置机器人名称</li>
+</ol>
+<p>此时来到 OpenClaw 配置处，选择飞书渠道，然后系统会自动安装飞书插件，待安装完成后提示输入，顺序不要搞反！</p>
+<ul>
+<li><strong>App Secret</strong></li>
+<li><strong>App ID</strong></li>
+</ul>
+<p>配置完成后会来到技能页面的选择，此时我们回到飞书配置处。</p>
+<h4 class="heading-element" id="5-配置事件订阅"><span>5. 配置事件订阅</span>
+  <a href="#5-%e9%85%8d%e7%bd%ae%e4%ba%8b%e4%bb%b6%e8%ae%a2%e9%98%85" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><div class="alert alert-important"><p class="alert-title"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path d="M0 1.75C0 .784.784.0 1.75.0h12.5C15.216.0 16 .784 16 1.75v9.5A1.75 1.75.0 0114.25 13H8.06l-2.573 2.573A1.458 1.458.0 013 14.543V13H1.75A1.75 1.75.0 010 11.25zm1.75-.25a.25.25.0 00-.25.25v9.5c0 .138.112.25.25.25h2a.75.75.0 01.75.75v2.19l2.72-2.72a.749.749.0 01.53-.22h6.5a.25.25.0 00.25-.25v-9.5a.25.25.0 00-.25-.25zm7 2.25v2.5a.75.75.0 01-1.5.0v-2.5a.75.75.0 011.5.0zM9 9A1 1 0 117 9a1 1 0 012 0z"/></svg>重要</p><p>⚠️ <strong>重要提醒</strong>：在配置事件订阅前，请务必确保已完成以上步骤。</p></div><p>在 <strong>事件订阅</strong> 页面：</p>
+<ol>
+<li>选择 <strong>使用长连接接收事件</strong>（WebSocket 模式）</li>
+<li>③处添加事件：<code>im.message.receive_v1</code>（接收消息）</li>
+</ol>
+<h4 class="heading-element" id="6-发布应用"><span>6. 发布应用</span>
+  <a href="#6-%e5%8f%91%e5%b8%83%e5%ba%94%e7%94%a8" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><ol>
+<li>在 <strong>版本管理与发布</strong> 页面创建版本</li>
+<li>提交审核并发布</li>
+<li>等待管理员审批（企业自建应用通常自动通过）</li>
+</ol>
+<h2 class="heading-element" id="23-后续但重要的配置"><span>2.3 后续但重要的配置</span>
+  <a href="#23-%e5%90%8e%e7%bb%ad%e4%bd%86%e9%87%8d%e8%a6%81%e7%9a%84%e9%85%8d%e7%bd%ae" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>此处 skill 技能等配置可以选择 skip 进行跳过，后面并一直选择默认即可。</p>
+<p>如果您使用的是自选大模型供应商，那么就需要来到 <strong>openclaw.json</strong> 配置大模型的上下文窗口和输出长度。</p>
+<p>对于 Linux 和 win 用户，openclaw 配置文件存在于用户目录下，即：</p>
+<ul>
+<li>Linux &ndash;&raquo; <code>/home/&lt;username&gt;/.openclaw/openclaw.json</code></li>
+<li>Win &ndash;&raquo; <code>C:\Users\&lt;username&gt;\.openclaw\openclaw.json</code></li>
+</ul>
+<p>找到我们的模型相关的配置，对于参数大模型供应商都有标注，像白山的 GLM5 上下文就是 200K，<strong>contextWindow</strong> 就修改为：<code>200000</code>，一般 <strong>maxTokens</strong> 此处可以默认，如果后续遇到龙爪输出卡住的情况，可以稍微增加。</p>
+<p>修改完成后保存：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;models&#34;</span><span class="err">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;mode&#34;</span><span class="p">:</span> <span class="s2">&#34;merge&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;providers&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;custom-api-edgefn-net-m2-5&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;baseUrl&#34;</span><span class="p">:</span> <span class="s2">&#34;https://api.edgefn.net/v1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;apiKey&#34;</span><span class="p">:</span> <span class="s2">&#34;sk-&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;api&#34;</span><span class="p">:</span> <span class="s2">&#34;openai-completions&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;models&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="nt">&#34;id&#34;</span><span class="p">:</span> <span class="s2">&#34;GLM5&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">          <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;GLM5 (Custom Provider)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">          <span class="nt">&#34;reasoning&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">          <span class="nt">&#34;input&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;text&#34;</span>
+</span></span><span class="line"><span class="cl">          <span class="p">],</span>
+</span></span><span class="line"><span class="cl">          <span class="nt">&#34;cost&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;input&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;output&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;cacheRead&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;cacheWrite&#34;</span><span class="p">:</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">          <span class="p">},</span>
+</span></span><span class="line"><span class="cl">          <span class="nt">&#34;contextWindow&#34;</span><span class="p">:</span> <span class="mi">16000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">          <span class="nt">&#34;maxTokens&#34;</span><span class="p">:</span> <span class="mi">4096</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>因为当我们在 2.2 处配置结束后，OpenClaw 就会默认启动，我们这里修改了大模型的配置信息，需要重启一次 OpenClaw：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">openclaw gateway restart</span></span></code></pre></td></tr></table>
+</div>
+</div><p>更多内容参考官方 install 部分。</p>
+<p>到这里，你应该可以从飞书唤醒 OpenClaw 了，恭喜你，尽情的使用吧。</p>
+<blockquote>
+<p>我要把 OpenClaw 夸成翘嘴</p></blockquote></div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod">
+        <span title="更新于 2026-03-06 20:53:00">更新于 2026-03-06&nbsp;</span>
+      </div><div class="post-info-license">
+            <span><a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a></span>
+          </div></div><div class="post-info-line">
+        <div class="post-info-md"></div>
+        <div class="post-info-share">
+          <span><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://sheetung.github.io/openclaw-feishu-setup/" data-hashtag="OpenClaw"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://sheetung.github.io/openclaw-feishu-setup/" data-title="OpenClaw 与飞书的搭建始末"><i class="fa-brands fa-weibo fa-fw" aria-hidden="true"></i></a>
+  </span>
+        </div>
+      </div></div>
+
+  <div class="post-info-more">
+    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href="/tags/openclaw/" class="post-tag" title="标签 - OpenClaw">OpenClaw</a><a href="/tags/%E9%A3%9E%E4%B9%A6/" class="post-tag" title="标签 - 飞书">飞书</a><a href="/tags/%E6%95%99%E7%A8%8B/" class="post-tag" title="标签 - 教程">教程</a><a href="/tags/ai/" class="post-tag" title="标签 - AI">AI</a></section>
+    <section>
+      <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+    </section>
+  </div><div class="post-nav"><a href="/openclaw-skill-%E6%B5%8B%E8%AF%95/" class="post-nav-item" rel="prev" title="openclaw 的 skill 测试"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>openclaw 的 skill 测试</a></div>
+</div>
+<div class="post-reward">
+    <div class="comment"></div>
+    <input type="checkbox" class="reward-input" name="reward" id="fi-reward" hidden />
+    <label class="reward-button" for="fi-reward"><i class="fa-solid fa-qrcode fa-fw" aria-hidden="true"></i>赞赏</label>
+    <div class="reward-ways" data-mode="static"><div><img src='/images/alipay.png' alt="西塘 支付宝"><span>支付宝</span>
+          </div><div><img src='/images/wechatpay.png' alt="西塘 微信"><span>微信</span>
+          </div></div>
+  </div><div id="comments"><div id="giscus" class="comment">
+          <script
+            src="https://giscus.app/client.js"
+            data-repo="sheetung/blog-comments"
+            data-repo-id="R_kgDOPKmTBg"
+            data-category="Announcements"
+            data-category-id="DIC_kwDOPKmTBs4CszTz"
+            data-mapping=""
+            data-strict="0"
+            
+            data-theme="preferred_color_scheme"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="bottom"
+            data-lang="zh-CN"
+            data-loading="lazy"
+            crossorigin="anonymous"
+            async
+            defer
+          ></script>
+        </div>
+        <noscript>
+          Please enable JavaScript to view the comments powered by <a href="https://giscus.app/" rel="external nofollow noopener noreferrer">giscus</a>.
+        </noscript></div></article>
+
+  <aside class="toc" id="toc-auto" aria-label="目录"><h2 class="toc-title">目录&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden="true"></i></h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line powered">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.148.1"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.3.20"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
+        </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
+            <span itemprop="copyrightYear">2025 - 2026</span><span class="author" itemprop="copyrightHolder">
+              <a href="/">西塘</a></span><span class="license footer-divider"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div><div class="footer-line statistics"><span class="site-time" title='网站运行中……'><i class="fa-solid fa-heartbeat fa-fw animate-icon" aria-hidden="true"></i><span class="run-times ms-1">网站运行中……</span></span></div><div class="footer-line visitor order-last">
+          <span id="busuanzi_container_site_uv" title='总访客数'><i class="fa-regular fa-user fa-fw me-1" aria-hidden="true"></i><span id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span></span><span id="busuanzi_container_site_pv" class="footer-divider" title='总访问量'><i class="fa-regular fa-eye fa-fw me-1" aria-hidden="true"></i><span id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span></span>
+        </div></div>
+  </footer></div><div class="widgets"><div class="fixed-buttons animate__faster d-none"><div class="fixed-button back-to-top" role="button" aria-label="回到顶部"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i><span class="variant-numeric">0%</span>
+        </div><div class="fixed-button view-comments d-none" role="button" aria-label="查看评论"><i class="fa-solid fa-comment fa-fw" aria-hidden="true"></i></div></div><div id="mask"></div><div class="reading-progress-bar" style="left: 0;top: 0;"></div><noscript>
+    <div class="noscript-warning">该网站在启用 JavaScript 的情况下效果最佳。</div>
+  </noscript>
+</div><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><link rel="stylesheet" href="/lib/pace/themes/green/pace-theme-minimal.css"><script src="/lib/autocomplete/autocomplete.min.js" defer></script><script src="/lib/fuse/fuse.min.js" defer></script><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script src="https://vercount.one/js" async defer></script><script src="/lib/pace/pace.min.js" async defer></script><script>window.config={"code":{"copyTitle":"复制到剪贴板","editLockTitle":"锁定可编辑代码块","editUnLockTitle":"解锁可编辑代码块","editable":true,"maxShownLines":10},"comment":{"enable":true,"expired":false,"giscus":{"darkTheme":"dark","lightTheme":"light","origin":"https://giscus.app"}},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验。"},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/search.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":30,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"siteTime":"2025-07-12T19:56:00+08:00","version":"v0.3.20"};</script><script src="/js/theme.min.js" defer></script></body>
+</html>

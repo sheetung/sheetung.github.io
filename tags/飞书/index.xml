@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>OpenClaw - 标签 - sheetung</title>
-    <link>https://sheetung.github.io/tags/openclaw/</link>
+    <title>飞书 - 标签 - sheetung</title>
+    <link>https://sheetung.github.io/tags/%E9%A3%9E%E4%B9%A6/</link>
     <description>西塘的博客副站，主站点[moontung](https://moontung.top)</description>
     <generator>Hugo 0.148.1 &amp; FixIt v0.3.20</generator>
     <language>zh-CN</language>
     <lastBuildDate>Fri, 06 Mar 2026 20:53:00 +0800</lastBuildDate>
-    <atom:link href="https://sheetung.github.io/tags/openclaw/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://sheetung.github.io/tags/%E9%A3%9E%E4%B9%A6/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>OpenClaw 与飞书的搭建始末</title>
       <link>https://sheetung.github.io/openclaw-feishu-setup/</link>
@@ -15,22 +15,6 @@
       <guid>https://sheetung.github.io/openclaw-feishu-setup/</guid>
       <category domain="https://sheetung.github.io/categories/%E6%95%99%E7%A8%8B/">教程</category>
       <description>&lt;p&gt;不知道赶没赶上这口热乎的，自己也是折腾了很久。从刚开始的 Clawbot，又到 Moltbot 然后是现在的 OpenClaw，应该是不会改名了吧！&lt;/p&gt;&#xA;&lt;p&gt;也算是更新了有几个月？在安装的成功率和使用体验上都有了不小的进步。虽然目前博主也还没探索出更好玩的技能，但是对于搭建上还是有着不少经验（折腾过好几次也是~~）&lt;/p&gt;&#xA;&lt;p&gt;所以本文会介绍 OpenClaw 的安装到与飞书的消息渠道的链接。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>openclaw 的 skill 测试</title>
-      <link>https://sheetung.github.io/openclaw-skill-%E6%B5%8B%E8%AF%95/</link>
-      <pubDate>Fri, 06 Mar 2026 17:12:00 +0800</pubDate>
-      <guid>https://sheetung.github.io/openclaw-skill-%E6%B5%8B%E8%AF%95/</guid>
-      <category domain="https://sheetung.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔</category>
-      <description>&lt;p&gt;skill，自动更新博客测试成功&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>测试 OpenClaw 自动更新博客</title>
-      <link>https://sheetung.github.io/test-openclaw-auto-update/</link>
-      <pubDate>Fri, 06 Mar 2026 16:30:00 +0800</pubDate>
-      <guid>https://sheetung.github.io/test-openclaw-auto-update/</guid>
-      <category domain="https://sheetung.github.io/categories/%E6%B5%8B%E8%AF%95/">测试</category>
-      <description>&lt;p&gt;这是一篇测试文章，用于验证 &lt;strong&gt;OpenClaw&lt;/strong&gt; 自动更新博客的功能。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
