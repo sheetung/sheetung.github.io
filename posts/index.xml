@@ -6,8 +6,16 @@
     <description>西塘的博客副站，主站点[moontung](https://moontung.top)</description>
     <generator>Hugo 0.148.1 &amp; FixIt v0.3.20</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 06 Mar 2026 16:30:00 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 06 Mar 2026 17:12:00 +0800</lastBuildDate>
     <atom:link href="https://sheetung.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>openclaw 的 skill 测试</title>
+      <link>https://sheetung.github.io/openclaw-skill-%E6%B5%8B%E8%AF%95/</link>
+      <pubDate>Fri, 06 Mar 2026 17:12:00 +0800</pubDate>
+      <guid>https://sheetung.github.io/openclaw-skill-%E6%B5%8B%E8%AF%95/</guid>
+      <category domain="https://sheetung.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔</category>
+      <description>&lt;p&gt;skill，自动更新博客测试成功&lt;/p&gt;</description>
+    </item>
     <item>
       <title>测试 OpenClaw 自动更新博客</title>
       <link>https://sheetung.github.io/test-openclaw-auto-update/</link>
