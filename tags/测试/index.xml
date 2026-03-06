@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>测试 - 标签 - sheetung</title>
+    <link>https://sheetung.github.io/tags/%E6%B5%8B%E8%AF%95/</link>
+    <description>西塘的博客副站，主站点[moontung](https://moontung.top)</description>
+    <generator>Hugo 0.148.1 &amp; FixIt v0.3.20</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 06 Mar 2026 16:30:00 +0800</lastBuildDate>
+    <atom:link href="https://sheetung.github.io/tags/%E6%B5%8B%E8%AF%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>测试 OpenClaw 自动更新博客</title>
+      <link>https://sheetung.github.io/test-openclaw-auto-update/</link>
+      <pubDate>Fri, 06 Mar 2026 16:30:00 +0800</pubDate>
+      <guid>https://sheetung.github.io/test-openclaw-auto-update/</guid>
+      <category domain="https://sheetung.github.io/categories/%E6%B5%8B%E8%AF%95/">测试</category>
+      <description>&lt;p&gt;这是一篇测试文章，用于验证 &lt;strong&gt;OpenClaw&lt;/strong&gt; 自动更新博客的功能。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
