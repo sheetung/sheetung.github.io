@@ -11,7 +11,7 @@
   <meta itemprop="description" content="OpenClaw 安装、配置以及与飞书消息渠道连接的详细教程">
   <meta itemprop="datePublished" content="2026-03-06T20:53:00+08:00">
   <meta itemprop="dateModified" content="2026-03-06T20:53:00+08:00">
-  <meta itemprop="wordCount" content="626">
+  <meta itemprop="wordCount" content="655">
   <meta itemprop="keywords" content="OpenClaw,飞书,教程,部署"><meta property="og:url" content="https://sheetung.github.io/openclaw-feishu-setup/">
   <meta property="og:site_name" content="sheetung">
   <meta property="og:title" content="OpenClaw 与飞书的搭建始末">
@@ -43,7 +43,7 @@
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https:\/\/sheetung.github.io\/openclaw-feishu-setup\/"
-    },"genre": "posts","keywords": "OpenClaw, 飞书, 教程, AI","wordcount":  626 ,
+    },"genre": "posts","keywords": "OpenClaw, 飞书, 教程, AI","wordcount":  655 ,
     "url": "https:\/\/sheetung.github.io\/openclaw-feishu-setup\/","datePublished": "2026-03-06T20:53:00+08:00","dateModified": "2026-03-06T20:53:00+08:00","publisher": {
       "@type": "Organization",
       "name": ""},"author": {
@@ -121,7 +121,7 @@
     <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span>OpenClaw 与飞书的搭建始末</span>
       </h1><p class="single-subtitle animate__animated animate__fadeIn">从安装到连接飞书消息平台的完整指南</p></div><div class="post-meta">
       <div class="post-meta-line"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
-      西塘</span></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/%E6%95%99%E7%A8%8B/" class="post-category" title="分类 - 教程"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> 教程</a></span></div><div class="post-meta-line"><span title="发布于 2026-03-06 20:53:00"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2026-03-06">2026-03-06</time></span>&nbsp;<span title="626 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 700 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>预计阅读 3 分钟</span>&nbsp;<span id="busuanzi_container_page_pv" class="busuanzi_visitors comment-visitors" data-flag-title="OpenClaw 与飞书的搭建始末"><i class="fa-regular fa-eye fa-fw me-1" aria-hidden="true"></i><span id="busuanzi_value_page_pv">-</span>&nbsp;次阅读
+      西塘</span></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/%E6%95%99%E7%A8%8B/" class="post-category" title="分类 - 教程"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> 教程</a></span></div><div class="post-meta-line"><span title="发布于 2026-03-06 20:53:00"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2026-03-06">2026-03-06</time></span>&nbsp;<span title="655 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 700 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>预计阅读 4 分钟</span>&nbsp;<span id="busuanzi_container_page_pv" class="busuanzi_visitors comment-visitors" data-flag-title="OpenClaw 与飞书的搭建始末"><i class="fa-regular fa-eye fa-fw me-1" aria-hidden="true"></i><span id="busuanzi_value_page_pv">-</span>&nbsp;次阅读
           </span>&nbsp;</div>
     </div><div class="details toc" id="toc-static" data-kept="false">
         <div class="details-summary toc-title">
@@ -147,7 +147,12 @@
         </li>
       </ul>
     </li>
-    <li><a href="#23-后续但重要的配置">2.3 后续但重要的配置</a></li>
+    <li><a href="#23-后续但重要的配置">2.3 后续但重要的配置</a>
+      <ul>
+        <li><a href="#231-大模型上下文大小配置">2.3.1 大模型上下文大小配置</a></li>
+        <li><a href="#232-openclaw-系统指令操作权限">2.3.2 OpenClaw 系统指令操作权限</a></li>
+      </ul>
+    </li>
   </ul>
 </nav></div>
       </div><div class="content" id="content"><p>不知道赶没赶上这口热乎的，自己也是折腾了很久。从刚开始的 Clawbot，又到 Moltbot 然后是现在的 OpenClaw，应该是不会改名了吧！</p>
@@ -487,7 +492,11 @@
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
 </h2><p>此处 skill 技能等配置可以选择 skip 进行跳过，后面并一直选择默认即可。</p>
-<p>如果您使用的是自选大模型供应商，那么就需要来到 <strong>openclaw.json</strong> 配置大模型的上下文窗口和输出长度。</p>
+<h3 class="heading-element" id="231-大模型上下文大小配置"><span>2.3.1 大模型上下文大小配置</span>
+  <a href="#231-%e5%a4%a7%e6%a8%a1%e5%9e%8b%e4%b8%8a%e4%b8%8b%e6%96%87%e5%a4%a7%e5%b0%8f%e9%85%8d%e7%bd%ae" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>如果您使用的是自选大模型供应商，那么就需要来到 <strong>openclaw.json</strong> 配置大模型的上下文窗口和输出长度。</p>
 <p>对于 Linux 和 win 用户，openclaw 配置文件存在于用户目录下，即：</p>
 <ul>
 <li>Linux &ndash;&raquo; <code>/home/&lt;username&gt;/.openclaw/openclaw.json</code></li>
@@ -561,9 +570,30 @@
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">openclaw gateway restart</span></span></code></pre></td></tr></table>
 </div>
 </div><p>更多内容参考官方 install 部分。</p>
+<h3 class="heading-element" id="232-openclaw-系统指令操作权限"><span>2.3.2 OpenClaw 系统指令操作权限</span>
+  <a href="#232-openclaw-%e7%b3%bb%e7%bb%9f%e6%8c%87%e4%bb%a4%e6%93%8d%e4%bd%9c%e6%9d%83%e9%99%90" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>如果你刚使用它，让它查看系统内存占用等，他会发你相应的命令或者回你&quot;我无法直接操作系统指令&quot;。这是因为 OpenClaw（应该是默认）将操作终端的权限关掉了。</p>
+<p>写入如下配置，并重启 OpenClaw：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 请注意自己的配置文件位置</span>
+</span></span><span class="line"><span class="cl">sed -i <span class="s1">&#39;s/&#34;profile&#34;: &#34;messaging&#34;/&#34;profile&#34;: &#34;full&#34;/&#39;</span> ~/.openclaw/openclaw.json
+</span></span><span class="line"><span class="cl"><span class="c1"># 重启 OpenClaw</span>
+</span></span><span class="line"><span class="cl">openclaw gateway restart</span></span></code></pre></td></tr></table>
+</div>
+</div><p>重启后，OpenClaw 就拥有执行系统指令的权限了。</p>
 <p>到这里，你应该可以从飞书唤醒 OpenClaw 了，恭喜你，尽情的使用吧。</p>
 <blockquote>
-<p>我要把 OpenClaw 夸成翘嘴</p></blockquote></div><div class="post-footer" id="post-footer">
+<p>我要把 OpenClaw 夸成翘嘴</p></blockquote>
+<p><img loading="lazy" src='/assets/openclaw-feishu-6.png' alt="/assets/openclaw-feishu-6.png"></p></div><div class="post-footer" id="post-footer">
   <div class="post-info">
     <div class="post-info-line">
       <div class="post-info-mod">

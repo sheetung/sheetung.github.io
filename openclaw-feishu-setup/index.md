@@ -244,6 +244,8 @@ Onboarding mode
 
 此处 skill 技能等配置可以选择 skip 进行跳过，后面并一直选择默认即可。
 
+### 2.3.1 大模型上下文大小配置
+
 如果您使用的是自选大模型供应商，那么就需要来到 **openclaw.json** 配置大模型的上下文窗口和输出长度。
 
 对于 Linux 和 win 用户，openclaw 配置文件存在于用户目录下，即：
@@ -292,9 +294,26 @@ openclaw gateway restart
 
 更多内容参考官方 install 部分。
 
+### 2.3.2 OpenClaw 系统指令操作权限
+
+如果你刚使用它，让它查看系统内存占用等，他会发你相应的命令或者回你"我无法直接操作系统指令"。这是因为 OpenClaw（应该是默认）将操作终端的权限关掉了。
+
+写入如下配置，并重启 OpenClaw：
+
+```bash
+# 请注意自己的配置文件位置
+sed -i 's/"profile": "messaging"/"profile": "full"/' ~/.openclaw/openclaw.json
+# 重启 OpenClaw
+openclaw gateway restart
+```
+
+重启后，OpenClaw 就拥有执行系统指令的权限了。
+
 到这里，你应该可以从飞书唤醒 OpenClaw 了，恭喜你，尽情的使用吧。
 
 > 我要把 OpenClaw 夸成翘嘴
+
+![](/assets/openclaw-feishu-6.png)
 
 
 ---
