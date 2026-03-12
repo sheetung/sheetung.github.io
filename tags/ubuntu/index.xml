@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>OpenClaw - 标签 - sheetung</title>
-    <link>https://sheetung.github.io/tags/openclaw/</link>
+    <title>Ubuntu - 标签 - sheetung</title>
+    <link>https://sheetung.github.io/tags/ubuntu/</link>
     <description>西塘的博客副站，主站点[moontung](https://moontung.top)</description>
     <generator>Hugo 0.148.1 &amp; FixIt v0.3.20</generator>
     <language>zh-CN</language>
     <lastBuildDate>Thu, 12 Mar 2026 15:46:00 +0800</lastBuildDate>
-    <atom:link href="https://sheetung.github.io/tags/openclaw/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://sheetung.github.io/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ubuntu系统使用openclaw发送截图黑屏解决办法</title>
       <link>https://sheetung.github.io/Ubuntu%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8openclaw%E5%8F%91%E9%80%81%E6%88%AA%E5%9B%BE%E9%BB%91%E5%B1%8F%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</link>
@@ -15,30 +15,6 @@
       <guid>https://sheetung.github.io/Ubuntu%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8openclaw%E5%8F%91%E9%80%81%E6%88%AA%E5%9B%BE%E9%BB%91%E5%B1%8F%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</guid>
       <category domain="https://sheetung.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔</category>
       <description>&lt;h2 class=&#34;heading-element&#34; id=&#34;问题原因&#34;&gt;&lt;span&gt;问题原因&lt;/span&gt;&#xA;  &lt;a href=&#34;#%e9%97%ae%e9%a2%98%e5%8e%9f%e5%9b%a0&#34; class=&#34;heading-mark&#34;&gt;&#xA;    &lt;svg class=&#34;octicon octicon-link&#34; viewBox=&#34;0 0 16 16&#34; version=&#34;1.1&#34; width=&#34;16&#34; height=&#34;16&#34; aria-hidden=&#34;true&#34;&gt;&lt;path d=&#34;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&#34;&gt;&lt;/path&gt;&lt;/svg&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&lt;p&gt;在 Wayland 显示协议下，使用 &lt;code&gt;scrot&lt;/code&gt; 等 X11 截图工具会导致黑屏。原因是 Wayland 对屏幕捕捉有更严格的安全限制。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>OpenClaw 与飞书的搭建始末</title>
-      <link>https://sheetung.github.io/openclaw-feishu-setup/</link>
-      <pubDate>Fri, 06 Mar 2026 20:53:00 +0800</pubDate>
-      <guid>https://sheetung.github.io/openclaw-feishu-setup/</guid>
-      <category domain="https://sheetung.github.io/categories/%E6%95%99%E7%A8%8B/">教程</category>
-      <description>&lt;p&gt;不知道赶没赶上这口热乎的，自己也是折腾了很久。从刚开始的 Clawbot，又到 Moltbot 然后是现在的 OpenClaw，应该是不会改名了吧！&lt;/p&gt;&#xA;&lt;p&gt;也算是更新了有几个月？在安装的成功率和使用体验上都有了不小的进步。虽然目前博主也还没探索出更好玩的技能，但是对于搭建上还是有着不少经验（折腾过好几次也是~~）&lt;/p&gt;&#xA;&lt;p&gt;所以本文会介绍 OpenClaw 的安装到与飞书的消息渠道的链接。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>openclaw 的 skill 测试</title>
-      <link>https://sheetung.github.io/openclaw-skill-%E6%B5%8B%E8%AF%95/</link>
-      <pubDate>Fri, 06 Mar 2026 17:12:00 +0800</pubDate>
-      <guid>https://sheetung.github.io/openclaw-skill-%E6%B5%8B%E8%AF%95/</guid>
-      <category domain="https://sheetung.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔</category>
-      <description>&lt;p&gt;skill，自动更新博客测试成功&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>测试 OpenClaw 自动更新博客</title>
-      <link>https://sheetung.github.io/test-openclaw-auto-update/</link>
-      <pubDate>Fri, 06 Mar 2026 16:30:00 +0800</pubDate>
-      <guid>https://sheetung.github.io/test-openclaw-auto-update/</guid>
-      <category domain="https://sheetung.github.io/categories/%E6%B5%8B%E8%AF%95/">测试</category>
-      <description>&lt;p&gt;这是一篇测试文章，用于验证 &lt;strong&gt;OpenClaw&lt;/strong&gt; 自动更新博客的功能。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
