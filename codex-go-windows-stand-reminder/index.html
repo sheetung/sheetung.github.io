@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>Codex 帮我写了个 Go 版 Windows 久坐提醒工具：Stand Reminder - sheetung</title><meta name="author" content="西塘">
+<meta name="description" content="介绍我使用 Codex 协助开发的 Go 语言 Windows 久坐提醒工具 Stand Reminder，包括功能设计、界面展示、关键迭代与项目发布过程。"><meta name="keywords" content='Codex, Go, Windows, 久坐提醒, Hugo'>
+  <meta itemprop="name" content="Codex 帮我写了个 Go 版 Windows 久坐提醒工具：Stand Reminder">
+  <meta itemprop="description" content="介绍我使用 Codex 协助开发的 Go 语言 Windows 久坐提醒工具 Stand Reminder，包括功能设计、界面展示、关键迭代与项目发布过程。">
+  <meta itemprop="datePublished" content="2026-04-09T12:05:00+08:00">
+  <meta itemprop="dateModified" content="2026-04-09T12:05:00+08:00">
+  <meta itemprop="wordCount" content="270">
+  <meta itemprop="keywords" content="Codex,Go,Windows,久坐提醒,Hugo"><meta property="og:url" content="https://sheetung.github.io/codex-go-windows-stand-reminder/">
+  <meta property="og:site_name" content="sheetung">
+  <meta property="og:title" content="Codex 帮我写了个 Go 版 Windows 久坐提醒工具：Stand Reminder">
+  <meta property="og:description" content="介绍我使用 Codex 协助开发的 Go 语言 Windows 久坐提醒工具 Stand Reminder，包括功能设计、界面展示、关键迭代与项目发布过程。">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-04-09T12:05:00+08:00">
+    <meta property="article:modified_time" content="2026-04-09T12:05:00+08:00">
+    <meta property="article:tag" content="Go">
+    <meta property="article:tag" content="Codex">
+    <meta property="article:tag" content="Windows">
+    <meta property="article:tag" content="独立开发">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Codex 帮我写了个 Go 版 Windows 久坐提醒工具：Stand Reminder">
+  <meta name="twitter:description" content="介绍我使用 Codex 协助开发的 Go 语言 Windows 久坐提醒工具 Stand Reminder，包括功能设计、界面展示、关键迭代与项目发布过程。">
+<meta name="application-name" content="FixIt">
+<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="https://sheetung.github.io/codex-go-windows-stand-reminder/" title="Codex 帮我写了个 Go 版 Windows 久坐提醒工具：Stand Reminder - sheetung" /><link rel="prev" type="text/html" href="https://sheetung.github.io/Ubuntu%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8openclaw%E5%8F%91%E9%80%81%E6%88%AA%E5%9B%BE%E9%BB%91%E5%B1%8F%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/" title="Ubuntu系统使用openclaw发送截图黑屏解决办法" /><link rel="alternate" type="text/markdown" href="https://sheetung.github.io/codex-go-windows-stand-reminder/index.md" title="Codex 帮我写了个 Go 版 Windows 久坐提醒工具：Stand Reminder - sheetung"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Codex 帮我写了个 Go 版 Windows 久坐提醒工具：Stand Reminder",
+    "inLanguage": "zh-CN",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https:\/\/sheetung.github.io\/codex-go-windows-stand-reminder\/"
+    },"genre": "posts","keywords": "Go, Codex, Windows, 独立开发","wordcount":  270 ,
+    "url": "https:\/\/sheetung.github.io\/codex-go-windows-stand-reminder\/","datePublished": "2026-04-09T12:05:00+08:00","dateModified": "2026-04-09T12:05:00+08:00","publisher": {
+      "@type": "Organization",
+      "name": ""},"author": {
+        "@type": "Person",
+        "name": "西塘"
+      },"description": "介绍我使用 Codex 协助开发的 Go 语言 Windows 久坐提醒工具 Stand Reminder，包括功能设计、界面展示、关键迭代与项目发布过程。"
+  }
+  </script><script src="/js/head/color-scheme.min.js"></script></head>
+  <body data-header-desktop="sticky" data-header-mobile="auto"><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/" title="sheetung"><span class="header-title-text">sheetung</span></a><span class="header-subtitle"></span></div>
+    <nav>
+      <ul class="menu"><li class="menu-item">
+              <a class="menu-link" href="/posts/">文章</a></li><li class="menu-item">
+              <a class="menu-link" href="/categories/">分类</a></li><li class="menu-item">
+              <a class="menu-link" href="/tags/">标签</a></li><li class="menu-item">
+              <a class="menu-link" href="/friends/">友链</a></li><li class="menu-item">
+              <a class="menu-link" href="/about/">关于</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id="search-desktop">
+            <input type="text" placeholder="搜索文章标题或内容……" id="search-input-desktop">
+            <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+              <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+            </a>
+            <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+              <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+            </a>
+            <span class="search-button search-loading" id="search-loading-desktop">
+              <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+            </span>
+          </li><li class="menu-item theme-switch" title="切换主题">
+          <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+        </li></ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="sheetung"><span class="header-title-text">sheetung</span></a><span class="header-subtitle"></span></div>
+      <div class="menu-toggle" id="menu-toggle-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li class="search-wrapper">
+            <div class="search mobile" id="search-mobile">
+              <input type="text" placeholder="搜索文章标题或内容……" id="search-input-mobile">
+              <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+              </a>
+              <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+              </a>
+              <span class="search-button search-loading" id="search-loading-mobile">
+                <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+              </span>
+            </div>
+            <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+              取消
+            </a>
+          </li><li class="menu-item"><a class="menu-link" href="/posts/">文章</a></li><li class="menu-item"><a class="menu-link" href="/categories/">分类</a></li><li class="menu-item"><a class="menu-link" href="/tags/">标签</a></li><li class="menu-item"><a class="menu-link" href="/friends/">友链</a></li><li class="menu-item"><a class="menu-link" href="/about/">关于</a></li><li class="menu-item menu-system">
+          <span class="menu-system-item theme-switch" title="切换主题"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></span></li>
+      </ul>
+    </nav>
+  </div>
+</header><div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+  </div>
+  <div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+  </div><main class="container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="合集"></aside>
+
+  <article class="page single">
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span>Codex 帮我写了个 Go 版 Windows 久坐提醒工具：Stand Reminder</span>
+      </h1><p class="single-subtitle animate__animated animate__fadeIn">从想法到可用成品，一次和 Codex 协作完成的小工具实践</p></div><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
+      西塘</span></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/%E9%A1%B9%E7%9B%AE%E8%AE%B0%E5%BD%95/" class="post-category" title="分类 - 项目记录"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> 项目记录</a></span></div><div class="post-meta-line"><span title="发布于 2026-04-09 12:05:00"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2026-04-09">2026-04-09</time></span>&nbsp;<span title="270 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 300 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>预计阅读 2 分钟</span>&nbsp;<span id="busuanzi_container_page_pv" class="busuanzi_visitors comment-visitors" data-flag-title="Codex 帮我写了个 Go 版 Windows 久坐提醒工具：Stand Reminder"><i class="fa-regular fa-eye fa-fw me-1" aria-hidden="true"></i><span id="busuanzi_value_page_pv">-</span>&nbsp;次阅读
+          </span>&nbsp;</div>
+    </div><div class="details toc" id="toc-static" data-kept="false">
+        <div class="details-summary toc-title">
+          <span>目录</span>
+          <span><i class="details-icon fa-solid fa-angle-right" aria-hidden="true"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#为什么会做这个工具">为什么会做这个工具</a></li>
+    <li><a href="#它现在能做什么">它现在能做什么</a></li>
+    <li><a href="#界面上我比较满意的几个地方">界面上，我比较满意的几个地方</a>
+      <ul>
+        <li><a href="#1-控制中心首页">1. 控制中心首页</a></li>
+        <li><a href="#2-统计视图">2. 统计视图</a></li>
+        <li><a href="#3-设置页">3. 设置页</a></li>
+      </ul>
+    </li>
+    <li><a href="#从-commit-里能看出的迭代重点">从 commit 里能看出的迭代重点</a>
+      <ul>
+        <li><a href="#1-feat-migrate-storage-to-sqlite-and-refresh-docs">1. <code>feat: migrate storage to sqlite and refresh docs</code></a></li>
+        <li><a href="#2-feat-improve-stats-dashboard-visuals">2. <code>feat: improve stats dashboard visuals</code></a></li>
+        <li><a href="#3-feat-open-control-center-from-notifications">3. <code>feat: open control center from notifications</code></a></li>
+        <li><a href="#4-feat-增加媒体播放的检测避免误判大概有用吧">4. <code>feat: 增加媒体播放的检测避免误判（大概有用吧）</code></a></li>
+        <li><a href="#5-feat-add-pauseafter-configuration-to-engine-and-update-tests">5. <code>feat: add PauseAfter configuration to engine and update tests</code></a></li>
+        <li><a href="#6-一系列-release--version--build-相关提交">6. 一系列 release / version / build 相关提交</a></li>
+      </ul>
+    </li>
+    <li><a href="#用-codex-写这个项目最大的感受">用 Codex 写这个项目，最大的感受</a></li>
+    <li><a href="#如果你想直接使用">如果你想直接使用</a></li>
+    <li><a href="#最后">最后</a></li>
+  </ul>
+</nav></div>
+      </div><div class="content" id="content"><p>最近我做了一个挺实用的小工具：<a href="https://github.com/sheetung/stand-Reminder"target="_blank" rel="external nofollow noopener noreferrer">Stand Reminder</a>。</p>
+<p>它是一个运行在 Windows 端的久坐提醒程序，使用 Go 编写，常驻系统托盘，实测内存占用可以控制在 <strong>10MB 以下</strong>。项目本身不大，但很完整：从托盘常驻、状态检测、系统通知，到本地网页控制中心、统计视图、中英文切换，再到 GitHub Release 打包，已经是一套可以直接拿来用的成品。</p>
+<p>这个项目还有一个对我来说比较有意思的点：<strong>它是我和 Codex 协作完成的。</strong></p>
+<p>不是那种“让 AI 写几行 demo”式的尝试，而是我负责提出需求、确认产品方向、不断补充使用细节，Codex 负责把这些想法快速落地，再一起迭代成一个真正能用的工具。</p>
+<h2 class="heading-element" id="为什么会做这个工具"><span>为什么会做这个工具</span>
+  <a href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e4%bc%9a%e5%81%9a%e8%bf%99%e4%b8%aa%e5%b7%a5%e5%85%b7" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>原因很简单：久坐太久了。</p>
+<p>很多提醒类工具要么太重，要么交互别扭，要么打断感太强。我想要的其实很明确：</p>
+<ul>
+<li>平时安静地待在托盘里，不要打扰我</li>
+<li>真正连续使用电脑一段时间后，再提醒我起身活动</li>
+<li>如果我在摸鱼看视频，或者处于某种不适合打断的状态，识别最好能更合理一点</li>
+<li>最好还能有一个简洁的控制面板，随时查看状态、调参数、看统计</li>
+<li>占用尽量低，别为了提醒站起来反而多开一个“重量级软件”</li>
+</ul>
+<p>于是就有了 Stand Reminder。</p>
+<h2 class="heading-element" id="它现在能做什么"><span>它现在能做什么</span>
+  <a href="#%e5%ae%83%e7%8e%b0%e5%9c%a8%e8%83%bd%e5%81%9a%e4%bb%80%e4%b9%88" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>根据 README 里的功能说明和当前界面，Stand Reminder 目前已经具备这些核心能力：</p>
+<ul>
+<li>Windows 托盘常驻运行，启动后不弹黑色终端窗口</li>
+<li>检测键盘、鼠标活动以及媒体播放状态</li>
+<li>按连续使用时长进行久坐提醒</li>
+<li>到达阈值后发送 Windows 系统通知</li>
+<li>点击通知后可直接打开控制中心</li>
+<li>提供本地网页控制中心，默认地址为 <code>http://127.0.0.1:47831</code></li>
+<li>支持修改提醒分钟数、空闲重置分钟数、检测间隔、通知标题和通知内容</li>
+<li>支持手动 <code>暂停</code>、<code>开始 / 恢复</code>、<code>我已起身活动</code></li>
+<li>“我已起身活动”后会停止当前计时，并显示一个 10 分钟活动倒计时</li>
+<li>支持中英文界面切换</li>
+<li>支持今天、7 天、20 天三个维度的统计视图</li>
+</ul>
+<p>如果只看功能列表，这已经不是一个“玩具项目”了，而是一个完整的桌面应用。</p>
+<h2 class="heading-element" id="界面上我比较满意的几个地方"><span>界面上，我比较满意的几个地方</span>
+  <a href="#%e7%95%8c%e9%9d%a2%e4%b8%8a%e6%88%91%e6%af%94%e8%be%83%e6%bb%a1%e6%84%8f%e7%9a%84%e5%87%a0%e4%b8%aa%e5%9c%b0%e6%96%b9" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>从 README 展示图来看，这个项目的 UI 也不是“能用就行”的风格，而是认真做了组织和分层。</p>
+<h3 class="heading-element" id="1-控制中心首页"><span>1. 控制中心首页</span>
+  <a href="#1-%e6%8e%a7%e5%88%b6%e4%b8%ad%e5%bf%83%e9%a6%96%e9%a1%b5" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>首页主要承担状态总览和操作入口的职责，打开后能快速看到当前运行情况，并执行常用动作。对这种托盘类应用来说，这样的设计很合理：</p>
+<ul>
+<li>日常不打扰</li>
+<li>需要时一键打开</li>
+<li>打开后信息集中，不用到处翻</li>
+</ul>
+<h3 class="heading-element" id="2-统计视图"><span>2. 统计视图</span>
+  <a href="#2-%e7%bb%9f%e8%ae%a1%e8%a7%86%e5%9b%be" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>统计页支持今天、7 天、20 天的视图切换，这一点我挺喜欢。</p>
+<p>因为久坐提醒如果只有“提醒一下”，长期来看很容易被无视；但如果能看到自己的节奏和数据，它就更像一个轻量自我管理工具，而不仅仅是弹窗提醒器。</p>
+<p>README 里也提到，今天统计图的 UI 思路参考了 Mizuki 的文章。这种做法我觉得挺好：尊重已有优秀设计，吸收思路，再结合自己的产品去实现。</p>
+<h3 class="heading-element" id="3-设置页"><span>3. 设置页</span>
+  <a href="#3-%e8%ae%be%e7%bd%ae%e9%a1%b5" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>提醒时长、空闲重置时间、检测间隔、通知标题、通知内容都能自定义，说明这个工具一开始就不是“我写给自己能跑就行”，而是考虑到了不同人的使用习惯。</p>
+<p>这也是我做工具时越来越在意的一点：
+<strong>默认值重要，但允许用户调整同样重要。</strong></p>
+<h2 class="heading-element" id="从-commit-里能看出的迭代重点"><span>从 commit 里能看出的迭代重点</span>
+  <a href="#%e4%bb%8e-commit-%e9%87%8c%e8%83%bd%e7%9c%8b%e5%87%ba%e7%9a%84%e8%bf%ad%e4%bb%a3%e9%87%8d%e7%82%b9" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>这个仓库的提交记录也很有意思，能比较清楚地看出这个项目不是一次性写完的，而是持续在打磨。</p>
+<p>我挑几个我觉得最能体现“从可用到好用”的 commit 来说。</p>
+<h3 class="heading-element" id="1-feat-migrate-storage-to-sqlite-and-refresh-docs"><span>1. <code>feat: migrate storage to sqlite and refresh docs</code></span>
+  <a href="#1-feat-migrate-storage-to-sqlite-and-refresh-docs" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>这是一个很关键的升级。</p>
+<p>从更简单的存储方式迁移到 SQLite，意味着项目开始认真处理统计数据和本地持久化能力。对于一个带历史统计、活动记录、状态管理的工具来说，SQLite 是很自然也很稳妥的选择。</p>
+<p>这一步通常意味着项目从“逻辑跑通”进入“结构稳定、便于扩展”的阶段。</p>
+<h3 class="heading-element" id="2-feat-improve-stats-dashboard-visuals"><span>2. <code>feat: improve stats dashboard visuals</code></span>
+  <a href="#2-feat-improve-stats-dashboard-visuals" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>我很认同这种迭代优先级。</p>
+<p>很多开发者做完功能就停了，但真实使用体验往往卡在“看起来乱、不愿意打开”。统计面板视觉优化虽然不是硬功能，却会直接影响这个工具会不会被持续使用。</p>
+<h3 class="heading-element" id="3-feat-open-control-center-from-notifications"><span>3. <code>feat: open control center from notifications</code></span>
+  <a href="#3-feat-open-control-center-from-notifications" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>这个细节非常加分。</p>
+<p>提醒弹出后，如果用户还要自己去找托盘图标，再点开控制中心，流程就断了。现在直接从通知跳转控制中心，整个交互链条就顺了很多。这类改动不一定显眼，但非常体现产品感觉。</p>
+<h3 class="heading-element" id="4-feat-增加媒体播放的检测避免误判大概有用吧"><span>4. <code>feat: 增加媒体播放的检测避免误判（大概有用吧）</code></span>
+  <a href="#4-feat-%e5%a2%9e%e5%8a%a0%e5%aa%92%e4%bd%93%e6%92%ad%e6%94%be%e7%9a%84%e6%a3%80%e6%b5%8b%e9%81%bf%e5%85%8d%e8%af%af%e5%88%a4%e5%a4%a7%e6%a6%82%e6%9c%89%e7%94%a8%e5%90%a7" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>我特别喜欢这个 commit 名，既诚实又有点好笑。</p>
+<p>但它背后反映的是一个实际问题：<strong>“你在电脑前”不等于“你现在适合被提醒”。</strong></p>
+<p>如果正在放视频、开会、听内容，单纯靠输入事件判断，确实可能误判。加入媒体播放检测，说明这个工具在朝着“更像理解使用情境”而不是“机械计时器”的方向走。</p>
+<h3 class="heading-element" id="5-feat-add-pauseafter-configuration-to-engine-and-update-tests"><span>5. <code>feat: add PauseAfter configuration to engine and update tests</code></span>
+  <a href="#5-feat-add-pauseafter-configuration-to-engine-and-update-tests" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>这属于典型的“后期好用度增强项”。</p>
+<p>配置越来越细，意味着产品开始照顾不同节奏的人；同时还更新了 tests，也说明这个项目不是一味堆功能，而是在尽量保持可维护性。</p>
+<h3 class="heading-element" id="6-一系列-release--version--build-相关提交"><span>6. 一系列 release / version / build 相关提交</span>
+  <a href="#6-%e4%b8%80%e7%b3%bb%e5%88%97-release--version--build-%e7%9b%b8%e5%85%b3%e6%8f%90%e4%ba%a4" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>比如：</p>
+<ul>
+<li><code>ci: publish releases from version tags</code></li>
+<li><code>ci: enrich release notes</code></li>
+<li><code>fix: update version number to v0.2.3 in index.html and improve release bundle creation in build workflow</code></li>
+<li><code>fix: update app version to v0.2.4 and remove version display from index.html</code></li>
+</ul>
+<p>这些提交说明项目已经不只是“本地能跑”，而是在认真处理：</p>
+<ul>
+<li>版本发布</li>
+<li>自动化构建</li>
+<li>Release 打包</li>
+<li>面向最终用户的分发体验</li>
+</ul>
+<p>当一个项目开始反复打磨这些部分时，通常代表它真的准备给别人用了。</p>
+<h2 class="heading-element" id="用-codex-写这个项目最大的感受"><span>用 Codex 写这个项目，最大的感受</span>
+  <a href="#%e7%94%a8-codex-%e5%86%99%e8%bf%99%e4%b8%aa%e9%a1%b9%e7%9b%ae%e6%9c%80%e5%a4%a7%e7%9a%84%e6%84%9f%e5%8f%97" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>这次做下来，我对 Codex 的一个直观感受是：</p>
+<p><strong>它特别适合把脑子里的半成品需求，快速推进成一个结构完整的可运行项目。</strong></p>
+<p>尤其像这种桌面工具，需求会不断变化：</p>
+<ul>
+<li>托盘怎么做更自然</li>
+<li>通知如何触发</li>
+<li>页面结构怎么拆</li>
+<li>状态统计怎么存</li>
+<li>设置项应该暴露哪些</li>
+<li>Release 如何打包</li>
+</ul>
+<p>如果全靠自己一点点切换上下文，会比较消耗精力；而有了 Codex 之后，我更像是在持续做“产品经理 + 技术审稿人”的角色：</p>
+<ul>
+<li>我提出目标和细节</li>
+<li>它快速生成初版实现</li>
+<li>我再根据体验补充需求</li>
+<li>然后继续迭代</li>
+</ul>
+<p>这种协作方式对独立开发小工具来说，效率真的很高。</p>
+<p>当然，前提还是你自己要知道想要什么。Codex 能帮你加速，但不能替你判断什么才是合理的产品体验。</p>
+<h2 class="heading-element" id="如果你想直接使用"><span>如果你想直接使用</span>
+  <a href="#%e5%a6%82%e6%9e%9c%e4%bd%a0%e6%83%b3%e7%9b%b4%e6%8e%a5%e4%bd%bf%e7%94%a8" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>如果你只是想直接试试这个工具，可以去 GitHub Releases 下载打包好的版本：</p>
+<p><a href="https://github.com/sheetung/stand-Reminder/releases"target="_blank" rel="external nofollow noopener noreferrer">Stand Reminder Releases</a></p>
+<p>下载 zip 后，运行里面的 <code>stand-reminder.exe</code> 即可。程序启动后会进入系统托盘。</p>
+<p>如果你想自己编译，README 里给出的方式也很直接：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">go</span> <span class="n">build</span> <span class="n">-ldflags</span><span class="p">=</span><span class="s1">&#39;-H windowsgui&#39;</span> <span class="n">-o</span> <span class="nb">stand-reminder</span><span class="p">.</span><span class="py">exe</span> <span class="p">.</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>这条参数里的 <code>-H windowsgui</code> 也正好对应了这个项目的目标：
+<strong>它应该是一个安静待在后台的 Windows 工具，而不是一启动就冒出控制台窗口。</strong></p>
+<h2 class="heading-element" id="最后"><span>最后</span>
+  <a href="#%e6%9c%80%e5%90%8e" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>我挺喜欢这种项目。</p>
+<p>它不是什么宏大的系统，也不是为了炫技而做的复杂工程，而是一个很具体、很贴近日常使用场景的小工具：解决久坐问题，减少打扰，保持足够轻量，同时把体验做顺。</p>
+<p>更重要的是，这个项目也让我更明确了一件事：
+<strong>AI 写代码真正有价值的地方，不只是“帮你补代码”，而是让一个原本可能会被搁置的小想法，更容易被做成、做完、做得像样。</strong></p>
+<p>如果你也在折腾 Go、小工具开发，或者也在尝试和 Codex 一起做项目，也许可以看看这个仓库：</p>
+<p><a href="https://github.com/sheetung/stand-Reminder"target="_blank" rel="external nofollow noopener noreferrer">https://github.com/sheetung/stand-Reminder</a></p>
+</div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod">
+        <span title="更新于 2026-04-09 12:05:00">更新于 2026-04-09&nbsp;</span>
+      </div><div class="post-info-license">
+            <span><a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a></span>
+          </div></div><div class="post-info-line">
+        <div class="post-info-md"></div>
+        <div class="post-info-share">
+          <span><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://sheetung.github.io/codex-go-windows-stand-reminder/" data-hashtag="Go"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://sheetung.github.io/codex-go-windows-stand-reminder/" data-title="Codex 帮我写了个 Go 版 Windows 久坐提醒工具：Stand Reminder"><i class="fa-brands fa-weibo fa-fw" aria-hidden="true"></i></a>
+  </span>
+        </div>
+      </div></div>
+
+  <div class="post-info-more">
+    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href="/tags/go/" class="post-tag" title="标签 - Go">Go</a><a href="/tags/codex/" class="post-tag" title="标签 - Codex">Codex</a><a href="/tags/windows/" class="post-tag" title="标签 - Windows">Windows</a><a href="/tags/%E7%8B%AC%E7%AB%8B%E5%BC%80%E5%8F%91/" class="post-tag" title="标签 - 独立开发">独立开发</a></section>
+    <section>
+      <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+    </section>
+  </div><div class="post-nav"><a href="/Ubuntu%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8openclaw%E5%8F%91%E9%80%81%E6%88%AA%E5%9B%BE%E9%BB%91%E5%B1%8F%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/" class="post-nav-item" rel="prev" title="Ubuntu系统使用openclaw发送截图黑屏解决办法"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>Ubuntu系统使用openclaw发送截图黑屏解决办法</a></div>
+</div>
+<div class="post-reward">
+    <div class="comment"></div>
+    <input type="checkbox" class="reward-input" name="reward" id="fi-reward" hidden />
+    <label class="reward-button" for="fi-reward"><i class="fa-solid fa-qrcode fa-fw" aria-hidden="true"></i>赞赏</label>
+    <div class="reward-ways" data-mode="static"><div><img src='/images/alipay.png' alt="西塘 支付宝"><span>支付宝</span>
+          </div><div><img src='/images/wechatpay.png' alt="西塘 微信"><span>微信</span>
+          </div></div>
+  </div><div id="comments"><div id="giscus" class="comment">
+          <script
+            src="https://giscus.app/client.js"
+            data-repo="sheetung/blog-comments"
+            data-repo-id="R_kgDOPKmTBg"
+            data-category="Announcements"
+            data-category-id="DIC_kwDOPKmTBs4CszTz"
+            data-mapping=""
+            data-strict="0"
+            
+            data-theme="preferred_color_scheme"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="bottom"
+            data-lang="zh-CN"
+            data-loading="lazy"
+            crossorigin="anonymous"
+            async
+            defer
+          ></script>
+        </div>
+        <noscript>
+          Please enable JavaScript to view the comments powered by <a href="https://giscus.app/" rel="external nofollow noopener noreferrer">giscus</a>.
+        </noscript></div></article>
+
+  <aside class="toc" id="toc-auto" aria-label="目录"><h2 class="toc-title">目录&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden="true"></i></h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line powered">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.148.1"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.3.20"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
+        </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
+            <span itemprop="copyrightYear">2025 - 2026</span><span class="author" itemprop="copyrightHolder">
+              <a href="/">西塘</a></span><span class="license footer-divider"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div><div class="footer-line statistics"><span class="site-time" title='网站运行中……'><i class="fa-solid fa-heartbeat fa-fw animate-icon" aria-hidden="true"></i><span class="run-times ms-1">网站运行中……</span></span></div><div class="footer-line visitor order-last">
+          <span id="busuanzi_container_site_uv" title='总访客数'><i class="fa-regular fa-user fa-fw me-1" aria-hidden="true"></i><span id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span></span><span id="busuanzi_container_site_pv" class="footer-divider" title='总访问量'><i class="fa-regular fa-eye fa-fw me-1" aria-hidden="true"></i><span id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span></span>
+        </div></div>
+  </footer></div><div class="widgets"><div class="fixed-buttons animate__faster d-none"><div class="fixed-button back-to-top" role="button" aria-label="回到顶部"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i><span class="variant-numeric">0%</span>
+        </div><div class="fixed-button view-comments d-none" role="button" aria-label="查看评论"><i class="fa-solid fa-comment fa-fw" aria-hidden="true"></i></div></div><div id="mask"></div><div class="reading-progress-bar" style="left: 0;top: 0;"></div><noscript>
+    <div class="noscript-warning">该网站在启用 JavaScript 的情况下效果最佳。</div>
+  </noscript>
+</div><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><link rel="stylesheet" href="/lib/pace/themes/green/pace-theme-minimal.css"><script src="/lib/autocomplete/autocomplete.min.js" defer></script><script src="/lib/fuse/fuse.min.js" defer></script><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script src="https://vercount.one/js" async defer></script><script src="/lib/pace/pace.min.js" async defer></script><script>window.config={"code":{"copyTitle":"复制到剪贴板","editLockTitle":"锁定可编辑代码块","editUnLockTitle":"解锁可编辑代码块","editable":true,"maxShownLines":10},"comment":{"enable":true,"expired":false,"giscus":{"darkTheme":"dark","lightTheme":"light","origin":"https://giscus.app"}},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验。"},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/search.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":30,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"siteTime":"2025-07-12T19:56:00+08:00","version":"v0.3.20"};</script><script src="/js/theme.min.js" defer></script><script async defer data-website-id="15750748-7c82-490e-b84b-07300e94e202" src="https://anal.moontung.top/script.js"  ></script></body>
+</html>

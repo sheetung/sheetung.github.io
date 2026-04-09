@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>独立开发 - 标签 - sheetung</title>
+    <link>https://sheetung.github.io/tags/%E7%8B%AC%E7%AB%8B%E5%BC%80%E5%8F%91/</link>
+    <description>西塘的博客副站，主站点[moontung](https://moontung.top)</description>
+    <generator>Hugo 0.148.1 &amp; FixIt v0.3.20</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 09 Apr 2026 12:05:00 +0800</lastBuildDate>
+    <atom:link href="https://sheetung.github.io/tags/%E7%8B%AC%E7%AB%8B%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Codex 帮我写了个 Go 版 Windows 久坐提醒工具：Stand Reminder</title>
+      <link>https://sheetung.github.io/codex-go-windows-stand-reminder/</link>
+      <pubDate>Thu, 09 Apr 2026 12:05:00 +0800</pubDate>
+      <guid>https://sheetung.github.io/codex-go-windows-stand-reminder/</guid>
+      <category domain="https://sheetung.github.io/categories/%E9%A1%B9%E7%9B%AE%E8%AE%B0%E5%BD%95/">项目记录</category>
+      <description>这是一个使用 Go 编写、运行在 Windows 托盘中的轻量级久坐提醒工具。我结合自己的使用习惯提出需求，由 Codex 持续协助实现、迭代和整理，最终做成了一个内存占用很低、可直接发布的桌面小工具。</description>
+    </item>
+  </channel>
+</rss>

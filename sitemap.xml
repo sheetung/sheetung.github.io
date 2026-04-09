@@ -2,30 +2,66 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://sheetung.github.io/categories/</loc>
-    <lastmod>2026-03-12T15:46:00+08:00</lastmod>
+    <lastmod>2026-04-09T12:05:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://sheetung.github.io/tags/openclaw/</loc>
-    <lastmod>2026-03-12T15:46:00+08:00</lastmod>
+    <loc>https://sheetung.github.io/tags/codex/</loc>
+    <lastmod>2026-04-09T12:05:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://sheetung.github.io/codex-go-windows-stand-reminder/</loc>
+    <lastmod>2026-04-09T12:05:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://sheetung.github.io/tags/go/</loc>
+    <lastmod>2026-04-09T12:05:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://sheetung.github.io/posts/</loc>
-    <lastmod>2026-03-12T15:46:00+08:00</lastmod>
+    <lastmod>2026-04-09T12:05:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://sheetung.github.io/</loc>
-    <lastmod>2026-03-12T15:46:00+08:00</lastmod>
+    <lastmod>2026-04-09T12:05:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://sheetung.github.io/tags/</loc>
+    <lastmod>2026-04-09T12:05:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://sheetung.github.io/tags/windows/</loc>
+    <lastmod>2026-04-09T12:05:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://sheetung.github.io/tags/%E7%8B%AC%E7%AB%8B%E5%BC%80%E5%8F%91/</loc>
+    <lastmod>2026-04-09T12:05:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://sheetung.github.io/categories/%E9%A1%B9%E7%9B%AE%E8%AE%B0%E5%BD%95/</loc>
+    <lastmod>2026-04-09T12:05:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://sheetung.github.io/tags/openclaw/</loc>
     <lastmod>2026-03-12T15:46:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
