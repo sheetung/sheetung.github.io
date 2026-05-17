@@ -111,24 +111,63 @@
   </div>
   <div class="search-dropdown mobile">
     <div id="search-dropdown-mobile"></div>
-  </div><main class="fi-container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="合集"><div class="aside-microblog">
-  <div class="aside-microblog-title">
-    <i class="fa-solid fa-pen-nib"></i> 碎碎念
+  </div><main class="fi-container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="合集"><div class="details aside-microblog-details open">
+  <div class="details-summary aside-microblog-summary">
+    <i class="fa-solid fa-pen-nib"></i>
+    <span class="aside-microblog-name">碎碎念</span>
+    <span class="aside-microblog-count">4</span>
+    <i class="details-icon fa-solid fa-angle-right"></i>
   </div>
-  <ul class="aside-microblog-list"><li class="aside-microblog-item">
-      <span class="aside-microblog-date">2026-05-17</span>
-      <span class="aside-microblog-content">升级了 FixIt 主题到 v0.4.5，博客焕然一新 ✨</span>
-    </li><li class="aside-microblog-item">
-      <span class="aside-microblog-date">2026-05-10</span>
-      <span class="aside-microblog-content">在折腾 OpenClaw 和飞书的集成，终于跑通了</span>
-    </li><li class="aside-microblog-item">
-      <span class="aside-microblog-date">2026-04-09</span>
-      <span class="aside-microblog-content">用 Codex 写了个 Go 版的久坐提醒工具，独立开发真有趣</span>
-    </li><li class="aside-microblog-item">
-      <span class="aside-microblog-date">2026-03-06</span>
-      <span class="aside-microblog-content">把博客从服务器迁移到了 GitHub Pages，轻装上阵</span>
-    </li></ul>
-</div></aside>
+  <div class="details-content aside-microblog-content">
+    <div class="aside-microblog-body" data-page="0" data-total="4" data-per-page="3"><div class="aside-microblog-item" data-index="0">
+        <span class="aside-microblog-date">2026-05-17</span>
+        <span class="aside-microblog-text">升级了 FixIt 主题到 v0.4.5，博客焕然一新 ✨</span>
+      </div><div class="aside-microblog-item" data-index="1">
+        <span class="aside-microblog-date">2026-05-10</span>
+        <span class="aside-microblog-text">在折腾 OpenClaw 和飞书的集成，终于跑通了</span>
+      </div><div class="aside-microblog-item" data-index="2">
+        <span class="aside-microblog-date">2026-04-09</span>
+        <span class="aside-microblog-text">用 Codex 写了个 Go 版的久坐提醒工具，独立开发真有趣</span>
+      </div><div class="aside-microblog-item hidden" data-index="3">
+        <span class="aside-microblog-date">2026-03-06</span>
+        <span class="aside-microblog-text">把博客从服务器迁移到了 GitHub Pages，轻装上阵</span>
+      </div></div>
+    <div class="aside-microblog-nav">
+      <a class="aside-microblog-nav-item aside-microblog-prev disabled" role="button" aria-label="上一页">
+        <i class="fa-solid fa-angle-left"></i>
+      </a>
+      <span class="aside-microblog-page text-secondary">1/2</span><a class="aside-microblog-nav-item aside-microblog-next" role="button" aria-label="下一页">
+        <i class="fa-solid fa-angle-right"></i>
+      </a></div>
+  </div>
+</div>
+<script>
+(function(){
+  var el = document.currentScript.parentElement.querySelector('.aside-microblog-body');
+  if (!el) return;
+  var items = el.querySelectorAll('.aside-microblog-item');
+  var nav = el.parentElement.querySelector('.aside-microblog-nav');
+  var prev = nav.querySelector('.aside-microblog-prev');
+  var next = nav.querySelector('.aside-microblog-next');
+  var pageInfo = nav.querySelector('.aside-microblog-page');
+  var perPage = +el.dataset.perPage;
+  var total = +el.dataset.total;
+  var totalPages = Math.ceil(total / perPage);
+  var page = 0;
+
+  function show() {
+    items.forEach(function(item, i) {
+      item.classList.toggle('hidden', i < page * perPage || i >= (page + 1) * perPage);
+    });
+    pageInfo.textContent = (page + 1) + '/' + totalPages;
+    prev.classList.toggle('disabled', page === 0);
+    next.classList.toggle('disabled', page >= totalPages - 1);
+  }
+
+  prev.addEventListener('click', function() { if (page > 0) { page--; show(); } });
+  next.addEventListener('click', function() { if (page < totalPages - 1) { page++; show(); } });
+})();
+</script></aside>
 
   <article class="page single">
     <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span>Hugo：零成本搭建一个带有评论和搜索系统的静态博客</span>
