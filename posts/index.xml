@@ -6,8 +6,24 @@
     <description>西塘的博客副站，主站点[moontung](https://moontung.top)</description>
     <generator>Hugo 0.161.1 &amp; FixIt v0.4.5</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 09 Apr 2026 12:05:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 17 May 2026 15:00:00 +0800</lastBuildDate>
     <atom:link href="https://sheetung.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Markdown 基本语法</title>
+      <link>https://sheetung.github.io/markdown-basics/</link>
+      <pubDate>Sun, 17 May 2026 15:00:00 +0800</pubDate>
+      <guid>https://sheetung.github.io/markdown-basics/</guid>
+      <category domain="https://sheetung.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/">技术笔记</category>
+      <description>这篇文章提供了可以在 Hugo 的文章中使用的基本 Markdown 语法示例。</description>
+    </item>
+    <item>
+      <title>Markdown 扩展语法</title>
+      <link>https://sheetung.github.io/markdown-extended/</link>
+      <pubDate>Sun, 17 May 2026 15:00:00 +0800</pubDate>
+      <guid>https://sheetung.github.io/markdown-extended/</guid>
+      <category domain="https://sheetung.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/">技术笔记</category>
+      <description>本文展示了 FixIt Flavored Markdown 扩展语法。</description>
+    </item>
     <item>
       <title>Codex 帮我写了个 Go 版 Windows 久坐提醒工具：Stand Reminder</title>
       <link>https://sheetung.github.io/codex-go-windows-stand-reminder/</link>
