@@ -87,21 +87,29 @@
     <div id="search-dropdown-mobile"></div>
   </div><main class="fi-container"><div class="page-content">
   <h1>碎碎念</h1>
-  <ul class="fi-timeline"><li class="fi-timeline-item" data-size="medium" data-node="circle">
-      <div class="fi-timeline-item__content">转载了官方的markdown语法，哈哈哈</div>
-      <div class="fi-timeline-item__timestamp is-bottom">2026-05-17</div>
-    </li><li class="fi-timeline-item" data-size="medium" data-node="circle">
-      <div class="fi-timeline-item__content">升级了 FixIt 主题到 v0.4.5，博客焕然一新 ✨</div>
-      <div class="fi-timeline-item__timestamp is-bottom">2026-05-17</div>
-    </li><li class="fi-timeline-item" data-size="medium" data-node="circle">
-      <div class="fi-timeline-item__content">在折腾 OpenClaw 和飞书的集成，终于跑通了</div>
-      <div class="fi-timeline-item__timestamp is-bottom">2026-05-10</div>
-    </li><li class="fi-timeline-item" data-size="medium" data-node="circle">
-      <div class="fi-timeline-item__content">用 Codex 写了个 Go 版的久坐提醒工具</div>
-      <div class="fi-timeline-item__timestamp is-bottom">2026-04-09</div>
-    </li><li class="fi-timeline-item" data-size="medium" data-node="circle">
-      <div class="fi-timeline-item__content">把博客从服务器迁移到了 GitHub Pages，轻装上阵</div>
-      <div class="fi-timeline-item__timestamp is-bottom">2026-03-06</div>
+  <style>
+    .timeline { list-style: none; padding: 0; margin: 20px 0; position: relative; }
+    .timeline::before { content: ''; position: absolute; left: 12px; top: 0; bottom: 0; width: 2px; background: var(--theme-color, #409eff); }
+    .timeline-item { padding: 0 0 30px 40px; position: relative; }
+    .timeline-item::before { content: ''; position: absolute; left: 6px; top: 6px; width: 14px; height: 14px; border-radius: 50%; background: var(--theme-color, #409eff); border: 2px solid #fff; box-shadow: 0 0 0 2px var(--theme-color, #409eff); }
+    .timeline-item__date { font-size: 0.85em; color: #888; margin-bottom: 4px; }
+    .timeline-item__content { line-height: 1.6; }
+  </style>
+  <ul class="timeline"><li class="timeline-item">
+      <div class="timeline-item__date">2026-05-17</div>
+      <div class="timeline-item__content">转载了官方的markdown语法，哈哈哈</div>
+    </li><li class="timeline-item">
+      <div class="timeline-item__date">2026-05-17</div>
+      <div class="timeline-item__content">升级了 FixIt 主题到 v0.4.5，博客焕然一新 ✨</div>
+    </li><li class="timeline-item">
+      <div class="timeline-item__date">2026-05-10</div>
+      <div class="timeline-item__content">在折腾 OpenClaw 和飞书的集成，终于跑通了</div>
+    </li><li class="timeline-item">
+      <div class="timeline-item__date">2026-04-09</div>
+      <div class="timeline-item__content">用 Codex 写了个 Go 版的久坐提醒工具</div>
+    </li><li class="timeline-item">
+      <div class="timeline-item__date">2026-03-06</div>
+      <div class="timeline-item__content">把博客从服务器迁移到了 GitHub Pages，轻装上阵</div>
     </li></ul>
 </div></main><footer class="footer">
     <div class="footer-container"><div class="footer-line powered">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.161.1"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.4.5"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
