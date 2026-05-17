@@ -118,7 +118,7 @@
         <ul class="related-list"><li class="related-item">
               <a href="/build_hugo_blog/" title="Hugo：零成本搭建一个带有评论和搜索系统的静态博客">Hugo：零成本搭建一个带有评论和搜索系统的静态博客</a></li></ul>
       </div>
-    </div><div class="details aside-microblog-details open">
+    </div><div class="details aside-microblog-details">
   <div class="details-summary aside-microblog-summary">
     <i class="fa-solid fa-pen-nib"></i>
     <span class="aside-microblog-name">碎碎念</span>
@@ -146,6 +146,9 @@
       <span class="aside-microblog-page text-secondary">1/2</span><a class="aside-microblog-nav-item aside-microblog-next" role="button" aria-label="下一页">
         <i class="fa-solid fa-angle-right"></i>
       </a></div>
+    <a class="aside-microblog-more" href="/microblog/" style="display:none">
+      查看更多 <i class="fa-solid fa-angle-right"></i>
+    </a>
   </div>
 </div>
 <script>
@@ -157,6 +160,7 @@
   var prev = nav.querySelector('.aside-microblog-prev');
   var next = nav.querySelector('.aside-microblog-next');
   var pageInfo = nav.querySelector('.aside-microblog-page');
+  var more = el.parentElement.querySelector('.aside-microblog-more');
   var perPage = +el.dataset.perPage;
   var total = +el.dataset.total;
   var totalPages = Math.ceil(total / perPage);
@@ -169,6 +173,7 @@
     pageInfo.textContent = (page + 1) + '/' + totalPages;
     prev.classList.toggle('disabled', page === 0);
     next.classList.toggle('disabled', page >= totalPages - 1);
+    if (more) more.style.display = page >= totalPages - 1 ? '' : 'none';
   }
 
   prev.addEventListener('click', function() { if (page > 0) { page--; show(); } });

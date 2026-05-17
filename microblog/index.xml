@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>碎碎念 - sheetung</title>
+    <link>https://sheetung.github.io/microblog/</link>
+    <description>西塘的博客副站，主站点[moontung](https://moontung.top)</description>
+    <generator>Hugo 0.161.1 &amp; FixIt v0.4.5</generator>
+    <language>zh-CN</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="https://sheetung.github.io/microblog/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
