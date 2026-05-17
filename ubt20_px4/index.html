@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
   <head>
-    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
     <meta name="robots" content="noodp" />
@@ -12,7 +11,7 @@
   <meta itemprop="description" content="虚拟机安装px4环境配置">
   <meta itemprop="datePublished" content="2025-07-29T05:05:48+01:00">
   <meta itemprop="dateModified" content="2025-07-29T05:05:48+01:00">
-  <meta itemprop="wordCount" content="116">
+  <meta itemprop="wordCount" content="117">
   <meta itemprop="keywords" content="Ubuntu20,PX4"><meta property="og:url" content="https://sheetung.github.io/ubt20_px4/">
   <meta property="og:site_name" content="sheetung">
   <meta property="og:title" content="虚拟机Ubuntu20配置px4相关环境">
@@ -31,7 +30,7 @@
 <meta name="application-name" content="FixIt">
 <meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="https://sheetung.github.io/ubt20_px4/" title="虚拟机Ubuntu20配置px4相关环境 - sheetung" /><link rel="prev" type="text/html" href="https://sheetung.github.io/lubancat_px4uart/" title="【无人机】鲁班猫Cat5V2与PX4飞控的通信篇" /><link rel="next" type="text/html" href="https://sheetung.github.io/tangfiles/" title="Index" /><link rel="alternate" type="text/markdown" href="https://sheetung.github.io/ubt20_px4/index.md" title="虚拟机Ubuntu20配置px4相关环境 - sheetung"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="https://sheetung.github.io/ubt20_px4/" title="虚拟机Ubuntu20配置px4相关环境 - sheetung" /><link rel="prev" type="text/html" href="https://sheetung.github.io/lubancat_px4uart/" title="【无人机】鲁班猫Cat5V2与PX4飞控的通信篇" /><link rel="next" type="text/html" href="https://sheetung.github.io/tangfiles/" title="Index" /><link rel="alternate" type="text/markdown" href="https://sheetung.github.io/ubt20_px4/index.md" title="虚拟机Ubuntu20配置px4相关环境 - sheetung"><link rel="stylesheet" href="/css/config.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
   {
@@ -42,7 +41,7 @@
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https:\/\/sheetung.github.io\/ubt20_px4\/"
-    },"genre": "posts","keywords": "Ubuntu20, PX4","wordcount":  116 ,
+    },"genre": "posts","keywords": "Ubuntu20, PX4","wordcount":  117 ,
     "url": "https:\/\/sheetung.github.io\/ubt20_px4\/","datePublished": "2025-07-29T05:05:48+01:00","dateModified": "2025-07-29T05:05:48+01:00","publisher": {
       "@type": "Organization",
       "name": ""},"author": {
@@ -51,7 +50,7 @@
       },"description": ""
   }
   </script><script src="/js/head/color-scheme.min.js"></script></head>
-  <body data-header-desktop="sticky" data-header-mobile="auto"><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
+  <body data-instant-intensity="viewport" data-header-desktop="sticky" data-header-mobile="auto"><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
   <div class="header-wrapper">
     <div class="header-title">
       <a href="/" title="sheetung"><span class="header-title-text">sheetung</span></a><span class="header-subtitle"></span></div>
@@ -64,17 +63,15 @@
               <a class="menu-link" href="/about/">关于</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id="search-desktop">
             <input type="text" placeholder="搜索文章标题或内容……" id="search-input-desktop">
             <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
-              <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+              <i class="fa-solid fa-search" aria-hidden="true"></i>
             </a>
             <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
-              <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+              <i class="fa-solid fa-times-circle" aria-hidden="true"></i>
             </a>
             <span class="search-button search-loading" id="search-loading-desktop">
-              <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+              <i class="fa-solid fa-spinner fa-spin" aria-hidden="true"></i>
             </span>
-          </li><li class="menu-item theme-switch" title="切换主题">
-          <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
-        </li></ul>
+          </li><li class="menu-item theme-switch" role="button" aria-label="切换主题" title="切换主题"><i class="fa-solid fa-adjust" aria-hidden="true"></i></li></ul>
     </nav>
   </div>
 </header><header class="mobile animate__faster" id="header-mobile">
@@ -82,7 +79,8 @@
     <div class="header-wrapper">
       <div class="header-title">
         <a href="/" title="sheetung"><span class="header-title-text">sheetung</span></a><span class="header-subtitle"></span></div>
-      <div class="menu-toggle" id="menu-toggle-mobile">
+      <div class="theme-switch" role="button" aria-label="切换主题"><i class="fa-solid fa-adjust" aria-hidden="true"></i></div>
+      <div class="menu-toggle" id="menu-toggle-mobile" role="button" aria-labelledby="menu-mobile">
         <span></span><span></span><span></span>
       </div>
     </div>
@@ -91,20 +89,19 @@
             <div class="search mobile" id="search-mobile">
               <input type="text" placeholder="搜索文章标题或内容……" id="search-input-mobile">
               <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
-                <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+                <i class="fa-solid fa-search" aria-hidden="true"></i>
               </a>
               <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
-                <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+                <i class="fa-solid fa-times-circle" aria-hidden="true"></i>
               </a>
               <span class="search-button search-loading" id="search-loading-mobile">
-                <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                <i class="fa-solid fa-spinner fa-spin" aria-hidden="true"></i>
               </span>
             </div>
             <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
               取消
             </a>
-          </li><li class="menu-item"><a class="menu-link" href="/posts/">文章</a></li><li class="menu-item"><a class="menu-link" href="/categories/">分类</a></li><li class="menu-item"><a class="menu-link" href="/tags/">标签</a></li><li class="menu-item"><a class="menu-link" href="/friends/">友链</a></li><li class="menu-item"><a class="menu-link" href="/about/">关于</a></li><li class="menu-item menu-system">
-          <span class="menu-system-item theme-switch" title="切换主题"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></span></li>
+          </li><li class="menu-item"><a class="menu-link" href="/posts/">文章</a></li><li class="menu-item"><a class="menu-link" href="/categories/">分类</a></li><li class="menu-item"><a class="menu-link" href="/tags/">标签</a></li><li class="menu-item"><a class="menu-link" href="/friends/">友链</a></li><li class="menu-item"><a class="menu-link" href="/about/">关于</a></li><li class="menu-item menu-system"></li>
       </ul>
     </nav>
   </div>
@@ -113,13 +110,13 @@
   </div>
   <div class="search-dropdown mobile">
     <div id="search-dropdown-mobile"></div>
-  </div><main class="container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="合集"></aside>
+  </div><main class="fi-container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="合集"></aside>
 
   <article class="page single">
     <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span>虚拟机Ubuntu20配置px4相关环境</span>
       </h1></div><div class="post-meta">
       <div class="post-meta-line"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
-      西塘</span></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/ubuntu/" class="post-category" title="分类 - Ubuntu"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Ubuntu</a></span></div><div class="post-meta-line"><span title="发布于 2025-07-29 05:05:48"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2025-07-29">2025-07-29</time></span>&nbsp;<span title="116 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 200 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>预计阅读 1 分钟</span>&nbsp;<span id="busuanzi_container_page_pv" class="busuanzi_visitors comment-visitors" data-flag-title="虚拟机Ubuntu20配置px4相关环境"><i class="fa-regular fa-eye fa-fw me-1" aria-hidden="true"></i><span id="busuanzi_value_page_pv">-</span>&nbsp;次阅读
+      西塘</span></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/ubuntu/" class="post-category" title="分类 - Ubuntu"><i class="fa-regular fa-folder" aria-hidden="true"></i> Ubuntu</a></span></div><div class="post-meta-line"><span title="发布于 2025-07-29 05:05:48"><i class="fa-solid fa-calendar-days me-1" aria-hidden="true"></i><time datetime="2025-07-29">2025-07-29</time></span>&nbsp;<span title="117 字"><i class="fa-solid fa-pencil-alt me-1" aria-hidden="true"></i>约 200 字</span>&nbsp;<span><i class="fa-regular fa-clock me-1" aria-hidden="true"></i>预计阅读 1 分钟</span>&nbsp;<span id="busuanzi_container_page_pv" class="busuanzi_visitors comment-visitors" data-flag-title="虚拟机Ubuntu20配置px4相关环境"><i class="fa-regular fa-eye me-1" aria-hidden="true"></i><span id="busuanzi_value_page_pv">-</span>&nbsp;次阅读
           </span>&nbsp;</div>
     </div><div class="details toc" id="toc-static" data-kept="false">
         <div class="details-summary toc-title">
@@ -146,8 +143,8 @@
 </h3><ol>
 <li>github clone源码，此处需要代理 [Linux 开启与关闭代理]</li>
 </ol>
-<div class="highlight" data-open="false" title="代理的相关命令"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
+<div class="code-block highlight" data-mode="classic" data-copyable="true" data-open="false" title="代理的相关命令"><div class="chroma">
+<div class="code-header language-bash"><span class="code-title"><i class="arrow fa-solid fa-chevron-down" aria-hidden="true"></i><span class="title-inner">代理的相关命令</span></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h" aria-hidden="true"></i></span><span class="action-btn line-nos-btn" aria-label="切换行号" role="button" title="切换行号" data-ct-tooltip><i class="fa-solid fa-list-ol" aria-hidden="true"></i></span><span class="action-btn line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行" data-ct-tooltip><i class="fa-solid fa-right-left" aria-hidden="true"></i></span><span class="action-btn copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板" data-copied-text="已复制" data-ct-tooltip><i class="fa-regular fa-clone" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="10" data-line-digit="1" style="--fi-max-shown-lines:10;--fi-line-digit:1;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
@@ -161,20 +158,20 @@
 </span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">https_proxy</span><span class="o">=</span>http://IP:PORT 
 </span></span><span class="line"><span class="cl"><span class="c1"># 关闭代理 </span>
 </span></span><span class="line"><span class="cl"><span class="nb">unset</span> http_proxy 
-</span></span><span class="line"><span class="cl"><span class="nb">unset</span> https_proxy</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl"><span class="nb">unset</span> https_proxy</span></span></code></pre></td></tr></table></div>
 </div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
+</div><div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-sh"><span class="code-title"><i class="arrow fa-solid fa-chevron-down" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h" aria-hidden="true"></i></span><span class="action-btn line-nos-btn" aria-label="切换行号" role="button" title="切换行号" data-ct-tooltip><i class="fa-solid fa-list-ol" aria-hidden="true"></i></span><span class="action-btn line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行" data-ct-tooltip><i class="fa-solid fa-right-left" aria-hidden="true"></i></span><span class="action-btn copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板" data-copied-text="已复制" data-ct-tooltip><i class="fa-regular fa-clone" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="10" data-line-digit="1" style="--fi-max-shown-lines:10;--fi-line-digit:1;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git clone https://github.com/PX4/PX4-Autopilot.git --recursive</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git clone https://github.com/PX4/PX4-Autopilot.git --recursive</span></span></code></pre></td></tr></table></div>
 </div>
 </div><ol start="2">
 <li>成功后，进入文件夹继续下载组件</li>
 </ol>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
+<div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-fallback"><span class="code-title"><i class="arrow fa-solid fa-chevron-down" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h" aria-hidden="true"></i></span><span class="action-btn line-nos-btn" aria-label="切换行号" role="button" title="切换行号" data-ct-tooltip><i class="fa-solid fa-list-ol" aria-hidden="true"></i></span><span class="action-btn line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行" data-ct-tooltip><i class="fa-solid fa-right-left" aria-hidden="true"></i></span><span class="action-btn copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板" data-copied-text="已复制" data-ct-tooltip><i class="fa-regular fa-clone" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="10" data-line-digit="1" style="--fi-max-shown-lines:10;--fi-line-digit:1;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
@@ -184,17 +181,17 @@
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd PX4-Autopilot/
 </span></span><span class="line"><span class="cl">git submodule update --init --recursive
 </span></span><span class="line"><span class="cl">bash ./Tools/setup/ubuntu.sh
-</span></span><span class="line"><span class="cl"># !!！reboot 重启机器</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl"># !!！reboot 重启机器</span></span></code></pre></td></tr></table></div>
 </div>
 </div><ol start="3">
 <li>测试编译px4</li>
 </ol>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
+<div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-sh"><span class="code-title"><i class="arrow fa-solid fa-chevron-down" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h" aria-hidden="true"></i></span><span class="action-btn line-nos-btn" aria-label="切换行号" role="button" title="切换行号" data-ct-tooltip><i class="fa-solid fa-list-ol" aria-hidden="true"></i></span><span class="action-btn line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行" data-ct-tooltip><i class="fa-solid fa-right-left" aria-hidden="true"></i></span><span class="action-btn copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板" data-copied-text="已复制" data-ct-tooltip><i class="fa-regular fa-clone" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="10" data-line-digit="1" style="--fi-max-shown-lines:10;--fi-line-digit:1;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">make px4_sitl_default gazebo</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">make px4_sitl_default gazebo</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h3 class="heading-element" id="安装mavros"><span>安装mavros</span>
   <a href="#%e5%ae%89%e8%a3%85mavros" class="heading-mark">
@@ -203,18 +200,18 @@
 </h3><ol>
 <li>编译成功显示gazebo后，退出。并安装mavros</li>
 </ol>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
+<div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-sh"><span class="code-title"><i class="arrow fa-solid fa-chevron-down" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h" aria-hidden="true"></i></span><span class="action-btn line-nos-btn" aria-label="切换行号" role="button" title="切换行号" data-ct-tooltip><i class="fa-solid fa-list-ol" aria-hidden="true"></i></span><span class="action-btn line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行" data-ct-tooltip><i class="fa-solid fa-right-left" aria-hidden="true"></i></span><span class="action-btn copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板" data-copied-text="已复制" data-ct-tooltip><i class="fa-regular fa-clone" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="10" data-line-digit="1" style="--fi-max-shown-lines:10;--fi-line-digit:1;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo apt-get install ros-noetic-mavros*</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo apt-get install ros-noetic-mavros*</span></span></code></pre></td></tr></table></div>
 </div>
 </div><ol start="2">
 <li>测试，并解决报错问题</li>
 </ol>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
+<div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-sh"><span class="code-title"><i class="arrow fa-solid fa-chevron-down" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h" aria-hidden="true"></i></span><span class="action-btn line-nos-btn" aria-label="切换行号" role="button" title="切换行号" data-ct-tooltip><i class="fa-solid fa-list-ol" aria-hidden="true"></i></span><span class="action-btn line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行" data-ct-tooltip><i class="fa-solid fa-right-left" aria-hidden="true"></i></span><span class="action-btn copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板" data-copied-text="已复制" data-ct-tooltip><i class="fa-regular fa-clone" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="10" data-line-digit="1" style="--fi-max-shown-lines:10;--fi-line-digit:1;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
@@ -222,9 +219,9 @@
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">roslaunch mavros px4.launch
 </span></span><span class="line"><span class="cl"><span class="c1"># 报错解决</span>
-</span></span><span class="line"><span class="cl">sudo /opt/ros/noetic/lib/mavros/install_geographiclib_datasets.sh</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl">sudo /opt/ros/noetic/lib/mavros/install_geographiclib_datasets.sh</span></span></code></pre></td></tr></table></div>
 </div>
-</div><p><img loading="lazy" src='/assets/ubt20_px4/20241106090111521.png' alt="/assets/ubt20_px4/20241106090111521.png"></p>
+</div><p><img loading="lazy" src='/assets/ubt20_px4/20241106090111521.png' alt="/assets/ubt20_px4/20241106090111521.png" height="494" width="733"></p>
 <h3 class="heading-element" id="切换px4版本"><span>切换PX4版本</span>
   <a href="#%e5%88%87%e6%8d%a2px4%e7%89%88%e6%9c%ac" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
@@ -233,21 +230,22 @@
 <li>成功后切换PX4版本至工程需要的版本</li>
 </ol>
 <blockquote>
-<p>我这里配置工程 <a href="https://gitee.com/gchasing/ego_geometry_control"target="_blank" rel="external nofollow noopener noreferrer">ego visual</a>, 需要版本为<strong>1.12.3</strong></p></blockquote>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
+<p>我这里配置工程 <a href="https://gitee.com/gchasing/ego_geometry_control" target="_blank" rel="external nofollow noopener noreferrer">ego visual</a>, 需要版本为<strong>1.12.3</strong></p>
+</blockquote>
+<div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-sh"><span class="code-title"><i class="arrow fa-solid fa-chevron-down" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h" aria-hidden="true"></i></span><span class="action-btn line-nos-btn" aria-label="切换行号" role="button" title="切换行号" data-ct-tooltip><i class="fa-solid fa-list-ol" aria-hidden="true"></i></span><span class="action-btn line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行" data-ct-tooltip><i class="fa-solid fa-right-left" aria-hidden="true"></i></span><span class="action-btn copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板" data-copied-text="已复制" data-ct-tooltip><i class="fa-regular fa-clone" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="10" data-line-digit="1" style="--fi-max-shown-lines:10;--fi-line-digit:1;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git checkout v1.12.3
-</span></span><span class="line"><span class="cl">git submodule update --init --recursive</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl">git submodule update --init --recursive</span></span></code></pre></td></tr></table></div>
 </div>
 </div><ol start="2">
 <li>安装jdk8, 并切换版本</li>
 </ol>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
+<div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-sh"><span class="code-title"><i class="arrow fa-solid fa-chevron-down" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h" aria-hidden="true"></i></span><span class="action-btn line-nos-btn" aria-label="切换行号" role="button" title="切换行号" data-ct-tooltip><i class="fa-solid fa-list-ol" aria-hidden="true"></i></span><span class="action-btn line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行" data-ct-tooltip><i class="fa-solid fa-right-left" aria-hidden="true"></i></span><span class="action-btn copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板" data-copied-text="已复制" data-ct-tooltip><i class="fa-regular fa-clone" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="10" data-line-digit="1" style="--fi-max-shown-lines:10;--fi-line-digit:1;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
@@ -255,49 +253,48 @@
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo apt install openjdk-8-jdk
 </span></span><span class="line"><span class="cl">sudo update-alternatives --config java <span class="c1"># 选择Java 8 的指令</span>
-</span></span><span class="line"><span class="cl">rm -rf Tools/jMAVSim/out</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl">rm -rf Tools/jMAVSim/out</span></span></code></pre></td></tr></table></div>
 </div>
 </div><ol start="3">
 <li>编译<strong>jmavsim</strong></li>
 </ol>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
+<div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-sh"><span class="code-title"><i class="arrow fa-solid fa-chevron-down" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h" aria-hidden="true"></i></span><span class="action-btn line-nos-btn" aria-label="切换行号" role="button" title="切换行号" data-ct-tooltip><i class="fa-solid fa-list-ol" aria-hidden="true"></i></span><span class="action-btn line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行" data-ct-tooltip><i class="fa-solid fa-right-left" aria-hidden="true"></i></span><span class="action-btn copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板" data-copied-text="已复制" data-ct-tooltip><i class="fa-regular fa-clone" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="10" data-line-digit="1" style="--fi-max-shown-lines:10;--fi-line-digit:1;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">make clean
-</span></span><span class="line"><span class="cl">make px4_sitl_default jmavsim</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl">make px4_sitl_default jmavsim</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h3 class="heading-element" id="安装qgc"><span>安装QGC</span>
   <a href="#%e5%ae%89%e8%a3%85qgc" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
-</h3><p>根据官网提示安装 <a href="https://docs.qgroundcontrol.com/master/en/qgc-user-guide/getting_started/download_and_install.html"target="_blank" rel="external nofollow noopener noreferrer">QGC</a></p></div><div class="post-footer" id="post-footer">
+</h3><p>根据官网提示安装 <a href="https://docs.qgroundcontrol.com/master/en/qgc-user-guide/getting_started/download_and_install.html" target="_blank" rel="external nofollow noopener noreferrer">QGC</a></p></div><div class="post-footer" id="post-footer">
   <div class="post-info">
     <div class="post-info-line">
-      <div class="post-info-mod">
-        <span title="更新于 2025-07-29 05:05:48">更新于 2025-07-29&nbsp;</span>
+      <div class="post-info-mod"><span title="更新于 2025-07-29 05:05:48">更新于 2025-07-29&nbsp;</span>
       </div></div><div class="post-info-line">
         <div class="post-info-md"></div>
         <div class="post-info-share">
-          <span><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://sheetung.github.io/ubt20_px4/" data-hashtag="Ubuntu20"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden="true"></i></a>
-  <a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://sheetung.github.io/ubt20_px4/" data-title="虚拟机Ubuntu20配置px4相关环境"><i class="fa-brands fa-weibo fa-fw" aria-hidden="true"></i></a>
+          <span><a href="javascript:void(0);" title="分享到 X" data-sharer="twitter" data-url="https://sheetung.github.io/ubt20_px4/" data-title="虚拟机Ubuntu20配置px4相关环境" data-hashtags="Ubuntu20,PX4"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://sheetung.github.io/ubt20_px4/" data-hashtag="Ubuntu20"><i class="fa-brands fa-facebook-square" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://sheetung.github.io/ubt20_px4/" data-title="虚拟机Ubuntu20配置px4相关环境"><i class="fa-brands fa-weibo" aria-hidden="true"></i></a>
   </span>
         </div>
       </div></div>
 
   <div class="post-info-more">
-    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href="/tags/ubuntu20/" class="post-tag" title="标签 - Ubuntu20">Ubuntu20</a><a href="/tags/px4/" class="post-tag" title="标签 - PX4">PX4</a></section>
-    <section>
-      <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+    <section class="post-tags"><i class="fa-solid fa-tags me-1" aria-hidden="true"></i><a href="/tags/ubuntu20/" class="post-tag" title="标签 - Ubuntu20">Ubuntu20</a><a href="/tags/px4/" class="post-tag" title="标签 - PX4">PX4</a></section>
+    <section><span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
     </section>
-  </div><div class="post-nav"><a href="/lubancat_px4uart/" class="post-nav-item" rel="prev" title="【无人机】鲁班猫Cat5V2与PX4飞控的通信篇"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>【无人机】鲁班猫Cat5V2与PX4飞控的通信篇</a><a href="/test-openclaw-auto-update/" class="post-nav-item" rel="next" title="测试 OpenClaw 自动更新博客">测试 OpenClaw 自动更新博客<i class="fa-solid fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+  </div><div class="post-nav"><a href="/lubancat_px4uart/" class="post-nav-item" rel="prev" title="【无人机】鲁班猫Cat5V2与PX4飞控的通信篇"><i class="fa-solid fa-angle-left" aria-hidden="true"></i>【无人机】鲁班猫Cat5V2与PX4飞控的通信篇</a><a href="/test-openclaw-auto-update/" class="post-nav-item" rel="next" title="测试 OpenClaw 自动更新博客">测试 OpenClaw 自动更新博客<i class="fa-solid fa-angle-right" aria-hidden="true"></i></a></div>
 </div>
 <div class="post-reward">
     <div class="comment"></div>
     <input type="checkbox" class="reward-input" name="reward" id="fi-reward" hidden />
-    <label class="reward-button" for="fi-reward"><i class="fa-solid fa-qrcode fa-fw" aria-hidden="true"></i>赞赏</label>
+    <label class="reward-button" for="fi-reward"><i class="fa-solid fa-qrcode" aria-hidden="true"></i>赞赏</label>
     <div class="reward-ways" data-mode="static"><div><img src='/images/alipay.png' alt="西塘 支付宝"><span>支付宝</span>
           </div><div><img src='/images/wechatpay.png' alt="西塘 微信"><span>微信</span>
           </div></div>
@@ -326,17 +323,35 @@
           Please enable JavaScript to view the comments powered by <a href="https://giscus.app/" rel="external nofollow noopener noreferrer">giscus</a>.
         </noscript></div></article>
 
-  <aside class="toc" id="toc-auto" aria-label="目录"><h2 class="toc-title">目录&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden="true"></i></h2>
-      <div class="toc-content" id="toc-content-auto"></div></aside></main><footer class="footer">
-    <div class="footer-container"><div class="footer-line powered">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.148.1"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.3.20"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
-        </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
+  <aside class="toc" id="toc-auto" aria-label="目录"><h2 class="toc-title">目录&nbsp;<i class="toc-icon fa-solid fa-angle-down" aria-hidden="true"></i></h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside><dialog id="toc-dialog" aria-labelledby="toc-dialog-title" role="dialog">
+      <div class="toc">
+        <h2 class="toc-title">目录</h2>
+        <div class="toc-content" id="toc-content-drawer"><nav >
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#安装和配置px4">安装和配置PX4</a></li>
+        <li><a href="#安装mavros">安装mavros</a></li>
+        <li><a href="#切换px4版本">切换PX4版本</a></li>
+        <li><a href="#安装qgc">安装QGC</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+      </div>
+    </dialog></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line powered">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.161.1"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.4.5"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
+        </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright" aria-hidden="true"></i>
             <span itemprop="copyrightYear">2025 - 2026</span><span class="author" itemprop="copyrightHolder">
-              <a href="/">西塘</a></span><span class="license footer-divider"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div><div class="footer-line statistics"><span class="site-time" title='网站运行中……'><i class="fa-solid fa-heartbeat fa-fw animate-icon" aria-hidden="true"></i><span class="run-times ms-1">网站运行中……</span></span></div><div class="footer-line visitor order-last">
-          <span id="busuanzi_container_site_uv" title='总访客数'><i class="fa-regular fa-user fa-fw me-1" aria-hidden="true"></i><span id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span></span><span id="busuanzi_container_site_pv" class="footer-divider" title='总访问量'><i class="fa-regular fa-eye fa-fw me-1" aria-hidden="true"></i><span id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span></span>
+              <a href="/">西塘</a></span><span class="license footer-divider"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div><div class="footer-line statistics"><span class="site-time" title='网站运行中……'><i class="fa-solid fa-heartbeat animate-icon" aria-hidden="true"></i><span class="run-times variant-numeric ms-1">网站运行中……</span></span></div><div class="footer-line visitor order-last">
+          <span id="busuanzi_container_site_uv" title='总访客数'><i class="fa-regular fa-user me-1" aria-hidden="true"></i><span id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin" aria-hidden="true"></i></span></span><span id="busuanzi_container_site_pv" class="footer-divider" title='总访问量'><i class="fa-regular fa-eye me-1" aria-hidden="true"></i><span id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin" aria-hidden="true"></i></span></span>
         </div></div>
-  </footer></div><div class="widgets"><div class="fixed-buttons animate__faster d-none"><div class="fixed-button back-to-top" role="button" aria-label="回到顶部"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i><span class="variant-numeric">0%</span>
-        </div><div class="fixed-button view-comments d-none" role="button" aria-label="查看评论"><i class="fa-solid fa-comment fa-fw" aria-hidden="true"></i></div></div><div id="mask"></div><div class="reading-progress-bar" style="left: 0;top: 0;"></div><noscript>
+  </footer></div><div class="widgets"><div class="fixed-buttons"><div class="fixed-button back-to-top animate__faster d-none" role="button" aria-label="回到顶部"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i><svg viewBox="0 0 100 100">
+              <circle class="bg" cx="50" cy="50" r="50"></circle>
+              <circle class="progress" cx="50" cy="50" r="50"></circle>
+            </svg></div><div id="toc-drawer-button" class="fixed-button toc-drawer-button d-none" role="button" aria-label="目录"><i class="fa-solid fa-bars" aria-hidden="true"></i></div><div class="fixed-button view-comments d-none" role="button" aria-label="查看评论"><i class="fa-solid fa-comment" aria-hidden="true"></i></div></div><div id="mask"></div><div class="reading-progress-bar" style="left: 0;top: 0;"></div><noscript>
     <div class="noscript-warning">该网站在启用 JavaScript 的情况下效果最佳。</div>
   </noscript>
-</div><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><link rel="stylesheet" href="/lib/pace/themes/green/pace-theme-minimal.css"><script src="/lib/autocomplete/autocomplete.min.js" defer></script><script src="/lib/fuse/fuse.min.js" defer></script><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script src="https://vercount.one/js" async defer></script><script src="/lib/pace/pace.min.js" async defer></script><script>window.config={"code":{"copyTitle":"复制到剪贴板","editLockTitle":"锁定可编辑代码块","editUnLockTitle":"解锁可编辑代码块","editable":true,"maxShownLines":10},"comment":{"enable":true,"expired":false,"giscus":{"darkTheme":"dark","lightTheme":"light","origin":"https://giscus.app"}},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验。"},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/search.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":30,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"siteTime":"2025-07-12T19:56:00+08:00","version":"v0.3.20"};</script><script src="/js/theme.min.js" defer></script><script async defer data-website-id="15750748-7c82-490e-b84b-07300e94e202" src="https://anal.moontung.top/script.js"  ></script></body>
+</div><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><link rel="stylesheet" href="/lib/pace/themes/green/pace-theme-minimal.css"><script src="/lib/autocomplete/autocomplete.min.js" defer></script><script src="/lib/fuse/fuse.min.js" defer></script><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script src="/lib/cell-tooltip/cell-tooltip.umd.js" defer></script><script src="https://vercount.one/js" async defer></script><script src="/lib/pace/pace.min.js" async defer></script><script src="/js/config/1b31fa61ccee49142d554ba72edfc71f.js" defer></script><script src="/js/theme.min.js" defer></script><script async defer data-website-id="15750748-7c82-490e-b84b-07300e94e202" src="https://anal.moontung.top/script.js"  ></script></body>
 </html>

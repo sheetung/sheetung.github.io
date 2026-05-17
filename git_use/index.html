@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
   <head>
-    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
     <meta name="robots" content="noodp" />
@@ -30,7 +29,7 @@
 <meta name="application-name" content="FixIt">
 <meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="https://sheetung.github.io/git_use/" title="GIT使用教程 通关版 - sheetung" /><link rel="prev" type="text/html" href="https://sheetung.github.io/friends/" title="Friends" /><link rel="next" type="text/html" href="https://sheetung.github.io/lubancat_px4uart/" title="【无人机】鲁班猫Cat5V2与PX4飞控的通信篇" /><link rel="alternate" type="text/markdown" href="https://sheetung.github.io/git_use/index.md" title="GIT使用教程 通关版 - sheetung"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="https://sheetung.github.io/git_use/" title="GIT使用教程 通关版 - sheetung" /><link rel="prev" type="text/html" href="https://sheetung.github.io/friends/" title="Friends" /><link rel="next" type="text/html" href="https://sheetung.github.io/lubancat_px4uart/" title="【无人机】鲁班猫Cat5V2与PX4飞控的通信篇" /><link rel="alternate" type="text/markdown" href="https://sheetung.github.io/git_use/index.md" title="GIT使用教程 通关版 - sheetung"><link rel="stylesheet" href="/css/config.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
   {
@@ -50,7 +49,7 @@
       },"description": ""
   }
   </script><script src="/js/head/color-scheme.min.js"></script></head>
-  <body data-header-desktop="sticky" data-header-mobile="auto"><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
+  <body data-instant-intensity="viewport" data-header-desktop="sticky" data-header-mobile="auto"><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
   <div class="header-wrapper">
     <div class="header-title">
       <a href="/" title="sheetung"><span class="header-title-text">sheetung</span></a><span class="header-subtitle"></span></div>
@@ -63,17 +62,15 @@
               <a class="menu-link" href="/about/">关于</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id="search-desktop">
             <input type="text" placeholder="搜索文章标题或内容……" id="search-input-desktop">
             <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
-              <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+              <i class="fa-solid fa-search" aria-hidden="true"></i>
             </a>
             <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
-              <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+              <i class="fa-solid fa-times-circle" aria-hidden="true"></i>
             </a>
             <span class="search-button search-loading" id="search-loading-desktop">
-              <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+              <i class="fa-solid fa-spinner fa-spin" aria-hidden="true"></i>
             </span>
-          </li><li class="menu-item theme-switch" title="切换主题">
-          <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
-        </li></ul>
+          </li><li class="menu-item theme-switch" role="button" aria-label="切换主题" title="切换主题"><i class="fa-solid fa-adjust" aria-hidden="true"></i></li></ul>
     </nav>
   </div>
 </header><header class="mobile animate__faster" id="header-mobile">
@@ -81,7 +78,8 @@
     <div class="header-wrapper">
       <div class="header-title">
         <a href="/" title="sheetung"><span class="header-title-text">sheetung</span></a><span class="header-subtitle"></span></div>
-      <div class="menu-toggle" id="menu-toggle-mobile">
+      <div class="theme-switch" role="button" aria-label="切换主题"><i class="fa-solid fa-adjust" aria-hidden="true"></i></div>
+      <div class="menu-toggle" id="menu-toggle-mobile" role="button" aria-labelledby="menu-mobile">
         <span></span><span></span><span></span>
       </div>
     </div>
@@ -90,20 +88,19 @@
             <div class="search mobile" id="search-mobile">
               <input type="text" placeholder="搜索文章标题或内容……" id="search-input-mobile">
               <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
-                <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+                <i class="fa-solid fa-search" aria-hidden="true"></i>
               </a>
               <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
-                <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+                <i class="fa-solid fa-times-circle" aria-hidden="true"></i>
               </a>
               <span class="search-button search-loading" id="search-loading-mobile">
-                <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                <i class="fa-solid fa-spinner fa-spin" aria-hidden="true"></i>
               </span>
             </div>
             <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
               取消
             </a>
-          </li><li class="menu-item"><a class="menu-link" href="/posts/">文章</a></li><li class="menu-item"><a class="menu-link" href="/categories/">分类</a></li><li class="menu-item"><a class="menu-link" href="/tags/">标签</a></li><li class="menu-item"><a class="menu-link" href="/friends/">友链</a></li><li class="menu-item"><a class="menu-link" href="/about/">关于</a></li><li class="menu-item menu-system">
-          <span class="menu-system-item theme-switch" title="切换主题"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></span></li>
+          </li><li class="menu-item"><a class="menu-link" href="/posts/">文章</a></li><li class="menu-item"><a class="menu-link" href="/categories/">分类</a></li><li class="menu-item"><a class="menu-link" href="/tags/">标签</a></li><li class="menu-item"><a class="menu-link" href="/friends/">友链</a></li><li class="menu-item"><a class="menu-link" href="/about/">关于</a></li><li class="menu-item menu-system"></li>
       </ul>
     </nav>
   </div>
@@ -112,13 +109,13 @@
   </div>
   <div class="search-dropdown mobile">
     <div id="search-dropdown-mobile"></div>
-  </div><main class="container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="合集"></aside>
+  </div><main class="fi-container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="合集"></aside>
 
   <article class="page single">
     <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span>GIT使用教程 通关版</span>
       </h1></div><div class="post-meta">
       <div class="post-meta-line"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
-      西塘</span></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/%E7%99%BE%E8%AE%B0/" class="post-category" title="分类 - 百记"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> 百记</a></span></div><div class="post-meta-line"><span title="发布于 2025-07-12 12:22:24"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2025-07-12">2025-07-12</time></span>&nbsp;<span title="452 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 500 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>预计阅读 3 分钟</span>&nbsp;<span id="busuanzi_container_page_pv" class="busuanzi_visitors comment-visitors" data-flag-title="GIT使用教程 通关版"><i class="fa-regular fa-eye fa-fw me-1" aria-hidden="true"></i><span id="busuanzi_value_page_pv">-</span>&nbsp;次阅读
+      西塘</span></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/%E7%99%BE%E8%AE%B0/" class="post-category" title="分类 - 百记"><i class="fa-regular fa-folder" aria-hidden="true"></i> 百记</a></span></div><div class="post-meta-line"><span title="发布于 2025-07-12 12:22:24"><i class="fa-solid fa-calendar-days me-1" aria-hidden="true"></i><time datetime="2025-07-12">2025-07-12</time></span>&nbsp;<span title="452 字"><i class="fa-solid fa-pencil-alt me-1" aria-hidden="true"></i>约 500 字</span>&nbsp;<span><i class="fa-regular fa-clock me-1" aria-hidden="true"></i>预计阅读 3 分钟</span>&nbsp;<span id="busuanzi_container_page_pv" class="busuanzi_visitors comment-visitors" data-flag-title="GIT使用教程 通关版"><i class="fa-regular fa-eye me-1" aria-hidden="true"></i><span id="busuanzi_value_page_pv">-</span>&nbsp;次阅读
           </span>&nbsp;</div>
     </div><div class="details toc" id="toc-static" data-kept="false">
         <div class="details-summary toc-title">
@@ -150,13 +147,15 @@
 </nav></div>
       </div><div class="content" id="content"><p>一篇完整的git命令使用教程</p>
 <blockquote>
-<p>记得很久以前，大概两年左右吧，为了方便自己查阅以及实验室朋友们的使用，搓了一篇git使用教程，很惭愧它特别的粗糙，并且还躺在我的blog里，现在作为gitee/github专业单词拼写专家，还是想精细化这个教程，同样是为了自己查阅，还有方便搜索到的朋友查看。</p></blockquote>
+<p>记得很久以前，大概两年左右吧，为了方便自己查阅以及实验室朋友们的使用，搓了一篇git使用教程，很惭愧它特别的粗糙，并且还躺在我的blog里，现在作为gitee/github专业单词拼写专家，还是想精细化这个教程，同样是为了自己查阅，还有方便搜索到的朋友查看。</p>
+</blockquote>
 <h3 class="heading-element" id="前提"><span>前提</span>
   <a href="#%e5%89%8d%e6%8f%90" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
 </h3><blockquote>
-<p>前提条件</p></blockquote>
+<p>前提条件</p>
+</blockquote>
 <ol>
 <li>拥有一个<strong>gitee</strong>/<strong>github</strong>账号</li>
 <li>会创建一个基础的仓库</li>
@@ -167,8 +166,8 @@
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
 </h3><p>首先，你需要在<strong>gitee</strong>/<strong>github</strong>上新建一个仓库，新建好后不要着急退出。会看到类似于这样的代码块</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
+<div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-bash"><span class="code-title"><i class="arrow fa-solid fa-chevron-down" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h" aria-hidden="true"></i></span><span class="action-btn line-nos-btn" aria-label="切换行号" role="button" title="切换行号" data-ct-tooltip><i class="fa-solid fa-list-ol" aria-hidden="true"></i></span><span class="action-btn line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行" data-ct-tooltip><i class="fa-solid fa-right-left" aria-hidden="true"></i></span><span class="action-btn copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板" data-copied-text="已复制" data-ct-tooltip><i class="fa-regular fa-clone" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="10" data-line-digit="2" style="--fi-max-shown-lines:10;--fi-line-digit:2;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
@@ -194,7 +193,7 @@
 </span></span><span class="line"><span class="cl"><span class="c1">#…or push an existing repository from the command line</span>
 </span></span><span class="line"><span class="cl">git remote add origin git@github.com:sheetung/testgit.git
 </span></span><span class="line"><span class="cl">git branch -M main
-</span></span><span class="line"><span class="cl">git push -u origin main</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl">git push -u origin main</span></span></code></pre></td></tr></table></div><div class="code-expand-btn" aria-label="展开或折叠代码块" role="button"><i class="fa-solid fa-angles-down" aria-hidden="true"></i></div>
 </div>
 </div><p>这里给出了一个使用<strong>SSH</strong>的基础的连接操作<del>其实也就这么多操作</del>，接下来来到电脑端，我使用的是<strong>Ubuntu</strong>，<strong>Win</strong>下一样</p>
 <h3 class="heading-element" id="添加ssh公钥"><span>添加SSH公钥</span>
@@ -202,20 +201,21 @@
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
 </h3><blockquote>
-<p>当然使用http远程管理仓库也是可行的，方法更简单。这里使用SSH是为了<del>专业</del></p></blockquote>
+<p>当然使用http远程管理仓库也是可行的，方法更简单。这里使用SSH是为了<del>专业</del></p>
+</blockquote>
 <p>首先不管是<strong>Linux</strong>还是<strong>Win</strong>，均可使用相同的命令生成<strong>SSH Key</strong>，命令后回车三次</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
+<div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-bash"><span class="code-title"><i class="arrow fa-solid fa-chevron-down" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h" aria-hidden="true"></i></span><span class="action-btn line-nos-btn" aria-label="切换行号" role="button" title="切换行号" data-ct-tooltip><i class="fa-solid fa-list-ol" aria-hidden="true"></i></span><span class="action-btn line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行" data-ct-tooltip><i class="fa-solid fa-right-left" aria-hidden="true"></i></span><span class="action-btn copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板" data-copied-text="已复制" data-ct-tooltip><i class="fa-regular fa-clone" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="10" data-line-digit="1" style="--fi-max-shown-lines:10;--fi-line-digit:1;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># -t key 类型  -C 注释,随意可以是 计算机名，你的名字，Email...</span>
-</span></span><span class="line"><span class="cl">ssh-keygen -t rsa -C <span class="s2">&#34;email&#34;</span></span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl">ssh-keygen -t rsa -C <span class="s2">&#34;email&#34;</span></span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>生成后，有类似如下显示</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
+<div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-bash"><span class="code-title"><i class="arrow fa-solid fa-chevron-down" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h" aria-hidden="true"></i></span><span class="action-btn line-nos-btn" aria-label="切换行号" role="button" title="切换行号" data-ct-tooltip><i class="fa-solid fa-list-ol" aria-hidden="true"></i></span><span class="action-btn line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行" data-ct-tooltip><i class="fa-solid fa-right-left" aria-hidden="true"></i></span><span class="action-btn copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板" data-copied-text="已复制" data-ct-tooltip><i class="fa-regular fa-clone" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="10" data-line-digit="2" style="--fi-max-shown-lines:10;--fi-line-digit:2;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
@@ -259,17 +259,17 @@
 </span></span><span class="line"><span class="cl"><span class="p">|</span>        +o<span class="o">=</span>*o+.o.<span class="p">|</span>
 </span></span><span class="line"><span class="cl"><span class="p">|</span>        .*<span class="o">=</span>++o.  <span class="p">|</span>
 </span></span><span class="line"><span class="cl"><span class="p">|</span>       .o<span class="o">==</span> .o   <span class="p">|</span>
-</span></span><span class="line"><span class="cl">+----<span class="o">[</span>SHA256<span class="o">]</span>-----+</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl">+----<span class="o">[</span>SHA256<span class="o">]</span>-----+</span></span></code></pre></td></tr></table></div><div class="code-expand-btn" aria-label="展开或折叠代码块" role="button"><i class="fa-solid fa-angles-down" aria-hidden="true"></i></div>
 </div>
 </div><p>可见，<strong>Linux</strong>下<strong>SSH</strong>保存在<code>/home/ubt/.ssh/id_rsa.pub</code>内</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
+<div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-bash"><span class="code-title"><i class="arrow fa-solid fa-chevron-down" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h" aria-hidden="true"></i></span><span class="action-btn line-nos-btn" aria-label="切换行号" role="button" title="切换行号" data-ct-tooltip><i class="fa-solid fa-list-ol" aria-hidden="true"></i></span><span class="action-btn line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行" data-ct-tooltip><i class="fa-solid fa-right-left" aria-hidden="true"></i></span><span class="action-btn copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板" data-copied-text="已复制" data-ct-tooltip><i class="fa-regular fa-clone" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="10" data-line-digit="1" style="--fi-max-shown-lines:10;--fi-line-digit:1;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># cat copy</span>
-</span></span><span class="line"><span class="cl">cat /home/ubt/.ssh/id_rsa.pub</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl">cat /home/ubt/.ssh/id_rsa.pub</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p><strong>Win</strong>则保存在C盘用户&gt;用户名&gt;.ssh(隐藏文件夹)下，可直接用记事本打开
 将复制好的<strong>SSH Key</strong>，来到<strong>gitee</strong>/<strong>github</strong>的设置页面，找到<strong>SSH 公钥</strong>粘贴进去即可</p>
@@ -279,18 +279,18 @@
   </a>
 </h3><p>在工程内打开终端，Win下右键打开<strong>Git Bash</strong>
 首先配置你的<strong>git config</strong></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
+<div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-bash"><span class="code-title"><i class="arrow fa-solid fa-chevron-down" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h" aria-hidden="true"></i></span><span class="action-btn line-nos-btn" aria-label="切换行号" role="button" title="切换行号" data-ct-tooltip><i class="fa-solid fa-list-ol" aria-hidden="true"></i></span><span class="action-btn line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行" data-ct-tooltip><i class="fa-solid fa-right-left" aria-hidden="true"></i></span><span class="action-btn copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板" data-copied-text="已复制" data-ct-tooltip><i class="fa-regular fa-clone" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="10" data-line-digit="1" style="--fi-max-shown-lines:10;--fi-line-digit:1;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git config --global user.name “你的名字” 
-</span></span><span class="line"><span class="cl">git config --global user.email <span class="s2">&#34;注册的邮箱&#34;</span></span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl">git config --global user.email <span class="s2">&#34;注册的邮箱&#34;</span></span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>仓库初始化</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
+<div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-bash"><span class="code-title"><i class="arrow fa-solid fa-chevron-down" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h" aria-hidden="true"></i></span><span class="action-btn line-nos-btn" aria-label="切换行号" role="button" title="切换行号" data-ct-tooltip><i class="fa-solid fa-list-ol" aria-hidden="true"></i></span><span class="action-btn line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行" data-ct-tooltip><i class="fa-solid fa-right-left" aria-hidden="true"></i></span><span class="action-btn copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板" data-copied-text="已复制" data-ct-tooltip><i class="fa-regular fa-clone" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="10" data-line-digit="2" style="--fi-max-shown-lines:10;--fi-line-digit:2;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
@@ -316,7 +316,7 @@
 </span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;first commit&#34;</span>
 </span></span><span class="line"><span class="cl">git remote add origin ******.git
 </span></span><span class="line"><span class="cl"><span class="c1"># -u 第一次的参数  以后只需 git push origin main  此处gitee是master</span>
-</span></span><span class="line"><span class="cl">git push -u origin main</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl">git push -u origin main</span></span></code></pre></td></tr></table></div><div class="code-expand-btn" aria-label="展开或折叠代码块" role="button"><i class="fa-solid fa-angles-down" aria-hidden="true"></i></div>
 </div>
 </div><p>此时不出意外已经完成了仓库的推送，刷新你的仓库即可看到文件</p>
 <h3 class="heading-element" id="同步远程仓库"><span>同步远程仓库</span>
@@ -324,9 +324,10 @@
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
 </h3><blockquote>
-<p>如果已经拥有一个仓库，需要本地同步，那就这样这样这样</p></blockquote>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
+<p>如果已经拥有一个仓库，需要本地同步，那就这样这样这样</p>
+</blockquote>
+<div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-bash"><span class="code-title"><i class="arrow fa-solid fa-chevron-down" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h" aria-hidden="true"></i></span><span class="action-btn line-nos-btn" aria-label="切换行号" role="button" title="切换行号" data-ct-tooltip><i class="fa-solid fa-list-ol" aria-hidden="true"></i></span><span class="action-btn line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行" data-ct-tooltip><i class="fa-solid fa-right-left" aria-hidden="true"></i></span><span class="action-btn copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板" data-copied-text="已复制" data-ct-tooltip><i class="fa-regular fa-clone" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="10" data-line-digit="1" style="--fi-max-shown-lines:10;--fi-line-digit:1;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
@@ -340,14 +341,14 @@
 </span></span><span class="line"><span class="cl"><span class="c1"># 链接远程仓库</span>
 </span></span><span class="line"><span class="cl">git remote add origin ******.git
 </span></span><span class="line"><span class="cl"><span class="c1"># pull远程仓库的main分支</span>
-</span></span><span class="line"><span class="cl">git pull origin main</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl">git pull origin main</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h3 class="heading-element" id="仓库提交三件套"><span>仓库提交三件套</span>
   <a href="#%e4%bb%93%e5%ba%93%e6%8f%90%e4%ba%a4%e4%b8%89%e4%bb%b6%e5%a5%97" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
-</h3><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
+</h3><div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-bash"><span class="code-title"><i class="arrow fa-solid fa-chevron-down" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h" aria-hidden="true"></i></span><span class="action-btn line-nos-btn" aria-label="切换行号" role="button" title="切换行号" data-ct-tooltip><i class="fa-solid fa-list-ol" aria-hidden="true"></i></span><span class="action-btn line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行" data-ct-tooltip><i class="fa-solid fa-right-left" aria-hidden="true"></i></span><span class="action-btn copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板" data-copied-text="已复制" data-ct-tooltip><i class="fa-regular fa-clone" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="10" data-line-digit="1" style="--fi-max-shown-lines:10;--fi-line-digit:1;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
@@ -357,7 +358,7 @@
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 一般情况下，可以对所有文件进行直接提交，三件套如下</span>
 </span></span><span class="line"><span class="cl">git add .
 </span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;[M]:又掉了一根头发&#34;</span>
-</span></span><span class="line"><span class="cl">git push origin main</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl">git push origin main</span></span></code></pre></td></tr></table></div>
 </div>
 </div><hr>
 <h3 class="heading-element" id="git相关知识点"><span>git相关知识点</span>
@@ -368,17 +369,17 @@
   <a href="#git-remote%e5%88%a0%e9%99%a4%e6%9c%ac%e5%9c%b0%e5%af%b9%e5%ba%94%e7%9a%84%e8%bf%9c%e7%a8%8b%e5%9c%b0%e5%9d%80" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
-</h4><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
+</h4><div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-bash"><span class="code-title"><i class="arrow fa-solid fa-chevron-down" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h" aria-hidden="true"></i></span><span class="action-btn line-nos-btn" aria-label="切换行号" role="button" title="切换行号" data-ct-tooltip><i class="fa-solid fa-list-ol" aria-hidden="true"></i></span><span class="action-btn line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行" data-ct-tooltip><i class="fa-solid fa-right-left" aria-hidden="true"></i></span><span class="action-btn copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板" data-copied-text="已复制" data-ct-tooltip><i class="fa-regular fa-clone" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="10" data-line-digit="1" style="--fi-max-shown-lines:10;--fi-line-digit:1;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">#查看远程</span>
-</span></span><span class="line"><span class="cl">git remote -v</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl">git remote -v</span></span></code></pre></td></tr></table></div>
 </div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
+</div><div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-bash"><span class="code-title"><i class="arrow fa-solid fa-chevron-down" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h" aria-hidden="true"></i></span><span class="action-btn line-nos-btn" aria-label="切换行号" role="button" title="切换行号" data-ct-tooltip><i class="fa-solid fa-list-ol" aria-hidden="true"></i></span><span class="action-btn line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行" data-ct-tooltip><i class="fa-solid fa-right-left" aria-hidden="true"></i></span><span class="action-btn copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板" data-copied-text="已复制" data-ct-tooltip><i class="fa-regular fa-clone" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="10" data-line-digit="1" style="--fi-max-shown-lines:10;--fi-line-digit:1;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
@@ -388,7 +389,7 @@
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 删除并重建</span>
 </span></span><span class="line"><span class="cl">git remote remove origin
 </span></span><span class="line"><span class="cl"><span class="c1"># 重建，建议使用ssh密钥</span>
-</span></span><span class="line"><span class="cl">git remote add origin git@***.com:******.git</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl">git remote add origin git@***.com:******.git</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h4 class="heading-element" id="push忽略"><span>push忽略</span>
   <a href="#push%e5%bf%bd%e7%95%a5" class="heading-mark">
@@ -401,8 +402,8 @@
   </a>
 </h4><p>当然，开心就好，这个随意
 <code>git commit -m &quot;[M]:update...&quot;</code></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
+<div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-bash"><span class="code-title"><i class="arrow fa-solid fa-chevron-down" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h" aria-hidden="true"></i></span><span class="action-btn line-nos-btn" aria-label="切换行号" role="button" title="切换行号" data-ct-tooltip><i class="fa-solid fa-list-ol" aria-hidden="true"></i></span><span class="action-btn line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行" data-ct-tooltip><i class="fa-solid fa-right-left" aria-hidden="true"></i></span><span class="action-btn copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板" data-copied-text="已复制" data-ct-tooltip><i class="fa-regular fa-clone" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="10" data-line-digit="1" style="--fi-max-shown-lines:10;--fi-line-digit:1;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
@@ -418,7 +419,7 @@
 </span></span><span class="line"><span class="cl">D：表示文件被删除了（Deleted）。
 </span></span><span class="line"><span class="cl">R：表示文件被重命名了（Renamed）。
 </span></span><span class="line"><span class="cl">C：表示文件复制了一份（Copied）。
-</span></span><span class="line"><span class="cl">U：表示文件在合并时发生了冲突（Unmerged）。</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl">U：表示文件在合并时发生了冲突（Unmerged）。</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h4 class="heading-element" id="分支的提交与合并"><span>分支的提交与合并</span>
   <a href="#%e5%88%86%e6%94%af%e7%9a%84%e6%8f%90%e4%ba%a4%e4%b8%8e%e5%90%88%e5%b9%b6" class="heading-mark">
@@ -427,46 +428,46 @@
 </h4><ol>
 <li>将本地的 tabbar 分支进行本地的 commit 提交：</li>
 </ol>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
+<div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-bash"><span class="code-title"><i class="arrow fa-solid fa-chevron-down" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h" aria-hidden="true"></i></span><span class="action-btn line-nos-btn" aria-label="切换行号" role="button" title="切换行号" data-ct-tooltip><i class="fa-solid fa-list-ol" aria-hidden="true"></i></span><span class="action-btn line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行" data-ct-tooltip><i class="fa-solid fa-right-left" aria-hidden="true"></i></span><span class="action-btn copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板" data-copied-text="已复制" data-ct-tooltip><i class="fa-regular fa-clone" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="10" data-line-digit="1" style="--fi-max-shown-lines:10;--fi-line-digit:1;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git add .
-</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;完成了 tabBar 的开发&#34;</span></span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;完成了 tabBar 的开发&#34;</span></span></span></code></pre></td></tr></table></div>
 </div>
 </div><ol start="2">
 <li>将本地的 tabbar 分支推送到远程仓库进行保存：</li>
 </ol>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
+<div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-bash"><span class="code-title"><i class="arrow fa-solid fa-chevron-down" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h" aria-hidden="true"></i></span><span class="action-btn line-nos-btn" aria-label="切换行号" role="button" title="切换行号" data-ct-tooltip><i class="fa-solid fa-list-ol" aria-hidden="true"></i></span><span class="action-btn line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行" data-ct-tooltip><i class="fa-solid fa-right-left" aria-hidden="true"></i></span><span class="action-btn copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板" data-copied-text="已复制" data-ct-tooltip><i class="fa-regular fa-clone" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="10" data-line-digit="1" style="--fi-max-shown-lines:10;--fi-line-digit:1;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git push -u origin tabbar</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git push -u origin tabbar</span></span></code></pre></td></tr></table></div>
 </div>
 </div><ol start="3">
 <li>将本地的 tabbar 分支合并到本地的 master 分支：</li>
 </ol>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
+<div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-bash"><span class="code-title"><i class="arrow fa-solid fa-chevron-down" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h" aria-hidden="true"></i></span><span class="action-btn line-nos-btn" aria-label="切换行号" role="button" title="切换行号" data-ct-tooltip><i class="fa-solid fa-list-ol" aria-hidden="true"></i></span><span class="action-btn line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行" data-ct-tooltip><i class="fa-solid fa-right-left" aria-hidden="true"></i></span><span class="action-btn copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板" data-copied-text="已复制" data-ct-tooltip><i class="fa-regular fa-clone" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="10" data-line-digit="1" style="--fi-max-shown-lines:10;--fi-line-digit:1;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git checkout master
-</span></span><span class="line"><span class="cl">git merge tabbar</span></span></code></pre></td></tr></table>
+</span></span><span class="line"><span class="cl">git merge tabbar</span></span></code></pre></td></tr></table></div>
 </div>
 </div><ol start="4">
 <li>删除本地的 tabbar 分支：</li>
 </ol>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
+<div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-bash"><span class="code-title"><i class="arrow fa-solid fa-chevron-down" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h" aria-hidden="true"></i></span><span class="action-btn line-nos-btn" aria-label="切换行号" role="button" title="切换行号" data-ct-tooltip><i class="fa-solid fa-list-ol" aria-hidden="true"></i></span><span class="action-btn line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行" data-ct-tooltip><i class="fa-solid fa-right-left" aria-hidden="true"></i></span><span class="action-btn copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板" data-copied-text="已复制" data-ct-tooltip><i class="fa-regular fa-clone" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="10" data-line-digit="1" style="--fi-max-shown-lines:10;--fi-line-digit:1;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git branch -d tabbar</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git branch -d tabbar</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h4 class="heading-element" id="git版本的切换"><span>git版本的切换</span>
   <a href="#git%e7%89%88%e6%9c%ac%e7%9a%84%e5%88%87%e6%8d%a2" class="heading-mark">
@@ -475,39 +476,38 @@
 </h4><p>1.查看历史版本</p>
 <p>可以在仓库中或者使用命令 <code>git log</code> 查看</p>
 <p>2.然后切换到指定版本</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
+<div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-bash"><span class="code-title"><i class="arrow fa-solid fa-chevron-down" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h" aria-hidden="true"></i></span><span class="action-btn line-nos-btn" aria-label="切换行号" role="button" title="切换行号" data-ct-tooltip><i class="fa-solid fa-list-ol" aria-hidden="true"></i></span><span class="action-btn line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行" data-ct-tooltip><i class="fa-solid fa-right-left" aria-hidden="true"></i></span><span class="action-btn copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板" data-copied-text="已复制" data-ct-tooltip><i class="fa-regular fa-clone" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="10" data-line-digit="1" style="--fi-max-shown-lines:10;--fi-line-digit:1;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git checkout <span class="o">[</span>ID<span class="o">]</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git checkout <span class="o">[</span>ID<span class="o">]</span></span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>3.如果不放心使用 <code>git branch</code> 查看当前本地分支</p>
 <hr></div><div class="post-footer" id="post-footer">
   <div class="post-info">
     <div class="post-info-line">
-      <div class="post-info-mod">
-        <span title="更新于 2025-07-12 12:22:24">更新于 2025-07-12&nbsp;</span>
+      <div class="post-info-mod"><span title="更新于 2025-07-12 12:22:24">更新于 2025-07-12&nbsp;</span>
       </div></div><div class="post-info-line">
         <div class="post-info-md"><span><a href="/git_use/index.md" title="阅读原始文档" class="link-to-markdown">阅读原始文档</a></span></div>
         <div class="post-info-share">
-          <span><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://sheetung.github.io/git_use/" data-hashtag="git"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden="true"></i></a>
-  <a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://sheetung.github.io/git_use/" data-title="GIT使用教程 通关版"><i class="fa-brands fa-weibo fa-fw" aria-hidden="true"></i></a>
+          <span><a href="javascript:void(0);" title="分享到 X" data-sharer="twitter" data-url="https://sheetung.github.io/git_use/" data-title="GIT使用教程 通关版" data-hashtags="git"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://sheetung.github.io/git_use/" data-hashtag="git"><i class="fa-brands fa-facebook-square" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://sheetung.github.io/git_use/" data-title="GIT使用教程 通关版"><i class="fa-brands fa-weibo" aria-hidden="true"></i></a>
   </span>
         </div>
       </div></div>
 
   <div class="post-info-more">
-    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href="/tags/git/" class="post-tag" title="标签 - Git">Git</a></section>
-    <section>
-      <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+    <section class="post-tags"><i class="fa-solid fa-tags me-1" aria-hidden="true"></i><a href="/tags/git/" class="post-tag" title="标签 - Git">Git</a></section>
+    <section><span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
     </section>
-  </div><div class="post-nav"><a href="/build_hugo_blog/" class="post-nav-item" rel="prev" title="Hugo：零成本搭建一个带有评论和搜索系统的静态博客"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>Hugo：零成本搭建一个带有评论和搜索系统的静态博客</a><a href="/lubancat_px4uart/" class="post-nav-item" rel="next" title="【无人机】鲁班猫Cat5V2与PX4飞控的通信篇">【无人机】鲁班猫Cat5V2与PX4飞控的通信篇<i class="fa-solid fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+  </div><div class="post-nav"><a href="/build_hugo_blog/" class="post-nav-item" rel="prev" title="Hugo：零成本搭建一个带有评论和搜索系统的静态博客"><i class="fa-solid fa-angle-left" aria-hidden="true"></i>Hugo：零成本搭建一个带有评论和搜索系统的静态博客</a><a href="/lubancat_px4uart/" class="post-nav-item" rel="next" title="【无人机】鲁班猫Cat5V2与PX4飞控的通信篇">【无人机】鲁班猫Cat5V2与PX4飞控的通信篇<i class="fa-solid fa-angle-right" aria-hidden="true"></i></a></div>
 </div>
 <div class="post-reward">
     <div class="comment"></div>
     <input type="checkbox" class="reward-input" name="reward" id="fi-reward" hidden />
-    <label class="reward-button" for="fi-reward"><i class="fa-solid fa-qrcode fa-fw" aria-hidden="true"></i>赞赏</label>
+    <label class="reward-button" for="fi-reward"><i class="fa-solid fa-qrcode" aria-hidden="true"></i>赞赏</label>
     <div class="reward-ways" data-mode="static"><div><img src='/images/alipay.png' alt="西塘 支付宝"><span>支付宝</span>
           </div><div><img src='/images/wechatpay.png' alt="西塘 微信"><span>微信</span>
           </div></div>
@@ -536,17 +536,46 @@
           Please enable JavaScript to view the comments powered by <a href="https://giscus.app/" rel="external nofollow noopener noreferrer">giscus</a>.
         </noscript></div></article>
 
-  <aside class="toc" id="toc-auto" aria-label="目录"><h2 class="toc-title">目录&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden="true"></i></h2>
-      <div class="toc-content" id="toc-content-auto"></div></aside></main><footer class="footer">
-    <div class="footer-container"><div class="footer-line powered">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.148.1"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.3.20"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
-        </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
+  <aside class="toc" id="toc-auto" aria-label="目录"><h2 class="toc-title">目录&nbsp;<i class="toc-icon fa-solid fa-angle-down" aria-hidden="true"></i></h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside><dialog id="toc-dialog" aria-labelledby="toc-dialog-title" role="dialog">
+      <div class="toc">
+        <h2 class="toc-title">目录</h2>
+        <div class="toc-content" id="toc-content-drawer"><nav >
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#前提">前提</a></li>
+        <li><a href="#新建仓库">新建仓库</a></li>
+        <li><a href="#添加ssh公钥">添加SSH公钥</a></li>
+        <li><a href="#初始化仓库">初始化仓库</a></li>
+        <li><a href="#同步远程仓库">同步远程仓库</a></li>
+        <li><a href="#仓库提交三件套">仓库提交三件套</a></li>
+        <li><a href="#git相关知识点">git相关知识点</a>
+          <ul>
+            <li><a href="#git-remote删除本地对应的远程地址">git remote删除本地对应的远程地址</a></li>
+            <li><a href="#push忽略">push忽略</a></li>
+            <li><a href="#git-commit规范化">git commit规范化</a></li>
+            <li><a href="#分支的提交与合并">分支的提交与合并</a></li>
+            <li><a href="#git版本的切换">git版本的切换</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+      </div>
+    </dialog></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line powered">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.161.1"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.4.5"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
+        </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright" aria-hidden="true"></i>
             <span itemprop="copyrightYear">2025 - 2026</span><span class="author" itemprop="copyrightHolder">
-              <a href="/">西塘</a></span><span class="license footer-divider"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div><div class="footer-line statistics"><span class="site-time" title='网站运行中……'><i class="fa-solid fa-heartbeat fa-fw animate-icon" aria-hidden="true"></i><span class="run-times ms-1">网站运行中……</span></span></div><div class="footer-line visitor order-last">
-          <span id="busuanzi_container_site_uv" title='总访客数'><i class="fa-regular fa-user fa-fw me-1" aria-hidden="true"></i><span id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span></span><span id="busuanzi_container_site_pv" class="footer-divider" title='总访问量'><i class="fa-regular fa-eye fa-fw me-1" aria-hidden="true"></i><span id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span></span>
+              <a href="/">西塘</a></span><span class="license footer-divider"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div><div class="footer-line statistics"><span class="site-time" title='网站运行中……'><i class="fa-solid fa-heartbeat animate-icon" aria-hidden="true"></i><span class="run-times variant-numeric ms-1">网站运行中……</span></span></div><div class="footer-line visitor order-last">
+          <span id="busuanzi_container_site_uv" title='总访客数'><i class="fa-regular fa-user me-1" aria-hidden="true"></i><span id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin" aria-hidden="true"></i></span></span><span id="busuanzi_container_site_pv" class="footer-divider" title='总访问量'><i class="fa-regular fa-eye me-1" aria-hidden="true"></i><span id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin" aria-hidden="true"></i></span></span>
         </div></div>
-  </footer></div><div class="widgets"><div class="fixed-buttons animate__faster d-none"><div class="fixed-button back-to-top" role="button" aria-label="回到顶部"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i><span class="variant-numeric">0%</span>
-        </div><div class="fixed-button view-comments d-none" role="button" aria-label="查看评论"><i class="fa-solid fa-comment fa-fw" aria-hidden="true"></i></div></div><div id="mask"></div><div class="reading-progress-bar" style="left: 0;top: 0;"></div><noscript>
+  </footer></div><div class="widgets"><div class="fixed-buttons"><div class="fixed-button back-to-top animate__faster d-none" role="button" aria-label="回到顶部"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i><svg viewBox="0 0 100 100">
+              <circle class="bg" cx="50" cy="50" r="50"></circle>
+              <circle class="progress" cx="50" cy="50" r="50"></circle>
+            </svg></div><div id="toc-drawer-button" class="fixed-button toc-drawer-button d-none" role="button" aria-label="目录"><i class="fa-solid fa-bars" aria-hidden="true"></i></div><div class="fixed-button view-comments d-none" role="button" aria-label="查看评论"><i class="fa-solid fa-comment" aria-hidden="true"></i></div></div><div id="mask"></div><div class="reading-progress-bar" style="left: 0;top: 0;"></div><noscript>
     <div class="noscript-warning">该网站在启用 JavaScript 的情况下效果最佳。</div>
   </noscript>
-</div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><link rel="stylesheet" href="/lib/pace/themes/green/pace-theme-minimal.css"><script src="/lib/autocomplete/autocomplete.min.js" defer></script><script src="/lib/fuse/fuse.min.js" defer></script><script src="/lib/lightgallery/lightgallery.min.js" defer></script><script src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js" defer></script><script src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js" defer></script><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script src="https://vercount.one/js" async defer></script><script src="/lib/pace/pace.min.js" async defer></script><script>window.config={"code":{"copyTitle":"复制到剪贴板","editLockTitle":"锁定可编辑代码块","editUnLockTitle":"解锁可编辑代码块","editable":true,"maxShownLines":50},"comment":{"enable":true,"expired":false,"giscus":{"darkTheme":"dark","lightTheme":"light","origin":"https://giscus.app"}},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验。"},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"lightgallery":true,"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/search.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":30,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"siteTime":"2025-07-12T19:56:00+08:00","version":"v0.3.20"};</script><script src="/js/theme.min.js" defer></script><script async defer data-website-id="15750748-7c82-490e-b84b-07300e94e202" src="https://anal.moontung.top/script.js"  ></script></body>
+</div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><link rel="stylesheet" href="/lib/pace/themes/green/pace-theme-minimal.css"><script src="/lib/autocomplete/autocomplete.min.js" defer></script><script src="/lib/fuse/fuse.min.js" defer></script><script src="/lib/lightgallery/lightgallery.min.js" defer></script><script src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js" defer></script><script src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js" defer></script><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script src="/lib/cell-tooltip/cell-tooltip.umd.js" defer></script><script src="https://vercount.one/js" async defer></script><script src="/lib/pace/pace.min.js" async defer></script><script src="/js/config/24f08d7cf4e7c89dc3166cf532694e63.js" defer></script><script src="/js/theme.min.js" defer></script><script async defer data-website-id="15750748-7c82-490e-b84b-07300e94e202" src="https://anal.moontung.top/script.js"  ></script></body>
 </html>

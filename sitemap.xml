@@ -61,6 +61,18 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://sheetung.github.io/collections/</loc>
+    <lastmod>2026-03-12T15:46:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://sheetung.github.io/collections/openclaw/</loc>
+    <lastmod>2026-03-12T15:46:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://sheetung.github.io/tags/openclaw/</loc>
     <lastmod>2026-03-12T15:46:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -261,11 +273,6 @@
   <url>
     <loc>https://sheetung.github.io/about/</loc>
     <lastmod>2025-07-11T07:36:14+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://sheetung.github.io/collections/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
