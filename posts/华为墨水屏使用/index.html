@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>全网最简单的华为 3.98 彩显墨水屏使用 - sheetung</title><meta name="author" content="西塘">
+<meta name="description" content="基于华为 nova 彩显手机壳拆出的 3.98 英寸四色墨水屏，结合 ESP32-S3 / C3 开发板使用。
+"><meta name="keywords" content='墨水屏, ESP32, DIY'>
+  <meta itemprop="name" content="全网最简单的华为 3.98 彩显墨水屏使用">
+  <meta itemprop="description" content="基于华为 nova 彩显手机壳拆出的 3.98 英寸四色墨水屏，结合 ESP32-S3 / C3 开发板使用。">
+  <meta itemprop="datePublished" content="2026-10-25T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2026-10-25T00:00:00+00:00">
+  <meta itemprop="wordCount" content="9">
+  <meta itemprop="keywords" content="墨水屏,ESP32,DIY"><meta property="og:url" content="https://092399.xyz/posts/%E5%8D%8E%E4%B8%BA%E5%A2%A8%E6%B0%B4%E5%B1%8F%E4%BD%BF%E7%94%A8/">
+  <meta property="og:site_name" content="sheetung">
+  <meta property="og:title" content="全网最简单的华为 3.98 彩显墨水屏使用">
+  <meta property="og:description" content="基于华为 nova 彩显手机壳拆出的 3.98 英寸四色墨水屏，结合 ESP32-S3 / C3 开发板使用。">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-10-25T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-10-25T00:00:00+00:00">
+    <meta property="article:tag" content="墨水屏">
+    <meta property="article:tag" content="ESP32">
+    <meta property="article:tag" content="DIY">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="全网最简单的华为 3.98 彩显墨水屏使用">
+  <meta name="twitter:description" content="基于华为 nova 彩显手机壳拆出的 3.98 英寸四色墨水屏，结合 ESP32-S3 / C3 开发板使用。">
+<meta name="application-name" content="FixIt">
+<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="https://092399.xyz/posts/%E5%8D%8E%E4%B8%BA%E5%A2%A8%E6%B0%B4%E5%B1%8F%E4%BD%BF%E7%94%A8/" title="全网最简单的华为 3.98 彩显墨水屏使用 - sheetung" /><link rel="prev" type="text/html" href="https://092399.xyz/markdown-basics/" title="Markdown 基本语法" /><link rel="alternate" type="text/markdown" href="https://092399.xyz/posts/%E5%8D%8E%E4%B8%BA%E5%A2%A8%E6%B0%B4%E5%B1%8F%E4%BD%BF%E7%94%A8/index.md" title="全网最简单的华为 3.98 彩显墨水屏使用 - sheetung"><link rel="stylesheet" href="/css/config.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "全网最简单的华为 3.98 彩显墨水屏使用",
+    "inLanguage": "zh-CN",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https:\/\/092399.xyz\/posts\/%E5%8D%8E%E4%B8%BA%E5%A2%A8%E6%B0%B4%E5%B1%8F%E4%BD%BF%E7%94%A8\/"
+    },"genre": "posts","keywords": "墨水屏, ESP32, DIY","wordcount":  9 ,
+    "url": "https:\/\/092399.xyz\/posts\/%E5%8D%8E%E4%B8%BA%E5%A2%A8%E6%B0%B4%E5%B1%8F%E4%BD%BF%E7%94%A8\/","datePublished": "2026-10-25T00:00:00+00:00","dateModified": "2026-10-25T00:00:00+00:00","publisher": {
+      "@type": "Organization",
+      "name": ""},"author": {
+        "@type": "Person",
+        "name": "西塘"
+      },"description": ""
+  }
+  </script><script src="/js/head/color-scheme.min.js"></script></head>
+  <body data-instant-intensity="viewport" data-header-desktop="sticky" data-header-mobile="auto"><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/" title="sheetung"><span class="header-title-text">sheetung</span></a><span class="header-subtitle"></span></div>
+    <nav>
+      <ul class="menu"><li class="menu-item">
+              <a class="menu-link" href="/posts/">文章</a></li><li class="menu-item">
+              <a class="menu-link" href="/categories/">分类</a></li><li class="menu-item">
+              <a class="menu-link" href="/tags/">标签</a></li><li class="menu-item">
+              <a class="menu-link" href="/collections/">合集</a></li><li class="menu-item">
+              <a class="menu-link" href="/friends/">友链</a></li><li class="menu-item">
+              <a class="menu-link" href="/about/">关于</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id="search-desktop">
+            <input type="text" placeholder="搜索文章标题或内容……" id="search-input-desktop">
+            <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+              <i class="fa-solid fa-search" aria-hidden="true"></i>
+            </a>
+            <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+              <i class="fa-solid fa-times-circle" aria-hidden="true"></i>
+            </a>
+            <span class="search-button search-loading" id="search-loading-desktop">
+              <i class="fa-solid fa-spinner fa-spin" aria-hidden="true"></i>
+            </span>
+          </li><li class="menu-item theme-switch" role="button" aria-label="切换主题" title="切换主题"><i class="fa-solid fa-adjust" aria-hidden="true"></i></li></ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="sheetung"><span class="header-title-text">sheetung</span></a><span class="header-subtitle"></span></div>
+      <div class="theme-switch" role="button" aria-label="切换主题"><i class="fa-solid fa-adjust" aria-hidden="true"></i></div>
+      <div class="menu-toggle" id="menu-toggle-mobile" role="button" aria-labelledby="menu-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li class="search-wrapper">
+            <div class="search mobile" id="search-mobile">
+              <input type="text" placeholder="搜索文章标题或内容……" id="search-input-mobile">
+              <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                <i class="fa-solid fa-search" aria-hidden="true"></i>
+              </a>
+              <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                <i class="fa-solid fa-times-circle" aria-hidden="true"></i>
+              </a>
+              <span class="search-button search-loading" id="search-loading-mobile">
+                <i class="fa-solid fa-spinner fa-spin" aria-hidden="true"></i>
+              </span>
+            </div>
+            <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+              取消
+            </a>
+          </li><li class="menu-item"><a class="menu-link" href="/posts/">文章</a></li><li class="menu-item"><a class="menu-link" href="/categories/">分类</a></li><li class="menu-item"><a class="menu-link" href="/tags/">标签</a></li><li class="menu-item"><a class="menu-link" href="/collections/">合集</a></li><li class="menu-item"><a class="menu-link" href="/friends/">友链</a></li><li class="menu-item"><a class="menu-link" href="/about/">关于</a></li><li class="menu-item menu-system"></li>
+      </ul>
+    </nav>
+  </div>
+</header><div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+  </div>
+  <div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+  </div><main class="fi-container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="合集"><div class="details aside-microblog-details">
+  <div class="details-summary aside-microblog-summary">
+    <i class="fa-solid fa-pen-nib"></i>
+    <span class="aside-microblog-name">碎碎念</span>
+    <span class="aside-microblog-count">5</span>
+    <i class="details-icon fa-solid fa-angle-right"></i>
+  </div>
+  <div class="details-content aside-microblog-content">
+    <div class="aside-microblog-body" data-page="0" data-total="5" data-per-page="3"><div class="aside-microblog-item" data-index="0">
+        <span class="aside-microblog-date">2026-05-17</span>
+        <span class="aside-microblog-text">转载了官方的markdown语法，哈哈哈</span>
+      </div><div class="aside-microblog-item" data-index="1">
+        <span class="aside-microblog-date">2026-05-17</span>
+        <span class="aside-microblog-text">升级了 FixIt 主题到 v0.4.5，博客焕然一新 ✨</span>
+      </div><div class="aside-microblog-item" data-index="2">
+        <span class="aside-microblog-date">2026-05-10</span>
+        <span class="aside-microblog-text">在折腾 OpenClaw 和飞书的集成，终于跑通了</span>
+      </div><div class="aside-microblog-item hidden" data-index="3">
+        <span class="aside-microblog-date">2026-04-09</span>
+        <span class="aside-microblog-text">用 Codex 写了个 Go 版的久坐提醒工具</span>
+      </div><div class="aside-microblog-item hidden" data-index="4">
+        <span class="aside-microblog-date">2026-03-06</span>
+        <span class="aside-microblog-text">把博客从服务器迁移到了 GitHub Pages，轻装上阵</span>
+      </div></div>
+    <div class="aside-microblog-nav">
+      <a class="aside-microblog-nav-item aside-microblog-prev disabled" role="button" aria-label="上一页">
+        <i class="fa-solid fa-angle-left"></i>
+      </a>
+      <span class="aside-microblog-page text-secondary">1/2</span><a class="aside-microblog-nav-item aside-microblog-next" role="button" aria-label="下一页">
+        <i class="fa-solid fa-angle-right"></i>
+      </a></div>
+    <a class="aside-microblog-more" href="/microblog/" style="display:none">
+      查看更多 <i class="fa-solid fa-angle-right"></i>
+    </a>
+  </div>
+</div>
+<script>
+(function(){
+  var el = document.currentScript.parentElement.querySelector('.aside-microblog-body');
+  if (!el) return;
+  var items = el.querySelectorAll('.aside-microblog-item');
+  var nav = el.parentElement.querySelector('.aside-microblog-nav');
+  var prev = nav.querySelector('.aside-microblog-prev');
+  var next = nav.querySelector('.aside-microblog-next');
+  var pageInfo = nav.querySelector('.aside-microblog-page');
+  var more = el.parentElement.querySelector('.aside-microblog-more');
+  var perPage = +el.dataset.perPage;
+  var total = +el.dataset.total;
+  var totalPages = Math.ceil(total / perPage);
+  var page = 0;
+
+  function show() {
+    items.forEach(function(item, i) {
+      item.classList.toggle('hidden', i < page * perPage || i >= (page + 1) * perPage);
+    });
+    pageInfo.textContent = (page + 1) + '/' + totalPages;
+    prev.classList.toggle('disabled', page === 0);
+    next.classList.toggle('disabled', page >= totalPages - 1);
+    if (more) more.style.display = page >= totalPages - 1 ? '' : 'none';
+  }
+
+  prev.addEventListener('click', function() { if (page > 0) { page--; show(); } });
+  next.addEventListener('click', function() { if (page < totalPages - 1) { page++; show(); } });
+})();
+</script></aside>
+
+  <article class="page single">
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span>全网最简单的华为 3.98 彩显墨水屏使用</span>
+      </h1></div><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
+      西塘</span></span></div><div class="post-meta-line"><span title="发布于 2026-10-25 00:00:00"><i class="fa-solid fa-calendar-days me-1" aria-hidden="true"></i><time datetime="2026-10-25">2026-10-25</time></span>&nbsp;<span title="9 字"><i class="fa-solid fa-pencil-alt me-1" aria-hidden="true"></i>约 100 字</span>&nbsp;<span><i class="fa-regular fa-clock me-1" aria-hidden="true"></i>预计阅读 1 分钟</span>&nbsp;<span id="busuanzi_container_page_pv" class="busuanzi_visitors comment-visitors" data-flag-title="全网最简单的华为 3.98 彩显墨水屏使用"><i class="fa-regular fa-eye me-1" aria-hidden="true"></i><span id="busuanzi_value_page_pv">-</span>&nbsp;次阅读
+          </span>&nbsp;</div>
+    </div><div class="content" id="content"><p>基于华为 nova 彩显手机壳拆出的 3.98 英寸四色墨水屏，结合 ESP32-S3 / C3 开发板使用。</p>
+<p><img loading="lazy" src='/assets/posts/华为墨水屏/20261013192955340.webp' alt="/assets/posts/华为墨水屏/20261013192955340.webp">
+<img loading="lazy" src='/assets/posts/华为墨水屏/20261013193853158.webp' alt="/assets/posts/华为墨水屏/20261013193853158.webp">
+<img loading="lazy" src='/assets/posts/华为墨水屏/20261013194224487.webp' alt="/assets/posts/华为墨水屏/20261013194224487.webp"></p>
+</div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod"><span title="更新于 2026-10-25 00:00:00">更新于 2026-10-25&nbsp;</span>
+      </div><div class="post-info-license">
+            <span><a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a></span>
+          </div></div><div class="post-info-line">
+        <div class="post-info-md"></div>
+        <div class="post-info-share">
+          <span><a href="javascript:void(0);" title="分享到 X" data-sharer="twitter" data-url="https://092399.xyz/posts/%E5%8D%8E%E4%B8%BA%E5%A2%A8%E6%B0%B4%E5%B1%8F%E4%BD%BF%E7%94%A8/" data-title="全网最简单的华为 3.98 彩显墨水屏使用" data-hashtags="墨水屏,ESP32,DIY"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://092399.xyz/posts/%E5%8D%8E%E4%B8%BA%E5%A2%A8%E6%B0%B4%E5%B1%8F%E4%BD%BF%E7%94%A8/" data-hashtag="墨水屏"><i class="fa-brands fa-facebook-square" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://092399.xyz/posts/%E5%8D%8E%E4%B8%BA%E5%A2%A8%E6%B0%B4%E5%B1%8F%E4%BD%BF%E7%94%A8/" data-title="全网最简单的华为 3.98 彩显墨水屏使用"><i class="fa-brands fa-weibo" aria-hidden="true"></i></a>
+  </span>
+        </div>
+      </div></div>
+
+  <div class="post-info-more">
+    <section class="post-tags"><i class="fa-solid fa-tags me-1" aria-hidden="true"></i><a href="/tags/%E5%A2%A8%E6%B0%B4%E5%B1%8F/" class="post-tag" title="标签 - 墨水屏">墨水屏</a><a href="/tags/esp32/" class="post-tag" title="标签 - ESP32">ESP32</a><a href="/tags/diy/" class="post-tag" title="标签 - DIY">DIY</a></section>
+    <section><span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+    </section>
+  </div><div class="post-nav"><a href="/markdown-basics/" class="post-nav-item" rel="prev" title="Markdown 基本语法"><i class="fa-solid fa-angle-left" aria-hidden="true"></i>Markdown 基本语法</a></div>
+</div>
+<div class="post-reward">
+    <div class="comment"></div>
+    <input type="checkbox" class="reward-input" name="reward" id="fi-reward" hidden />
+    <label class="reward-button" for="fi-reward"><i class="fa-solid fa-qrcode" aria-hidden="true"></i>赞赏</label>
+    <div class="reward-ways" data-mode="static"><div><img src='/images/alipay.png' alt="西塘 支付宝"><span>支付宝</span>
+          </div><div><img src='/images/wechatpay.png' alt="西塘 微信"><span>微信</span>
+          </div></div>
+  </div></article>
+
+  <aside class="toc" id="toc-auto" aria-label="目录"></aside></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line powered">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.161.1"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.4.5"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
+        </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright" aria-hidden="true"></i>
+            <span itemprop="copyrightYear">2025 - 2026</span><span class="author" itemprop="copyrightHolder">
+              <a href="/">西塘</a></span><span class="license footer-divider"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div><div class="footer-line statistics"><span class="site-time" title='网站运行中……'><i class="fa-solid fa-heartbeat animate-icon" aria-hidden="true"></i><span class="run-times variant-numeric ms-1">网站运行中……</span></span></div><div class="footer-line visitor order-last">
+          <span id="busuanzi_container_site_uv" title='总访客数'><i class="fa-regular fa-user me-1" aria-hidden="true"></i><span id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin" aria-hidden="true"></i></span></span><span id="busuanzi_container_site_pv" class="footer-divider" title='总访问量'><i class="fa-regular fa-eye me-1" aria-hidden="true"></i><span id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin" aria-hidden="true"></i></span></span>
+        </div></div>
+  </footer></div><div class="widgets"><div class="fixed-buttons"><div class="fixed-button back-to-top animate__faster d-none" role="button" aria-label="回到顶部"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i><svg viewBox="0 0 100 100">
+              <circle class="bg" cx="50" cy="50" r="50"></circle>
+              <circle class="progress" cx="50" cy="50" r="50"></circle>
+            </svg></div></div><div id="mask"></div><div class="reading-progress-bar" style="left: 0;top: 0;"></div><noscript>
+    <div class="noscript-warning">该网站在启用 JavaScript 的情况下效果最佳。</div>
+  </noscript>
+</div><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><link rel="stylesheet" href="/lib/pace/themes/green/pace-theme-minimal.css"><script src="/lib/autocomplete/autocomplete.min.js" defer></script><script src="/lib/fuse/fuse.min.js" defer></script><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script src="/lib/cell-tooltip/cell-tooltip.umd.js" defer></script><script src="https://vercount.one/js" async defer></script><script src="/lib/pace/pace.min.js" async defer></script><script src="/js/config/db2e8afdd6c72c826e36eb64a5e1442f.js" defer></script><script src="/js/theme.min.js" defer></script><script async defer data-website-id="39399aab-ecd7-401d-b440-8e0e7c5455d0" src="https://anal.moontung.top/script.js"  ></script></body>
+</html>
