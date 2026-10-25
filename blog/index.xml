@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>所有blog - sheetung</title>
+    <link>https://092399.xyz/blog/</link>
+    <description>西塘的博客副站，主站点[moontung](https://moontung.top)</description>
+    <generator>Hugo 0.161.1 &amp; FixIt v0.4.5</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 25 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://092399.xyz/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>全网最简单的华为 3.98 彩显墨水屏使用</title>
+      <link>https://092399.xyz/blog/%E5%8D%8E%E4%B8%BA%E5%A2%A8%E6%B0%B4%E5%B1%8F%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>https://092399.xyz/blog/%E5%8D%8E%E4%B8%BA%E5%A2%A8%E6%B0%B4%E5%B1%8F%E4%BD%BF%E7%94%A8/</guid>
+      <description>&lt;p&gt;基于华为 nova 彩显手机壳拆出的 3.98 英寸四色墨水屏，结合 ESP32-S3 / C3 开发板使用。&lt;/p&gt;&#xA;&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#39;20261013192955340.webp&#39; alt=&#34;20261013192955340.webp&#34;&gt;&#xA;&lt;img loading=&#34;lazy&#34; src=&#39;20261013193853158.webp&#39; alt=&#34;20261013193853158.webp&#34;&gt;&#xA;&lt;img loading=&#34;lazy&#34; src=&#39;20261013194224487.webp&#39; alt=&#34;20261013194224487.webp&#34;&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

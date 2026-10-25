@@ -1,6 +1,48 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://092399.xyz/blog/</loc>
+    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://092399.xyz/tags/diy/</loc>
+    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://092399.xyz/tags/esp32/</loc>
+    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://092399.xyz/</loc>
+    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://092399.xyz/tags/</loc>
+    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://092399.xyz/tags/%E5%A2%A8%E6%B0%B4%E5%B1%8F/</loc>
+    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://092399.xyz/blog/%E5%8D%8E%E4%B8%BA%E5%A2%A8%E6%B0%B4%E5%B1%8F%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://092399.xyz/categories/</loc>
     <lastmod>2026-05-17T15:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -44,18 +86,6 @@
   </url>
   <url>
     <loc>https://092399.xyz/posts/</loc>
-    <lastmod>2026-05-17T15:00:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://092399.xyz/</loc>
-    <lastmod>2026-05-17T16:46:03+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://092399.xyz/tags/</loc>
     <lastmod>2026-05-17T15:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
