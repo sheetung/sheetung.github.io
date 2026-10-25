@@ -50,5 +50,5 @@ stty -F /dev/ttyS1 ispeed 921600 ospeed 921600
 ---
 
 > 作者: 西塘  
-> URL: https://sheetung.github.io/lubancat_px4uart/  
+> URL: https://092399.xyz/lubancat_px4uart/  
 

@@ -76,5 +76,5 @@ make px4_sitl_default jmavsim
 ---
 
 > 作者: 西塘  
-> URL: https://sheetung.github.io/ubt20_px4/  
+> URL: https://092399.xyz/ubt20_px4/  
 

@@ -69,5 +69,5 @@ openclaw gateway restart
 ---
 
 > 作者: 西塘  
-> URL: https://sheetung.github.io/Ubuntu%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8openclaw%E5%8F%91%E9%80%81%E6%88%AA%E5%9B%BE%E9%BB%91%E5%B1%8F%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/  
+> URL: https://092399.xyz/Ubuntu%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8openclaw%E5%8F%91%E9%80%81%E6%88%AA%E5%9B%BE%E9%BB%91%E5%B1%8F%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/  
 

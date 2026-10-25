@@ -792,5 +792,5 @@ console.log('Hello, world!');
 ---
 
 > 作者: 西塘  
-> URL: https://sheetung.github.io/markdown-extended/  
+> URL: https://092399.xyz/markdown-extended/  
 > 转载 URL: https://fixit.lruihao.cn/zh-cn/documentation/content-management/markdown-syntax/extended/

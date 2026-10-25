@@ -764,5 +764,5 @@ Content for chapter one.
 ---
 
 > 作者: 西塘  
-> URL: https://sheetung.github.io/markdown-basics/  
+> URL: https://092399.xyz/markdown-basics/  
 > 转载 URL: https://fixit.lruihao.cn/zh-cn/documentation/content-management/markdown-syntax/basics/

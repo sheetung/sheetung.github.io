@@ -40,5 +40,5 @@
 ---
 
 > 作者: 西塘  
-> URL: https://sheetung.github.io/friends/  
+> URL: https://092399.xyz/friends/  
 

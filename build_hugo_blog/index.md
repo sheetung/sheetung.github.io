@@ -102,5 +102,5 @@ hugo new content/posts/my-first-post.md
 ---
 
 > 作者: 西塘  
-> URL: https://sheetung.github.io/build_hugo_blog/  
+> URL: https://092399.xyz/build_hugo_blog/  
 

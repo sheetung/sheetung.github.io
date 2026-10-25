@@ -26,5 +26,5 @@
 ---
 
 > 作者: 西塘  
-> URL: https://sheetung.github.io/test-openclaw-auto-update/  
+> URL: https://092399.xyz/test-openclaw-auto-update/  
 

@@ -186,5 +186,5 @@ go build -ldflags='-H windowsgui' -o stand-reminder.exe .
 ---
 
 > 作者: 西塘  
-> URL: https://sheetung.github.io/codex-go-windows-stand-reminder/  
+> URL: https://092399.xyz/codex-go-windows-stand-reminder/  
 

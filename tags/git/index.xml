@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Git - 标签 - sheetung</title>
-    <link>https://sheetung.github.io/tags/git/</link>
+    <link>https://092399.xyz/tags/git/</link>
     <description>西塘的博客副站，主站点[moontung](https://moontung.top)</description>
     <generator>Hugo 0.161.1 &amp; FixIt v0.4.5</generator>
     <language>zh-CN</language>
     <lastBuildDate>Sat, 12 Jul 2025 12:22:24 +0100</lastBuildDate>
-    <atom:link href="https://sheetung.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://092399.xyz/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GIT使用教程 通关版</title>
-      <link>https://sheetung.github.io/git_use/</link>
+      <link>https://092399.xyz/git_use/</link>
       <pubDate>Sat, 12 Jul 2025 12:22:24 +0100</pubDate>
-      <guid>https://sheetung.github.io/git_use/</guid>
-      <category domain="https://sheetung.github.io/categories/%E7%99%BE%E8%AE%B0/">百记</category>
+      <guid>https://092399.xyz/git_use/</guid>
+      <category domain="https://092399.xyz/categories/%E7%99%BE%E8%AE%B0/">百记</category>
       <description>&lt;p&gt;一篇完整的git命令使用教程&lt;/p&gt;</description>
     </item>
   </channel>
